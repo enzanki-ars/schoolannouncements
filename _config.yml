@@ -2,6 +2,8 @@ title: "Darby Announcements - DEMO"
 description: "Demo for Hilliard Darby Announcements"
 repository: hcsd-dby/hcsd-dby.github.io
 
+exclude: [vendor]
+
 header:
   left-header:
     - text: Home

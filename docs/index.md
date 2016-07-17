@@ -15,8 +15,10 @@ are optional. If you do not require that field, just skip adding that line.
 
 **Some important notes:** 
 
-`.yml` files can be a little annoying at times. Indentation can _only_ be done 
-using spaces. While not required, when a line is longer than 80 characters, 
+* `.yml` files can be a little annoying at times. Indentation can _only_ be done 
+using spaces. 
+
+* While not required, when a line is longer than 80 characters, 
 usually used in descriptions, consider using the `>` character as shown below.
 This helps everybody so they do not have to scroll left and right to read the 
 data file.
@@ -29,15 +31,14 @@ description: >
   If you need a separate paragraph, separate them with a blank line.
 ```
 
-Anything that starts with a dash (`-`) can be repeated over and over and over...
+* Anything that starts with a dash (`-`) can be repeated over and over and over...
 It is a list, where each item start with that dash.
 
-In some cases, you might see text like `["Something", "Something Else", "Unknown something"]`.
+* In some cases, you might see text like `[...]`.
 This represents an array. Think of this like a list where each item is separated with 
-a comma.
+a comma. Example: `["Something", "Something Else", "Unknown something"]`
 
-In one example you will notice something a little different... The championships 
-start with an asterisk. All description like fields accept 
+* All description like fields accept 
 [markdown](https://help.github.com/articles/basic-writing-and-formatting-syntax/).
 In markdown, the asterisk starts a list item. Feel free to use any markdown you wish.
 
@@ -46,54 +47,37 @@ In markdown, the asterisk starts a list item. Feel free to use any markdown you 
 ### wordofthemonth.yml
 
 ```yml
-wordofthemonth: Supercalifragilisticexpialidocious
+wordofthemonth: 
 
 pastwinners:
-  - word: Inconceivable
-    names: ["Vizzini", "Inigo Montoya"]
+  - word: 
+    names: [...]
 ```
 
 ### birthdays.yml
 
 ```yml
-belated: ["Thing One", "Thing Two"]
-today: ["One Fish", "Two Fish", "Blue Fish", "Red Fish"]
-future: ["Dr. Seuss"]
+belated: [...]
+today: [...]
+future: [...]
 ```
-
-## Folder Based Data Files
-
-The following files should be made in separate files within the `_data/` folder.
 
 ### Sports
 
-#### sports/sportname.yml
+#### sports/sportname-date-time.yml
 
 ```yml
-name: Sportsball
-pastchampionships: >
-  * 2016 State Champions 
-```
-
-#### sports/sportname/gamedate-time.yml
-
-```yml
-date: 4/1/2016
-time: 3:14 pm
-location: Middle of Nowhere!
+sport:
+date: 
+time: 
+location: 
 score:
-  - team: Red
-    points: 3.14159
-  - team: Blue
-    points: 1.61803
-  - team: Hilliard Darby
-    points: All of them!
-result: Win
-awards: If the sport has awards, list them here...
-changes: >
-  If the game is ever canceled or postponed, list the changes here and adjust 
-  them above.
-tickets: Purchese them at the end of the mobius strip.
+  - team: 
+    points: 
+result: 
+awards: 
+changes: 
+tickets: 
 ```
 
 ### Clubs
@@ -101,17 +85,32 @@ tickets: Purchese them at the end of the mobius strip.
 #### clubs/clubname.yml
 
 ```yml
-name: Announcements Maitinence Club (Not Real)
-meetingdates: Every week day.
-nextdate: Today
-location: Anywhere
-time: All day
-description: >
-  Help work on these announcements!
-changes: List any meeting date/time/other changes here.
-website: https://hcsd-dby.github.io
-twitter: enzanki-ars
-facebook: Facebook? Facebook? Don't talk about Facebook!
-remind: Ummmmm.... I can't think of anything clever...
+name: 
+meetingdates: 
+nextdate: 
+location: 
+time: 
+description: 
+changes: 
+website:
+twitter:
+facebook:
+remind:
+```
+
+## Announcements
+### announcements/year-month-day-title.yml
+
+```yml
+title: 
+enabled: 
+date: 
+time: 
+location: 
+description: 
+extendeddescription: 
+picture: 
+video: 
+tweet: 
 ```
 

@@ -1,1 +1,3 @@
-hcsd-dby.github.io
+# School Announcemnt System
+
+Version: 0.0.1

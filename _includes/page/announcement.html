@@ -1,0 +1,34 @@
+<h2>{{announcement.title}}</h2>
+<ul>
+  {% if announcement.date %}
+    <li><i class="fa fa-calendar" aria-hidden="true"></i> Date: {{announcement.date}}</li>
+  {% endif %}
+  {% if announcement.time %}
+    <li><i class="fa fa-clock-o" aria-hidden="true"></i> Time: {{announcement.time}}</li>
+  {% endif %}
+  {% if announcement.location %}
+    <li><i class="fa fa-map-marker" aria-hidden="true"></i> Location: {{announcement.location}}</li>
+  {% endif %}
+</ul>
+{% if announcement.picture %}
+  <img src="{{ site.github.url | replace_first:'http://','https://' }}/img/announcement/{% annoucement.picture %}" class="img-responsive" alt="{{announcement.picture-alt}}">
+{% endif %}
+{% if announcement.video %}
+  <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="{{announcement.video}}"></iframe>
+  </div>
+{% endif %}
+{% if announcement.tweet %}
+  {{ announcement.tweet }}
+{% endif %}
+{% if announcement.description %}
+  <p>
+    {{announcement.description}}
+  </p>
+{% endif %}
+{% if announcement.extendeddescription %}
+  <p>
+    {{announcement.extendeddescription}}
+  </p>
+{% endif %}
+

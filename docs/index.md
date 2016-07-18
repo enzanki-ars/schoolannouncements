@@ -98,8 +98,9 @@ facebook:
 remind:
 ```
 
-## Announcements
-### announcements/year-month-day-title.yml
+### Announcements
+
+#### announcements/year-month-day-title.yml
 
 ```yml
 title: 

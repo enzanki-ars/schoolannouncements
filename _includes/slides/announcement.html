@@ -14,7 +14,7 @@
 </section>
 {% if include.announcement.picture %}
   <section>
-    <img src="{{ site.github.url | replace_first:'http://','https://' }}/img/announcement/{% annoucement.picture %}" class="img-responsive" alt="{{include.announcement.picture-alt}}">
+    <img src="{{ site.github.url | replace_first:'http://','https://' }}/img/announcement/{% include.annoucement.picture %}" class="img-responsive" alt="{{include.announcement.picture-alt}}">
   </section>
 {% endif %}
 {% if include.announcement.video %}

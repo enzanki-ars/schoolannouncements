@@ -44,7 +44,7 @@ In markdown, the asterisk starts a list item. Feel free to use any markdown you 
 
 ## Data Files
 
-### wordofthemonth.yml
+### _data/wordofthemonth.yml
 
 ```yml
 wordofthemonth: 
@@ -54,7 +54,7 @@ pastwinners:
     names: [...]
 ```
 
-### birthdays.yml
+### _data/birthdays.yml
 
 ```yml
 belated: [...]
@@ -64,9 +64,10 @@ future: [...]
 
 ### Sports
 
-#### sports/sportname-date-time.yml
+#### _sports/sportname-date-time.md
 
-```yml
+```md
+---
 sport:
 date: 
 time: 
@@ -78,13 +79,15 @@ result:
 awards: 
 changes: 
 tickets: 
+---
 ```
 
-### Clubs
+### Collections
 
-#### clubs/clubname.yml
+#### _clubs/clubname.md
 
-```yml
+```md
+---
 name: 
 meetingdates: 
 nextdate: 
@@ -96,13 +99,15 @@ website:
 twitter:
 facebook:
 remind:
+---
 ```
 
 ### Announcements
 
-#### announcements/year-month-day-title.yml
+#### _announcements/year-month-day-title.md
 
-```yml
+```md
+---
 title: 
 enabled: 
 date: 
@@ -113,5 +118,6 @@ extendeddescription:
 picture: 
 video: 
 tweet: 
+---
 ```
 

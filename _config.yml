@@ -17,6 +17,31 @@ header:
     - text: Privacy
       internal-link: privacy.html
 
+collections:
+  announcements:
+    output: true
+  sports:
+    output: true
+  clubs:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: announcements
+    values:
+      layout: announcement
+  - scope:
+      path: ""
+      type: sports
+    values:
+      layout: sport
+  - scope:
+      path: ""
+      type: clubs
+    values:
+      layout: club
+
 gems:
   - jekyll-sitemap
   - jekyll-feed

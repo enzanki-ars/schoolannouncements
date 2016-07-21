@@ -14,21 +14,25 @@
 </section>
 {% if include.announcement.picture %}
   <section>
+    <h3>{{include.announcement.title}}</h3>
     <img src="{{ site.github.url | replace_first:'http://','https://' }}/img/announcement/{% include.annoucement.picture %}" class="img-responsive" alt="{{include.announcement.picture-alt}}">
   </section>
 {% endif %}
 {% if include.announcement.video %}
   <section>
-    <iframe src="{{include.announcement.video}}"></iframe>
+    <h3>{{include.announcement.title}}</h3>
+    <iframe data-src="{{include.announcement.video}}"></iframe>
   </section>
 {% endif %}
 {% if include.announcement.tweet %}
   <section>
+    <h3>{{include.announcement.title}}</h3>
     {{ include.announcement.tweet }}
   </section>
 {% endif %}
 {% if include.announcement.description %}
-  <section>
+  <section data-autoslide="{{ include.announcement.slidetime | defualt: 5000 }}">
+    <h3>{{include.announcement.title}}</h3>
     <p>
       {{ include.announcement.description | markdownify}}
     </p>

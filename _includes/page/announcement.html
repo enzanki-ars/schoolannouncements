@@ -1,34 +1,34 @@
-<h2>{{announcement.title}}</h2>
+<h2>{{ include.announcement.title}}</h2>
 <ul>
-  {% if announcement.date %}
-    <li><i class="fa fa-calendar" aria-hidden="true"></i> Date: {{announcement.date}}</li>
+  {% if include.announcement.date %}
+    <li><i class="fa fa-calendar" aria-hidden="true"></i> Date: {{include.announcement.date}}</li>
   {% endif %}
-  {% if announcement.time %}
-    <li><i class="fa fa-clock-o" aria-hidden="true"></i> Time: {{announcement.time}}</li>
+  {% if include.announcement.time %}
+    <li><i class="fa fa-clock-o" aria-hidden="true"></i> Time: {{include.announcement.time}}</li>
   {% endif %}
-  {% if announcement.location %}
-    <li><i class="fa fa-map-marker" aria-hidden="true"></i> Location: {{announcement.location}}</li>
+  {% if include.announcement.location %}
+    <li><i class="fa fa-map-marker" aria-hidden="true"></i> Location: {{include.announcement.location}}</li>
   {% endif %}
 </ul>
-{% if announcement.picture %}
-  <img src="{{ site.github.url | replace_first:'http://','https://' }}/img/announcement/{% annoucement.picture %}" class="img-responsive" alt="{{announcement.picture-alt}}">
+{% if include.announcement.picture %}
+  <img src="{{ site.github.url | replace_first:'http://','https://' }}/img/announcement/{% include.annoucement.picture %}" class="img-responsive" alt="{{include.announcement.picture-alt}}">
 {% endif %}
-{% if announcement.video %}
+{% if include.announcement.video %}
   <div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" src="{{announcement.video}}"></iframe>
+    <iframe class="embed-responsive-item" src="{{include.announcement.video}}"></iframe>
   </div>
 {% endif %}
-{% if announcement.tweet %}
-  {{ announcement.tweet }}
+{% if include.announcement.tweet %}
+  {{ include.announcement.tweet }}
 {% endif %}
-{% if announcement.description %}
+{% if include.announcement.description %}
   <p>
-    {{ announcement.description | markdownify} }
+    {{ include.announcement.description | markdownify} }
   </p>
 {% endif %}
-{% if announcement.extendeddescription %}
+{% if include.announcement.extendeddescription %}
   <p>
-    {{ announcement.extendeddescription | markdownify }}
+    {{ include.announcement.extendeddescription | markdownify }}
   </p>
 {% endif %}
 

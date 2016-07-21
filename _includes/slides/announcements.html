@@ -1,7 +1,7 @@
 {% for announcement in site.announcements %}
   {% if announcement.enabled %}
     <section>
-      {% include slides/announcement.html %}
+      {% include slides/announcement.html announcement=announcement %}
     </section>
   {% endif %}
 {% endfor %}

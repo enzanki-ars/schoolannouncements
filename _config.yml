@@ -20,27 +20,13 @@ header:
 collections:
   announcements:
     output: true
+    layout: announcement
   sports:
     output: true
+    layout: sport
   clubs:
     output: true
-
-defaults:
-  - scope:
-      path: ""
-      type: announcements
-    values:
-      layout: announcement
-  - scope:
-      path: ""
-      type: sports
-    values:
-      layout: sport
-  - scope:
-      path: ""
-      type: clubs
-    values:
-      layout: club
+    layout: club
 
 gems:
   - jekyll-sitemap

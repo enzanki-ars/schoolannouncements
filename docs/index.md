@@ -110,7 +110,6 @@ remind:
 ---
 title: 
 enabled: 
-date: 
 time: 
 location: 
 description: 

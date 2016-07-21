@@ -106,6 +106,9 @@ remind:
 
 #### _announcements/year-month-day-title.md
 
+`slidetime:` is use to extend the default time that the description slide 
+is visible. By default, this time is 5 seconds.
+
 ```md
 ---
 title: 
@@ -114,6 +117,7 @@ time:
 location: 
 description: 
 extendeddescription: 
+slidetime: 
 picture: 
 video: 
 tweet: 

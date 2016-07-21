@@ -28,6 +28,23 @@ collections:
     output: true
     layout: club
 
+defaults:
+  - scope:
+      path: ""
+      type: announcements
+    values:
+      layout: announcement
+  - scope:
+      path: ""
+      type: sports
+    values:
+      layout: sport
+  - scope:
+      path: ""
+      type: clubs
+    values:
+      layout: club
+
 gems:
   - jekyll-sitemap
   - jekyll-feed

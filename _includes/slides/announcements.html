@@ -1,0 +1,7 @@
+{% for announcement in site.data.announcements %}
+  {% if announcement.enabled %}
+    <section>
+      {% include slides/announcement.html %}
+    </section>
+  {% endif %}
+{% endfor %}

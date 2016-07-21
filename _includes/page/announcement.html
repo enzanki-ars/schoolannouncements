@@ -23,12 +23,12 @@
 {% endif %}
 {% if announcement.description %}
   <p>
-    {{announcement.description}}
+    {{ announcement.description | markdownify} }
   </p>
 {% endif %}
 {% if announcement.extendeddescription %}
   <p>
-    {{announcement.extendeddescription}}
+    {{ announcement.extendeddescription | markdownify }}
   </p>
 {% endif %}
 

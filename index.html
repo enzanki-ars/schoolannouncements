@@ -2,5 +2,40 @@
 layout: default
 ---
 
-<h1>School Announcements</h1>
+<div class="jumbotron">
+  <h1>School Announcements</h1>
+  <p>
+    Demo for school announcement management system.
+  </p>
+  <p>
+    <div class="btn-group">
+      <button type="button" class="btn btn-primary dropdown-toggle btn-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        All Announcements <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a href="{{ site.github.url | replace_first:'http://','https://' }}/views/text/all.html">Text View</a></li>
+        <li><a href="{{ site.github.url | replace_first:'http://','https://' }}/views/slides/all.html">Slide View</a></li>
+      </ul>
+    </div>
+    <div class="btn-group">
+      <button type="button" class="btn btn-info dropdown-toggle btn-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Announcements Only <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a href="{{ site.github.url | replace_first:'http://','https://' }}/views/text/announcements.html">Text View</a></li>
+        <li><a href="{{ site.github.url | replace_first:'http://','https://' }}/views/slides/announcements.html">Slide View</a></li>
+      </ul>
+    </div>
+    <div class="btn-group">
+      <button type="button" class="btn btn-info dropdown-toggle btn-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Sports Only <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a href="{{ site.github.url | replace_first:'http://','https://' }}/views/text/sports.html">Text View</a></li>
+        <li><a href="{{ site.github.url | replace_first:'http://','https://' }}/views/slides/sports.html">Slide View</a></li>
+      </ul>
+    </div>
+  </p>
+</div>
+
 

@@ -44,6 +44,8 @@ In markdown, the asterisk starts a list item. Feel free to use any markdown you 
 
 ## Data Files
 
+Shown in order of appearance in views.
+
 ### _data/wordofthemonth.yml
 
 ```yml
@@ -62,29 +64,58 @@ today: [...]
 future: [...]
 ```
 
-### Sports
+### _announcements/year-month-day-title.md
 
-#### _sports/sportname-date-time.md
+`slidetime:` is use to extend the default time that the description slide 
+is visible. By default, this time is 10 seconds.
+
+`description:` is visible in all views, while `extendeddescription:` will not 
+shown on the slideshow. 
 
 ```md
 ---
-sport:
+title: 
+enabled: 
 date: 
 time: 
 location: 
-score:
-  - team: 
-    points: 
-result: 
-awards: 
 changes: 
-tickets: 
+description: 
+extendeddescription: 
+slidetime: 
+picture: 
+video: 
+tweet: 
 ---
 ```
 
-### Collections
+### _sports/date-sportsname.md
 
-#### _clubs/clubname.md
+`slidetime:` is use to extend the default time that the description slide 
+is visible. By default, this time is 10 seconds.
+
+```md
+---
+name: 
+enabled: 
+date: 
+time: 
+location: 
+tickets: 
+status: 
+description: 
+slidetime: 
+changes: 
+result: 
+score:
+  - team: 
+    points: 
+awards: 
+tweet: 
+---
+```
+
+### _clubs/clubname.md
 
 ```md
 ---
@@ -101,26 +132,3 @@ facebook:
 remind:
 ---
 ```
-
-### Announcements
-
-#### _announcements/year-month-day-title.md
-
-`slidetime:` is use to extend the default time that the description slide 
-is visible. By default, this time is 5 seconds.
-
-```md
----
-title: 
-enabled: 
-time: 
-location: 
-description: 
-extendeddescription: 
-slidetime: 
-picture: 
-video: 
-tweet: 
----
-```
-

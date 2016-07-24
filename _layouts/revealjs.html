@@ -1,53 +1,54 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-        <title>{{ page.title }}</title>
+    <title>{{ page.title }}</title>
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/reveal.min.css">
-                {% if page.revealjs-theme %}
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/theme/{{ page.revealjs-theme }}.min.css">
-                {% elsif site.revealjs-theme %}
-                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/theme/{{ site.revealjs-theme }}.min.css">
-                {% else %}
-                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/theme/white.min.css">
-                {% endif %}
-                
-                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha256-3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU= sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg==" crossorigin="anonymous">
-                <link rel="stylesheet" href="{{ site.github.url | replace_first:'http://','https://' }}/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/reveal.min.css">
+    {% if page.revealjs-theme %}
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/theme/{{ page.revealjs-theme }}.min.css">
+    {% elsif site.revealjs-theme %}
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/theme/{{ site.revealjs-theme }}.min.css">
+    {% else %}
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/theme/white.min.css">
+    {% endif %}
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha256-3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU= sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg==" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ site.github.url | replace_first:'http://','https://' }}/css/main.css">
 
-                {% if page.live-reload %}
-                    <script async src="{{ site.github.url | replace_first:'http://','https://' }}/js/live.js"></script>
-                {% endif %}
-        
-                <!-- Theme used for syntax highlighting of code -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/lib/css/zenburn.min.css">
-    </head>
-    <body>
-        <div class="reveal">
-            <div class="slides">
-                {{ content }}
-            </div>
-        </div>
+    {% if page.live-reload %}
+      <script async src="{{ site.github.url | replace_first:'http://','https://' }}/js/live.js"></script>
+    {% endif %}
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/lib/js/head.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/js/reveal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/lib/css/zenburn.min.css">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        {{ content }}
+      </div>
+    </div>
 
-        <script>
-            // More info https://github.com/hakimel/reveal.js#configuration
-            Reveal.initialize({
-                history: false,
-                autoSlide: 5000,
-                loop: true,
-                dependencies: [
-                    { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/plugin/markdown/marked.min.js' },
-                    { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/plugin/markdown/markdown.min.js' },
-                    { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/plugin/notes/notes.min.js', async: true },
-                    { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/plugin/highlight/highlight.min.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-                ]
-            });
-        </script>
-    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/lib/js/head.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/js/reveal.min.js"></script>
+
+    <script>
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        history: false,
+        autoSlide: 10000,
+        loop: true,
+        transition: 'fade',
+        transitionSpeed: 'slow',
+        dependencies: [
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/plugin/markdown/marked.min.js' },
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/plugin/markdown/markdown.min.js' },
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/plugin/notes/notes.min.js', async: true },
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/plugin/highlight/highlight.min.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+  </body>
 </html>

@@ -7,9 +7,6 @@
       $(document).ready(function() {
         $(".marquee")
           .css("animation-duration", ($(window).width() + $(".marquee").width()) / 30 + "s")
-        console.log(($(window).width() + $(".marquee").width()) / 30);
-        console.log("Commit: {{ site.github.build_revision }}");
-        ga('send', 'event', "Version", "{{ site.github.build_revision }}");
         if (window.location.protocol != "https:") {
           document.getElementById('sitealerts').innerHTML +=
             "<div class=\"alert alert-danger\" role=\"alert\"><strong>DANGER:</strong> You are accessing this site over an "

@@ -2,6 +2,16 @@ title: "School Announcements - DEMO"
 description: "Demo for School Announcements"
 repository: schoolannouncements/schoolannouncements.github.io
 
+versions:
+  bootstrap: 3.3.6
+  font-awesome: 4.6.3
+  jquery: 1.12.4
+  modernizer: 2.8.3
+  autotrack: 1.0.0
+  revealjs: 3.3.0
+
+googleanalytics: UA-64309741-1
+
 exclude: [vendor]
 
 header:

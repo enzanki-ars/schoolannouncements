@@ -59,13 +59,13 @@
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
         <link rel="apple-touch-icon" href="{{ site.github.url | replace_first:'http://','https://' }}/icons/apple-touch-icon.png">
 
-        <script async src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script async src="https://code.jquery.com/jquery-{{ site.versions.jquery }}.min.js"></script>
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/{{ site.versions.bootstrap }}/css/bootstrap.min.css" crossorigin="anonymous">
         {% if site.theme %}
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/{{ site.theme }}/bootstrap.min.css" crossorigin="anonymous">    
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/{{ site.versions.bootstrap }}/{{ site.theme }}/bootstrap.min.css" crossorigin="anonymous">    
         {% endif %}
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/{{ site.versions.font-awesome }}/css/font-awesome.min.css" crossorigin="anonymous">
         <link rel="stylesheet" href="{{ site.github.url | replace_first:'http://','https://' }}/css/main.css">
         
         {% if page.live-reload %}
@@ -91,19 +91,30 @@
                 ga('send', 'event', "YouTube Error", "YouTube Load Error");
             }
         </script>
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script> -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/{{ site.versions.modernizer }}/modernizr.min.js"></script> -->
     </head>
     <body>
-        <!-- Google Analytics -->
+        {% if site.googleanalytics %}
         <script>
             window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-            ga('create', 'UA-64309741-1', {'siteSpeedSampleRate': 100});
+            ga('create', '{{ site.googleanalytics }}', {'siteSpeedSampleRate': 100});
             ga('require', 'autotrack');
+            
+            ga('require', 'cleanUrlTracker');
+            ga('require', 'eventTracker');
+            ga('require', 'impressionTracker');
+            ga('require', 'mediaQueryTracker');
+            ga('require', 'outboundFormTracker');
+            ga('require', 'outboundLinkTracker');
+            ga('require', 'pageVisibilityTracker');
+            ga('require', 'socialWidgetTracker');
+            ga('require', 'urlChangeTracker');
+            
             ga('send', 'pageview');
         </script>
         <script async src="https://www.google-analytics.com/analytics.js"></script>
-        <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/0.6.5/autotrack.js"></script>
-        <!-- End Google Analytics -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/{{ site.versions.autotrack }}/autotrack.js"></script>
+        {% endif %}
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser.
             Please <a href="http://browsehappy.com/">upgrade your browser</a>

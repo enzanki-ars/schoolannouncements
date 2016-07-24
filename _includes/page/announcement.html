@@ -1,0 +1,39 @@
+<h3>{{ include.announcement.title}}</h3>
+<ul>
+  {% if include.announcement.date %}
+    <li><i class="fa fa-calendar" aria-hidden="true"></i> Date: {{ include.announcement.date | date: "%A, %B %e, %Y" }}</li>
+  {% endif %}
+  {% if include.announcement.time %}
+    <li><i class="fa fa-clock-o" aria-hidden="true"></i> Time: {{ include.announcement.time | date: "%l:%M %Z" }}</li>
+  {% endif %}
+  {% if include.announcement.location %}
+    <li><i class="fa fa-map-marker" aria-hidden="true"></i> Location: {{ include.announcement.location }}</li>
+  {% endif %}
+</ul>
+{% if include.announcement.changes %}
+  <p>
+    Changes: {{ include.announcement.changes | markdownify}}
+  </p>
+{% endif %}
+{% if include.announcement.picture %}
+  <img src="{{ site.github.url | replace_first:'http://','https://' }}/img/announcement/{{ include.annoucement.picture }}" class="img-responsive" alt="{{ include.announcement.picture-alt }}">
+{% endif %}
+{% if include.announcement.video %}
+  <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="{{ include.announcement.video }}"></iframe>
+  </div>
+{% endif %}
+{% if include.announcement.tweet %}
+  {{ include.announcement.tweet }}
+{% endif %}
+{% if include.announcement.description %}
+  <p>
+    {{ include.announcement.description | markdownify}}
+  </p>
+{% endif %}
+{% if include.announcement.extendeddescription %}
+  <p>
+    {{ include.announcement.extendeddescription | markdownify }}
+  </p>
+{% endif %}
+

@@ -2,6 +2,16 @@ title: "School Announcements - DEMO"
 description: "Demo for School Announcements"
 repository: schoolannouncements/schoolannouncements.github.io
 
+versions:
+  bootstrap: 3.3.6
+  font-awesome: 4.6.3
+  jquery: 1.12.4
+  modernizer: 2.8.3
+  autotrack: 1.0.0
+  revealjs: 3.3.0
+
+googleanalytics: UA-81210681-1
+
 exclude: [vendor]
 
 header:
@@ -16,6 +26,34 @@ header:
   right-header:
     - text: Privacy
       internal-link: privacy.html
+
+collections:
+  announcements:
+    output: true
+    layout: announcement
+  sports:
+    output: true
+    layout: sport
+  clubs:
+    output: true
+    layout: club
+
+defaults:
+  - scope:
+      path: ""
+      type: announcements
+    values:
+      layout: announcement
+  - scope:
+      path: ""
+      type: sports
+    values:
+      layout: sport
+  - scope:
+      path: ""
+      type: clubs
+    values:
+      layout: club
 
 gems:
   - jekyll-sitemap

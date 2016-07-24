@@ -1,0 +1,5 @@
+{% for announcement in site.announcements %}
+  {% if announcement.enabled %}
+    {% include page/announcement.html announcement=announcement %}
+  {% endif %}
+{% endfor %}

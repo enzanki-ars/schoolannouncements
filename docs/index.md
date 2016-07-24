@@ -44,7 +44,9 @@ In markdown, the asterisk starts a list item. Feel free to use any markdown you 
 
 ## Data Files
 
-### wordofthemonth.yml
+Shown in order of appearance in views.
+
+### _data/wordofthemonth.yml
 
 ```yml
 wordofthemonth: 
@@ -54,7 +56,7 @@ pastwinners:
     names: [...]
 ```
 
-### birthdays.yml
+### _data/birthdays.yml
 
 ```yml
 belated: [...]
@@ -62,29 +64,61 @@ today: [...]
 future: [...]
 ```
 
-### Sports
+### _announcements/year-month-day-title.md
 
-#### sports/sportname-date-time.yml
+`slidetime:` is use to extend the default time that the description slide 
+is visible. By default, this time is 10 seconds.
 
-```yml
-sport:
+`description:` is visible in all views, while `extendeddescription:` will not 
+shown on the slideshow. 
+
+```md
+---
+title: 
+enabled: 
 date: 
 time: 
 location: 
+changes: 
+description: 
+extendeddescription: 
+slidetime: 
+picture: 
+video: 
+tweet: 
+---
+```
+
+### _sports/date-sportsname.md
+
+`slidetime:` is use to extend the default time that the description slide 
+is visible. By default, this time is 10 seconds.
+
+```md
+---
+name: 
+enabled: 
+date: 
+time: 
+location: 
+tickets: 
+status: 
+description: 
+slidetime: 
+changes: 
+result: 
 score:
   - team: 
     points: 
-result: 
 awards: 
-changes: 
-tickets: 
+tweet: 
+---
 ```
 
-### Clubs
+### _clubs/clubname.md
 
-#### clubs/clubname.yml
-
-```yml
+```md
+---
 name: 
 meetingdates: 
 nextdate: 
@@ -96,21 +130,5 @@ website:
 twitter:
 facebook:
 remind:
+---
 ```
-
-## Announcements
-### announcements/year-month-day-title.yml
-
-```yml
-title: 
-enabled: 
-date: 
-time: 
-location: 
-description: 
-extendeddescription: 
-picture: 
-video: 
-tweet: 
-```
-

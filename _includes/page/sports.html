@@ -1,0 +1,5 @@
+{% for sport in site.sports %}
+  {% if sport.enabled %}
+    {% include page/sport.html sport=sport %}
+  {% endif %}
+{% endfor %}

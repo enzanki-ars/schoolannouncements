@@ -1,0 +1,48 @@
+<section>
+    <h2>{{include.announcement.title}}</h2>
+    <ul>
+      {% if include.announcement.date %}
+        <li><i class="fa fa-calendar" aria-hidden="true"></i> Date: {{ include.announcement.date | date: "%A, %B %e, %Y" }}</li>
+      {% endif %}
+      {% if include.announcement.time %}
+        <li><i class="fa fa-clock-o" aria-hidden="true"></i> Time: {{ include.announcement.time | date: "%l:%M %Z" }}</li>
+      {% endif %}
+      {% if include.announcement.location %}
+        <li><i class="fa fa-map-marker" aria-hidden="true"></i> Location: {{ include.announcement.location }}</li>
+      {% endif %}
+    </ul>
+</section>
+{% if include.announcement.changes %}
+  <section>
+    <h3>{{ include.announcement.title }}</h3>
+    <p>
+      Changes: {{ include.announcement.changes | markdownify}}
+    </p>
+  </section>
+{% endif %}
+{% if include.announcement.picture %}
+  <section>
+    <h3>{{include.announcement.title}}</h3>
+    <img src="{{ site.github.url | replace_first:'http://','https://' }}/img/announcement/{{ include.annoucement.picture }}" class="img-responsive" alt="{{ include.announcement.picture-alt }}">
+  </section>
+{% endif %}
+{% if include.announcement.video %}
+  <section>
+    <h3>{{include.announcement.title}}</h3>
+    <iframe data-src="{{ include.announcement.video }}"></iframe>
+  </section>
+{% endif %}
+{% if include.announcement.tweet %}
+  <section>
+    <h3>{{ include.announcement.title }}</h3>
+    {{ include.announcement.tweet }}
+  </section>
+{% endif %}
+{% if include.announcement.description %}
+  <section data-autoslide="{{ include.announcement.slidetime | defualt: 10000 }}">
+    <h3>{{ include.announcement.title }}</h3>
+    <p>
+      {{ include.announcement.description | markdownify}}
+    </p>
+  </section>
+{% endif %}

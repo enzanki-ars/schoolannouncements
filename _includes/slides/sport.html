@@ -1,0 +1,64 @@
+<section>
+  <h2>{{ include.sport.name }}</h2>
+  <ul>
+    {% if include.sport.date %}
+      <li><i class="fa fa-calendar" aria-hidden="true"></i> Date: {{ include.sport.date | date: "%A, %B %e, %Y" }}</li>
+    {% endif %}
+    {% if include.sport.time %}
+      <li><i class="fa fa-clock-o" aria-hidden="true"></i> Time: {{ include.sport.time | date: "%l:%M %Z" }}</li>
+    {% endif %}
+    {% if include.sport.location %}
+      <li><i class="fa fa-map-marker" aria-hidden="true"></i> Location: {{ include.sport.location }}</li>
+    {% endif %}
+    {% if include.sport.tickets %}
+      <li><i class="fa fa-ticket" aria-hidden="true"></i> Tickets: {{ include.sport.tickets }}</li>
+    {% endif %}
+    {% if include.sport.status %}
+      <li><i class="fa fa-question-circle-o" aria-hidden="true"></i> Status: {{ include.sport.status }}</li>
+    {% endif %}
+    {% if include.sport.result %}
+      <li><i class="fa fa-flag-checkered" aria-hidden="true"></i> Result: {{ include.sport.result }}</li>
+    {% endif %}
+  </ul>
+</section>
+{% if include.sport.changes %}
+  <section>
+    <h2>{{ include.sport.name }}</h2>
+    <p>
+      Changes: {{ include.sport.changes | markdownify}}
+    </p>
+  </section>
+{% endif %}
+{% if include.sport.description %}
+  <section data-autoslide="{{ include.sport.slidetime | defualt: 10000 }}">
+    <h2>{{ include.sport.name }}</h2>
+    <p>
+      {{ include.sport.description | markdownify}}
+    </p>
+  </section>
+{% endif %}
+{% if include.sport.score %}
+  <section>
+    <h2>{{ include.sport.name }}</h2>
+    <p>Score:</p>
+    <ul>
+      {% for team in include.sport.score %}
+        <li>{{ team.team }}: {{ team.points }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+{% endif %}
+{% if include.sport.awards %}
+  <section>
+    <h2>{{ include.sport.name }}</h2>
+    <p>
+      {{ include.sport.awards | markdownify}}
+    </p>
+  </section>
+{% endif %}
+{% if include.sport.tweet %}
+  <section>
+    <h2>{{ include.sport.name }}</h2>
+    {{ include.sport.tweet }}
+  </section>
+{% endif %}

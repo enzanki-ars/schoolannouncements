@@ -10,7 +10,7 @@ versions:
   autotrack: 1.0.0
   revealjs: 3.3.0
 
-googleanalytics: UA-64309741-1
+googleanalytics: UA-81210681-1
 
 exclude: [vendor]
 

@@ -1,0 +1,53 @@
+{% if site.data.other.wordofthemonth %}
+  <section data-autoslide="5000">
+    <h2>Word of the Month</h2>
+    <p>
+      Word of the month: {{ site.data.other.wordofthemonth }}
+    </p>
+  </section>
+{% endif %}
+{% if site.data.other.birthdays %}
+  <section>
+    <h2>Birthdays</h2>
+    {% if site.data.other.birthdays.belated %}
+      <section>
+        <h3>Happy Belated Birthday to: </h3>
+        <ul>
+          {% for person in site.data.other.birthdays.belated %}
+            <li>{{ person }}</li>
+          {% endfor %}
+        </ul>
+      </section>
+    {% endif %}
+    {% if site.data.other.birthdays.today %}
+      <section>
+        <h3>Happy Birthday to: </h3>
+        <ul>
+          {% for person in site.data.other.birthdays.today %}
+            <li>{{ person }}</li>
+          {% endfor %}
+        </ul>
+      </section>
+    {% endif %}
+    {% if site.data.other.birthdays.weekend %}
+      <section>
+        <h3>Happy Weekend Birthday to: </h3>
+        <ul>
+          {% for person in site.data.other.birthdays.weekend %}
+            <li>{{ person }}</li>
+          {% endfor %}
+        </ul>
+      </section>
+    {% endif %}
+    {% if site.data.other.birthdays.holiday %}
+      <section>
+        <p>Happy Holiday Birthday to: </p>
+        <ul>
+          {% for person in site.data.other.birthdays.holiday %}
+            <li>{{ person }}</li>
+          {% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+  </section>
+{% endif %}

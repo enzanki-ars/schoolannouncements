@@ -1,5 +1,5 @@
+<h2>{{ include.sport.name }}</h2>
 <section>
-  <h2>{{ include.sport.name }}</h2>
   <ul>
     {% if include.sport.date %}
       <li><i class="fa fa-calendar" aria-hidden="true"></i> Date: {{ include.sport.date | date: "%A, %B %e, %Y" }}</li>
@@ -23,7 +23,6 @@
 </section>
 {% if include.sport.changes %}
   <section>
-    <h2>{{ include.sport.name }}</h2>
     <p>
       Changes: {{ include.sport.changes | markdownify}}
     </p>
@@ -31,7 +30,6 @@
 {% endif %}
 {% if include.sport.description %}
   <section data-autoslide="{{ include.sport.slidetime | defualt: 10000 }}">
-    <h2>{{ include.sport.name }}</h2>
     <p>
       {{ include.sport.description | markdownify}}
     </p>
@@ -39,7 +37,6 @@
 {% endif %}
 {% if include.sport.score %}
   <section>
-    <h2>{{ include.sport.name }}</h2>
     <p>Score:</p>
     <ul>
       {% for team in include.sport.score %}
@@ -50,7 +47,6 @@
 {% endif %}
 {% if include.sport.awards %}
   <section>
-    <h2>{{ include.sport.name }}</h2>
     <p>
       {{ include.sport.awards | markdownify}}
     </p>
@@ -58,7 +54,6 @@
 {% endif %}
 {% if include.sport.tweet %}
   <section>
-    <h2>{{ include.sport.name }}</h2>
     {{ include.sport.tweet }}
   </section>
 {% endif %}

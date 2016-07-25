@@ -46,22 +46,19 @@ In markdown, the asterisk starts a list item. Feel free to use any markdown you 
 
 Shown in order of appearance in views.
 
-### _data/wordofthemonth.yml
+### _data/other.yml
 
 ```yml
 wordofthemonth: 
-
-pastwinners:
+pastwordofthemonthwinners:
   - word: 
     names: [...]
-```
 
-### _data/birthdays.yml
-
-```yml
-belated: [...]
-today: [...]
-future: [...]
+birthdays:
+  belated: [...]
+  today: [...]
+  weekend: [...]
+  break: [...]
 ```
 
 ### _announcements/year-month-day-title.md

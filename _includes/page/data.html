@@ -1,0 +1,41 @@
+{% if site.data.other.wordofthemonth %}
+  <h2>Word of the Month</h2>
+  <p>
+    Word of the month: {{ site.data.other.wordofthemonth }}
+  </p>
+{% endif %}
+{% if site.data.other.birthdays %}
+  <h2>Birthdays</h2>
+  {% if site.data.other.birthdays.belated %}
+    <p>Happy Belated Birthday to: </p>
+    <ul>
+      {% for person in site.data.other.birthdays.belated %}
+        <li>{{ person }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  {% if site.data.other.birthdays.today %}
+    <p>Happy Birthday to: </p>
+    <ul>
+      {% for person in site.data.other.birthdays.today %}
+        <li>{{ person }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  {% if site.data.other.birthdays.weekend %}
+    <p>Happy Weekend Birthday to: </p>
+    <ul>
+      {% for person in site.data.other.birthdays.weekend %}
+        <li>{{ person }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  {% if site.data.other.birthdays.holiday %}
+    <p>Happy Holiday Birthday to: </p>
+    <ul>
+      {% for person in site.data.other.birthdays.holiday %}
+        <li>{{ person }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endif %}

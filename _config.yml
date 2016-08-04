@@ -5,7 +5,7 @@ repository: schoolannouncements/schoolannouncements.github.io
 versions:
   bootstrap: 3.3.6
   font-awesome: 4.6.3
-  jquery: 3.1.0
+  jquery: 2.2.4
   modernizer: 2.8.3
   autotrack: 1.0.0
   revealjs: 3.3.0

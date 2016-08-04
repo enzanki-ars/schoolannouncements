@@ -71,8 +71,14 @@
         {% if page.live-reload %}
             <script async src="{{ site.github.url | replace_first:'http://','https://' }}/js/live.js"></script>
         {% endif %}
+        
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/{{ site.versions.timeago }}/jquery.timeago.min.js"></script>
 
         <script>
+            jQuery(document).ready(function() {
+              jQuery("time.timeago").timeago();
+              jQuery.timeago.settings.allowFuture = true;
+            });
             function loadSuccess() {
                 document.getElementById("blockedInfo").innerHTML = "<span class=\"label label-info\">" 
                     + "YouTube Access Check Succeeded.</span>";

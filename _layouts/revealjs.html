@@ -10,7 +10,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/{{ site.versions.revealjs }}/css/theme/{{ page.revealjs-theme | default: site.revealjs-theme | default: 'black' }}.min.css">
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/{{ site.versions.font-awesome }}/css/font-awesome.min.css" crossorigin="anonymous">
+    
+    <script async src="https://code.jquery.com/jquery-{{ site.versions.jquery }}.min.js"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/{{ site.versions.timeago }}/jquery.timeago.min.js"></script>
 
+    <script>
+      jQuery(document).ready(function() {
+        jQuery("time.timeago").timeago();
+        jQuery.timeago.settings.allowFuture = true;
+      });
+    </script>
+    
     {% if page.live-reload %}
       <script async src="{{ site.github.url | replace_first:'http://','https://' }}/js/live.js"></script>
     {% endif %}

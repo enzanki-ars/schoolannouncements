@@ -9,6 +9,7 @@ versions:
   modernizer: 2.8.3
   autotrack: 1.0.0
   revealjs: 3.3.0
+  timeago: 1.5.3
 
 googleanalytics: UA-81210681-1
 

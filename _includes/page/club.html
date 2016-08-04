@@ -1,0 +1,37 @@
+<h3>{{ include.club.name }}</h3>
+<ul>
+  {% if include.club.meetingdates %}
+    <li><i class="fa fa-calendar" aria-hidden="true"></i> Meeting Dates: {{ include.club.dates }}</li>
+  {% endif %}
+  {% if include.club.nextdate %}
+    <li><i class="fa fa-calendar" aria-hidden="true"></i> Next Date: {{ include.club.nextdate | date: "%A, %B %e, %Y" }}</li>
+  {% endif %}
+  {% if include.club.time %}
+    <li><i class="fa fa-clock-o" aria-hidden="true"></i> Time: {{ include.club.time | date: "%l:%M %Z" }}</li>
+  {% endif %}
+  {% if include.club.location %}
+    <li><i class="fa fa-map-marker" aria-hidden="true"></i> Location: {{ include.club.location }}</li>
+  {% endif %}
+  {% if include.club.website %}
+    <li><i class="fa fa-map-marker" aria-hidden="true"></i> Website: <a href="{{ include.club.website }}">{{ include.club.website }}</a></li>
+  {% endif %}
+  {% if include.club.twitter %}
+    <li><i class="fa fa-map-marker" aria-hidden="true"></i> Twitter: <a href="https://twitter.com/{{ include.club.twitter }}">@{{ include.club.twitter }}</a></li>
+  {% endif %}
+  {% if include.club.facebook %}
+    <li><i class="fa fa-map-marker" aria-hidden="true"></i> Facebook: <a href="{{ include.club.facebook }}">{{ include.club.facebook }}</a></li>
+  {% endif %}
+  {% if include.club.remind %}
+    <li><i class="fa fa-map-marker" aria-hidden="true"></i> Remind: <a href="https://remind.com/join/{{ include.club.remind }}">@{{ include.club.remind }}</a></li>
+  {% endif %}
+</ul>
+{% if include.club.changes %}
+  <p>
+    Changes: {{ include.club.changes | markdownify}}
+  </p>
+{% endif %}
+{% if include.club.description %}
+  <p>
+    {{ include.club.description | markdownify}}
+  </p>
+{% endif %}

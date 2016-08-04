@@ -25,6 +25,9 @@
       <div class="slides">
         {{ content }}
       </div>
+      <div style="align-self: left;bottom: 0;position: fixed;right: 0;font-size: 14px;margin-right: 5px;margin-bottom: 5px;">
+        Last Updated: <time class="timeago" datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: "%A, %B %e, %Y at %r %Z" }}</time>
+      </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/{{ site.versions.revealjs }}/lib/js/head.min.js"></script>
@@ -36,6 +39,8 @@
         history: false,
         autoSlide: 10000,
         loop: true,
+        width: 1280,
+        height: 720,
         transitionSpeed: 'slow',
         dependencies: [
           { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/plugin/markdown/marked.min.js' },

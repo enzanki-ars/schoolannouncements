@@ -12,7 +12,7 @@ script:
 
 deploy:
   provider: script
-  script: ./script/rollbar.sh
+  script: ./script/rollbar
   on:
     branch: master
 

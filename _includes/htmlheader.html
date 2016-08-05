@@ -74,29 +74,6 @@
         
         <script async src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/{{ site.versions.timeago }}/jquery.timeago.min.js"></script>
 
-        <script>
-            jQuery(document).ready(function() {
-              jQuery("time.timeago").timeago();
-              jQuery.timeago.settings.allowFuture = true;
-            });
-            function loadSuccess() {
-                document.getElementById("blockedInfo").innerHTML = "<span class=\"label label-info\">" 
-                    + "YouTube Access Check Succeeded.</span>";
-                var image_x = document.getElementById('blockedImage');
-                image_x.parentNode.removeChild(image_x);
-                ga('send', 'event', "YouTube Success", "YouTube Load Success");
-            }
-            function loadError() {
-                var site = "YouTube";
-                document.getElementById("blockedInfo").innerHTML = "<div class=\"alert alert-danger\" role=\"alert\">"
-                    + "<strong>" + site + " Blocked: </strong>You seem to be accessing this website from a location where "
-                    + site + " is blocked. As part of this website uses items from " + site + ", "
-                    + "please contact your network administrator in order to view this website as intended.</div>";
-                var image_x = document.getElementById('blockedImage');
-                image_x.parentNode.removeChild(image_x);
-                ga('send', 'event', "YouTube Error", "YouTube Load Error");
-            }
-        </script>
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/{{ site.versions.modernizer }}/modernizr.min.js"></script> -->
     </head>
     <body>

@@ -10,6 +10,12 @@ before_script:
 script: 
   - ./script/cibuild
 
+deploy:
+  provider: script
+  script: ./script/rollbar.sh
+  on:
+    branch: master
+
 env:
   global:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true

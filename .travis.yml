@@ -4,15 +4,14 @@ rvm:
   - 2.3.0
 
 before_script:
-  - chmod +x ./script/*
-  - ./script/setup
+  - bash ./script/setup
 
 script: 
-  - ./script/cibuild
+  - bash ./script/cibuild
 
 deploy:
   provider: script
-  script: ./script/rollbar
+  script: bash ./script/rollbar
   on:
     branch: master
 

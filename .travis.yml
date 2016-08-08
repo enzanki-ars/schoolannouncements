@@ -1,20 +1,19 @@
 language: ruby
 cache: bundler
 rvm:
-  - 2.3.0
-
+- 2.3.0
 before_script:
-  - bash ./script/setup
-
-script: 
-  - bash ./script/cibuild
-
+- bash ./script/setup
+script:
+- bash ./script/cibuild
 deploy:
   provider: script
   script: bash ./script/rollbar
   on:
     branch: master
-
 env:
   global:
-    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+notifications:
+  slack:
+    secure: Z1rYKMnY8OTJkHxm6ph0J7Ru7QocCNzP0JWRahoDF7ccPF2dn7nbVFbo7r1my+hy73w206RRA6/21yT6H32wUQCZqx6vZ/W/lFiDgx9tjm7YvLVSYZFPVqv+nrp8jtmWnpVCbNWDeiVCWcsAEpeY91tNw+WW1w/TvKrSCg70Vu2xCjdq1aWw6pCQmPHo1+YXKPcQ77AdKu+dAkZJ03mlai0bC4si0ggRtt8mtj9Pm8P0NYvrkQGFiw94cL32pFQoVbUd/bvSQwipEuMuIxVkObT8hSmrNmWfwhDdVdGkT4nMp+qkDy6lYTg4QZ63+WWKqbRvg6KLy7xotTaYwtrFwZvWr7/sBScTZn2V6PxyadPQWT2xg7wOffXfxkqV44BInb/9LKe4aHrFOQ5fTFns9Zom9azSJiJ9zbzjz+PgtfG0lFmwG1fyFMuM0pyh8S+iEXaE3eoKpEc7DsnXCuQvuATuWhRrhegVsnohZZLbhlzbciBl59LlUeNz+eNVdL5o1IIZ4Fb1zAITvIgj9K6/UD2Bpey0GQDg1aqHrFC4kLvXGEsUJyoArzXrU7TZZJIn7IHF/7VRyq3rOCNiaaFGZ0iL6+OgQhweCgL+rB6EWnQuLJEsKTWvf8+0QkwimprFELAQUvGqZPzJb9bYj/jgCPbicldb42zzv2Ue74PQltk=

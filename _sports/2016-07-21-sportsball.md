@@ -9,7 +9,7 @@ description: >
 result: Win
 score:
   - team: Red
-    points: 4
+    points: 3
   - team: Blue
     points: 5
 ---

@@ -31,11 +31,22 @@
 {% endif %}
 {% if include.sport.score %}
   Score: 
-  <ul>
-    {% for team in include.sport.score %}
-      <li>{{ team.team }}: {{ team.points }}</li>
-    {% endfor %}
-  </ul>
+  <table class="table table-condensed table-hover">
+    <tbody>
+      <tr>
+        <th>Team</th>
+        <th>Points</th>
+      </tr>
+    </tbody>
+    <tbody>
+      {% for team in include.sport.score %}
+        <tr>
+          <td>{{ team.team }}</td>
+          <td>{{ team.points }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
 {% endif %}
 {% if include.sport.awards %}
   <p>

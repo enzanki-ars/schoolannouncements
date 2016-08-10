@@ -38,11 +38,22 @@
 {% if include.sport.score %}
   <section>
     <p>Score:</p>
-    <ul>
-      {% for team in include.sport.score %}
-        <li>{{ team.team }}: {{ team.points }}</li>
-      {% endfor %}
-    </ul>
+    <table>
+      <tbody>
+        <tr>
+          <th>Team</th>
+          <th>Points</th>
+        </tr>
+      </tbody>
+      <tbody>
+        {% for team in include.sport.score %}
+          <tr>
+            <td>{{ team.team }}</td>
+            <td>{{ team.points }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
   </section>
 {% endif %}
 {% if include.sport.awards %}

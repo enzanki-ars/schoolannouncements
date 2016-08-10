@@ -16,20 +16,20 @@
   <td>{{ include.sport.description | default: "" | markdownify}}</td>
   <td>
     <table class="table table-condensed table-hover">
-      {% for team in include.sport.score %}
-        <tbody>
-          <tr>
-            <th>Team</th>
-            <th>Points</th>
-          </tr>
-        </tbody>
-        <tbody>
+      <tbody>
+        <tr>
+          <th>Team</th>
+          <th>Points</th>
+        </tr>
+      </tbody>
+      <tbody>
+        {% for team in include.sport.score %}
           <tr>
             <td>{{ team.team }}</td>
             <td>{{ team.points }}</td>
           </tr>
-        </tbody>
-      {% endfor %}
+        {% endfor %}
+      </tbody>
     </table>
   </td>
   <td>{{ include.sport.awards | default: "" | markdownify}}</td>

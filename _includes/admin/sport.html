@@ -1,29 +1,35 @@
-<th>{{ include.sport.name }}</th>
-<td>{{ include.sport.date | date: "%A, %B %e, %Y" }}</td>
-<td>{{ include.sport.time | date: "%l:%M %Z" }}</td>
-<td>{{ include.sport.location }}</td>
-<td>{{ include.sport.tickets }}</td>
-<td>{{ include.sport.status }}</td>
-<td>{{ include.sport.result }}</td>
-<td>{{ include.sport.changes | markdownify}}</td>
-<td>{{ include.sport.description | markdownify}}</td>
-<td>
-  <table class="table table-condensed table-hover">
-    {% for team in include.sport.score %}
-      <tbody>
-        <tr>
-          <th>Team</th>
-          <th>Points</th>
-        </tr>
-      </tbody>
-      <tbody>
-        <tr>
-          <td>{{ team.team }}</td>
-          <td>{{ team.points }}</td>
-        </tr>
-      </tbody>
-    {% endfor %}
-  </table>
-</td>
-<td>{{ include.sport.awards | markdownify}}</td>
-<td>{{ include.sport.tweet }}</td>
+{% if include.announcement.enabled %}
+<tr class="success">
+{% else %}
+<tr class="danger">
+{% endif %}
+  <th>{{ include.sport.name }}</th>
+  <td>{{ include.sport.date | date: "%A, %B %e, %Y" }}</td>
+  <td>{{ include.sport.time | date: "%l:%M %Z" }}</td>
+  <td>{{ include.sport.location }}</td>
+  <td>{{ include.sport.tickets }}</td>
+  <td>{{ include.sport.status }}</td>
+  <td>{{ include.sport.result }}</td>
+  <td>{{ include.sport.changes | markdownify}}</td>
+  <td>{{ include.sport.description | markdownify}}</td>
+  <td>
+    <table class="table table-condensed table-hover">
+      {% for team in include.sport.score %}
+        <tbody>
+          <tr>
+            <th>Team</th>
+            <th>Points</th>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <td>{{ team.team }}</td>
+            <td>{{ team.points }}</td>
+          </tr>
+        </tbody>
+      {% endfor %}
+    </table>
+  </td>
+  <td>{{ include.sport.awards | markdownify}}</td>
+  <td>{{ include.sport.tweet }}</td>
+</tr>

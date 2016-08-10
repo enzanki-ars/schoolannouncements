@@ -204,7 +204,7 @@
     getHead: function (url, callback) {
       pendingRequests[url] = true;
       var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XmlHttp");
-      xhr.open("HEAD", url, true);
+      xhr.open("HEAD", url + "?reloadtime=" + new Date().getTime(), true);
       xhr.setRequestHeader("Cache-Control", "no-cache");
       xhr.onreadystatechange = function () {
         delete pendingRequests[url];

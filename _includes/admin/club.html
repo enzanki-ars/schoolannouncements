@@ -11,9 +11,21 @@
   <td>{{ include.club.time | default: "" | date: "%l:%M %Z" }}</td>
   <td>{{ include.club.location }}</td>
   <td><a href="{{ include.club.website }}">{{ include.club.website }}</a></td>
-  <td><a href="https://twitter.com/{{ include.club.twitter }}">@{{ include.club.twitter }}</a></td>
-  <td><a href="{{ include.club.facebook }}">{{ include.club.facebook }}</a></td>
-  <td><a href="https://remind.com/join/{{ include.club.remind }}">@{{ include.club.remind }}</a></td>
+  <td>
+    {% if include.club.twitter %}
+      <a href="https://twitter.com/{{ include.club.twitter }}">@{{ include.club.twitter }}</a>
+    {% endif %}
+  </td>
+  <td>
+    {% include.club.facebook %}
+      <a href="{{ include.club.facebook }}">{{ include.club.facebook }}</a>
+    {% endif %}
+  </td>
+  <td>
+    {% include.club.remind %}
+      <a href="https://remind.com/join/{{ include.club.remind }}">@{{ include.club.remind }}</a>
+    {% endif %}
+  </td>
   <td>{{ include.club.changes | default: "" | markdownify}}</td>
   <td>{{ include.club.description | default: "" | markdownify}}</td>
 </tr>

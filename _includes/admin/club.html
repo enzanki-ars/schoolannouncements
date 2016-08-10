@@ -1,17 +1,19 @@
-{% if include.announcement.enabled %}
+{% if include.club.enabled != true %}
+<tr class="danger">
+{% elsif include.club.enabled %}
 <tr class="success">
 {% else %}
-<tr class="danger">
+<tr>
 {% endif %}
-  <th>{{ include.club.name }}</th>
+  <th><a href="{{ include.club.url }}">{{ include.club.name }}</a></th>
   <td>{{ include.club.dates }}</td>
-  <td>{{ include.club.nextdate | date: "%A, %B %e, %Y" }}</td>
-  <td>{{ include.club.time | date: "%l:%M %Z" }}</td>
+  <td>{{ include.club.nextdate | default: "" | date: "%A, %B %e, %Y" }}</td>
+  <td>{{ include.club.time | default: "" | date: "%l:%M %Z" }}</td>
   <td>{{ include.club.location }}</td>
   <td><a href="{{ include.club.website }}">{{ include.club.website }}</a></td>
   <td><a href="https://twitter.com/{{ include.club.twitter }}">@{{ include.club.twitter }}</a></td>
   <td><a href="{{ include.club.facebook }}">{{ include.club.facebook }}</a></td>
   <td><a href="https://remind.com/join/{{ include.club.remind }}">@{{ include.club.remind }}</a></td>
-  <td>{{ include.club.changes | markdownify}}</td>
-  <td>{{ include.club.description | markdownify}}</td>
+  <td>{{ include.club.changes | default: "" | markdownify}}</td>
+  <td>{{ include.club.description | default: "" | markdownify}}</td>
 </tr>

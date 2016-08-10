@@ -1,17 +1,19 @@
-{% if include.announcement.enabled %}
+{% if include.announcement.enabled != true %}
+<tr class="danger">
+{% elsif include.announcement.enabled %}
 <tr class="success">
 {% else %}
-<tr class="danger">
+<tr>
 {% endif %}
-  <th>{{ include.announcement.title }}</th>
-  <td>{{ include.announcement.date | date: "%A, %B %e, %Y" }}</td>
-  <td>{{ include.announcement.time | date: "%l:%M %Z" }}</td>
+  <th><a href="{{ include.announcement.url }}">{{ include.announcement.title }}</a></th>
+  <td>{{ include.announcement.date | default: "" | date: "%A, %B %e, %Y" }}</td>
+  <td>{{ include.announcement.time | default: "" | date: "%l:%M %Z" }}</td>
   <td>{{ include.announcement.location }}</td>
-  <td>{{ include.announcement.changes | markdownify}}</td>
+  <td>{{ include.announcement.changes | default: "" | markdownify  }}</td>
   <td><a href="{{ site.github.url | replace_first:'http://','https://' }}/img/announcement/{{ include.annoucement.picture }}">{{ site.github.url | replace_first:'http://','https://' }}/img/announcement/{{ include.annoucement.picture }}</a></td>
-  <td>{{ include.announcement.picture-alt }}</td>
+  <td>{{ include.announcement.picture-alt | default: "" }}</td>
   <td><a href="{{ include.announcement.video }}">{{ include.announcement.video }}</a></td>
   <td>{{ include.announcement.tweet }}</td>
-  <td>{{ include.announcement.description | markdownify}}</td>
-  <td>{{ include.announcement.extendeddescription | markdownify }}</td>
+  <td>{{ include.announcement.description | default: "" | markdownify }}</td>
+  <td>{{ include.announcement.extendeddescription | default: "" | markdownify }}</td>
 </tr>

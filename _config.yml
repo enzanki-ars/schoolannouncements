@@ -36,6 +36,10 @@ header:
           internal-link: views/text/sports.html 
         - text: Sports Only - Slide View
           internal-link: views/slides/sports.html 
+        - text: List View
+          internal-link: views/admin.html
+        - text: List View - Live
+          internal-link: views/admin-live.html 
     - text: Documentation
       internal-link: docs/index.html
 

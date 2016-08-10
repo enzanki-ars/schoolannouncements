@@ -1,0 +1,17 @@
+{% if include.announcement.enabled %}
+<tr class="success">
+{% elsif %}
+<tr class="danger">
+{% endif %}
+  <th>{{ include.club.name }}</th>
+  <td>{{ include.club.dates }}</td>
+  <td>{{ include.club.nextdate | date: "%A, %B %e, %Y" }}</td>
+  <td>{{ include.club.time | date: "%l:%M %Z" }}</td>
+  <td>{{ include.club.location }}</td>
+  <td><a href="{{ include.club.website }}">{{ include.club.website }}</a></td>
+  <td><a href="https://twitter.com/{{ include.club.twitter }}">@{{ include.club.twitter }}</a></td>
+  <td><a href="{{ include.club.facebook }}">{{ include.club.facebook }}</a></td>
+  <td><a href="https://remind.com/join/{{ include.club.remind }}">@{{ include.club.remind }}</a></td>
+  <td>{{ include.club.changes | markdownify}}</td>
+  <td>{{ include.club.description | markdownify}}</td>
+</tr>

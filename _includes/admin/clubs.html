@@ -1,0 +1,23 @@
+<div class="table-responsive">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Dates</th>
+        <th>Next Date</th>
+        <th>Time</th>
+        <th>Location</th>
+        <th>Website</th>
+        <th>Twitter</th>
+        <th>Facebook</th>
+        <th>Remind</th>
+        <th>Changes</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for club in site.club %}
+        {% include admin/club.html club=club %}
+      {% endfor %}
+	  </tbody>
+  </table>
+</div>

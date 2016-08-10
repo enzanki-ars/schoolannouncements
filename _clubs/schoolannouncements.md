@@ -1,5 +1,6 @@
 ---
 name: School Announcements
+enabled: true
 meetingdates: Everyday
 nextdate: Tommorrow
 location: Online

@@ -1,7 +1,7 @@
 ---
 name: Sportsball
 enabled: true
-time: 9:30am
+time: 9:30am EST
 location: Online
 status: Completed
 description: >

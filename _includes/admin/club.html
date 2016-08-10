@@ -17,12 +17,12 @@
     {% endif %}
   </td>
   <td>
-    {% include.club.facebook %}
+    {% if include.club.facebook %}
       <a href="{{ include.club.facebook }}">{{ include.club.facebook }}</a>
     {% endif %}
   </td>
   <td>
-    {% include.club.remind %}
+    {% if include.club.remind %}
       <a href="https://remind.com/join/{{ include.club.remind }}">@{{ include.club.remind }}</a>
     {% endif %}
   </td>

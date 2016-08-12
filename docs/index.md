@@ -74,7 +74,6 @@ shown on the slideshow.
 title: 
 enabled: 
 date: 
-time: 
 location: 
 changes: 
 description: 
@@ -96,7 +95,6 @@ is visible. By default, this time is 10 seconds.
 name: 
 enabled: 
 date: 
-time: 
 location: 
 tickets: 
 status: 
@@ -117,12 +115,12 @@ tweet:
 ```md
 ---
 name: 
+enabled:
 meetingdates: 
 nextdate: 
 location: 
-time: 
-description: 
 changes: 
+description: 
 website:
 twitter:
 facebook:

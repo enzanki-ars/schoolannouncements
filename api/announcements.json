@@ -1,4 +1,21 @@
 ---
 ---
 
-{{ site.announcements | jsonify }}
+[{% for announcement in site.announcements %}
+  {
+    "url": "{{ announcement.url }}",
+    "title": "{{ announcement.title }}",
+    "draft": {{ announcement.draft }},
+    "enabled": {{ announcement.enabled }},
+    "date": "{{ announcement.date }}",
+    "location": "{{ announcement.location }}",
+    "changes": "{{ announcement.changes | rstrip }}",
+    "description": "{{ announcement.description | rstrip }}",
+    "extendeddescription": "{{ announcement.extendeddescription | rstrip }}",
+    "picture": "{{ announcement.picture }}",
+    "video": "{{ announcement.video }}",
+    "tweet": "{{ announcement.tweet }}",
+    "content": "{{ announcement.content | rstrip }}",
+    "excerpt": "{{ announcement.excerpt | rstrip }}",
+  }{% if forloop.last != true %},{% endif %}
+{% endfor %}]

@@ -1,21 +1,22 @@
 ---
 ---
 
-[
-{% for sport in site.sports %}
+[{% for sport in site.sports %}
   {
     "url": "{{ sport.url }}",
     "name": "{{ sport.name }}",
     "draft": {{ sport.draft }},
-    "enabled": {{ sport.enabled }},
+    "enabled": {{ sport.enabled | default: "true" }},
     "date": "{{ sport.date }}",
     "location": "{{ sport.location }}",
+    "tickets": "{{ sport.tickets }}",
     "status": "{{ sport.status }}",
-    "description": "{{ sport.description | markdownify }}",
+    "description": "{{ sport.description | rstrip }}",
     "result": "{{ sport.result }}",
     "score": {{ sport.score | jsonify }},
-    "content": "{{ sport.content | markdownify }}",
-    "excerpt": "{{ sport.excerpt | markdownify }}",
-  }
-{% endfor %}
-]
+    "awards": "{{ sport.awards }}",
+    "tweet": "{{ sport.tweet }}",
+    "content": "{{ sport.content | rstrip }}",
+    "excerpt": "{{ sport.excerpt | rstrip }}",
+  }{% if forloop.last != true %},{% endif %}
+{% endfor %}]

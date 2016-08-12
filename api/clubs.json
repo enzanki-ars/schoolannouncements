@@ -1,4 +1,20 @@
 ---
 ---
 
-{{ site.clubs | jsonify }}
+[{% for club in site.clubs %}
+  {
+    "url": "{{ club.url }}",
+    "name": "{{ club.name }}",
+    "draft": {{ club.draft }},
+    "enabled": {{ club.enabled }},
+    "meetingdates": "{{ club.meetingdates }}",
+    "nextdate": "{{ club.nextdate }}",
+    "location": "{{ club.location }}",
+    "changes": "{{ club.changes | rstrip }}",
+    "description": "{{ club.description | rstrip }}",
+    "website": "{{ club.website }}",
+    "twitter": "{{ club.twitter }}",
+    "facebook": "{{ club.facebook }}",
+    "remind": "{{ club.remind }}",
+  }{% if forloop.last != true %},{% endif %}
+{% endfor %}]

@@ -18,12 +18,12 @@
 </ul>
 {% if include.sport.changes %}
   <p>
-    Changes: {{ include.sport.changes | markdownify}}
+    Changes: {{ include.sport.changes | markdownify | rstrip}}
   </p>
 {% endif %}
 {% if include.sport.description %}
   <p>
-    {{ include.sport.description | markdownify}}
+    {{ include.sport.description | markdownify | rstrip}}
   </p>
 {% endif %}
 {% if include.sport.score %}
@@ -47,7 +47,7 @@
 {% endif %}
 {% if include.sport.awards %}
   <p>
-    {{ include.sport.awards | markdownify}}
+    {{ include.sport.awards | markdownify | rstrip}}
   </p>
 {% endif %}
 {% if include.sport.tweet %}

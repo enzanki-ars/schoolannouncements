@@ -24,11 +24,11 @@
 </ul>
 {% if include.club.changes %}
   <p>
-    Changes: {{ include.club.changes | markdownify}}
+    Changes: {{ include.club.changes | markdownify | rstrip}}
   </p>
 {% endif %}
 {% if include.club.description %}
   <p>
-    {{ include.club.description | markdownify}}
+    {{ include.club.description | markdownify | rstrip}}
   </p>
 {% endif %}

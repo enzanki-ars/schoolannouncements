@@ -36,7 +36,11 @@ header:
         - text: Sports Only - Text View
           internal-link: views/text/sports.html 
         - text: Sports Only - Slide View
-          internal-link: views/slides/sports.html 
+          internal-link: views/slides/sports.html
+        - text: Clubs Only - Text View
+          internal-link: views/text/clubs.html 
+        - text: Clubs Only - Slide View
+          internal-link: views/slides/clubs.html 
         - text: List View
           internal-link: views/admin.html
         - text: List View - Live

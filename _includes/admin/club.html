@@ -26,6 +26,6 @@
       <a href="https://remind.com/join/{{ include.club.remind }}">@{{ include.club.remind }}</a>
     {% endif %}
   </td>
-  <td>{{ include.club.changes | default: "" | markdownify}}</td>
-  <td>{{ include.club.description | default: "" | markdownify}}</td>
+  <td>{{ include.club.changes | default: "" | markdownify | rstrip}}</td>
+  <td>{{ include.club.description | default: "" | markdownify | rstrip}}</td>
 </tr>

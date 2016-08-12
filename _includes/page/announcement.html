@@ -9,7 +9,7 @@
 </ul>
 {% if include.announcement.changes %}
   <p>
-    Changes: {{ include.announcement.changes | markdownify}}
+    Changes: {{ include.announcement.changes | markdownify | rstrip}}
   </p>
 {% endif %}
 {% if include.announcement.picture %}
@@ -25,12 +25,12 @@
 {% endif %}
 {% if include.announcement.description %}
   <p>
-    {{ include.announcement.description | markdownify}}
+    {{ include.announcement.description | markdownify | rstrip}}
   </p>
 {% endif %}
 {% if include.announcement.extendeddescription %}
   <p>
-    {{ include.announcement.extendeddescription | markdownify }}
+    {{ include.announcement.extendeddescription | markdownify | rstrip }}
   </p>
 {% endif %}
 

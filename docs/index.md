@@ -34,13 +34,17 @@ description: >
 * Anything that starts with a dash (`-`) can be repeated over and over and over...
 It is a list, where each item start with that dash.
 
-* In some cases, you might see text like `[...]`.
-This represents an array. Think of this like a list where each item is separated with 
-a comma. Example: `["Something", "Something Else", "Unknown something"]`
+* In some cases, you might see text like `[...]`. This represents an array. 
+In a yml list, each item is separated with a comma. 
+Example: `["Something", "Something Else", "Unknown something"]`
 
 * All description like fields accept 
 [markdown](https://help.github.com/articles/basic-writing-and-formatting-syntax/).
-In markdown, the asterisk starts a list item. Feel free to use any markdown you wish.
+Markdown includes features such as bold, italics, lists, and more. Feel free to 
+use any markdown you wish.
+
+* Date should be input in the form `YEAR-MONTH-DAY HOUR:MINUTESam/pm`. 
+Example: `2016-07-21 1:00pm` 
 
 ## Data Files
 
@@ -58,7 +62,7 @@ birthdays:
   belated: [...]
   today: [...]
   weekend: [...]
-  break: [...]
+  holiday: [...]
 ```
 
 ### _announcements/year-month-day-title.md
@@ -85,10 +89,10 @@ tweet:
 ---
 ```
 
-### _sports/date-sportsname.md
+### _sports/year-month-day-sportsname.md
 
-`slidetime:` is use to extend the default time that the description slide 
-is visible. By default, this time is 10 seconds.
+`slidetime:` is use to extend the default time that the description slide is 
+visible. By default, this time is 10 seconds.
 
 ```md
 ---

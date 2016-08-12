@@ -21,14 +21,14 @@
 {% if include.sport.changes %}
   <section>
     <p>
-      Changes: {{ include.sport.changes | markdownify}}
+      Changes: {{ include.sport.changes | markdownify | rstrip}}
     </p>
   </section>
 {% endif %}
 {% if include.sport.description %}
   <section data-autoslide="{{ include.sport.slidetime | defualt: 10000 }}">
     <p>
-      {{ include.sport.description | markdownify}}
+      {{ include.sport.description | markdownify | rstrip}}
     </p>
   </section>
 {% endif %}
@@ -56,7 +56,7 @@
 {% if include.sport.awards %}
   <section>
     <p>
-      {{ include.sport.awards | markdownify}}
+      {{ include.sport.awards | markdownify | rstrip}}
     </p>
   </section>
 {% endif %}

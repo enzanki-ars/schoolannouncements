@@ -1,7 +1,7 @@
 <h3>{{ include.sport.name }}</h3>
 <ul>
   {% if include.sport.date %}
-    <li><i class="fa fa-calendar" aria-hidden="true"></i> Date: <time class="timeago" datetime="{{ include.sport.date | date_to_xmlschema }}">{{ include.sport.date | date: "%A, %B %e, %Y %l:%M%P %Z" }}</time></li>
+    <li><i class="fa fa-calendar" aria-hidden="true"></i> Date: {{ include.sport.date | date: "%A, %B %e, %Y %l:%M%P %Z" }} (<time class="timeago" datetime="{{ include.sport.date | date_to_xmlschema }}">{{ include.sport.date | date: "%A, %B %e, %Y %l:%M%P %Z" }}</time>)</li>
   {% endif %}
   {% if include.sport.location %}
     <li><i class="fa fa-map-marker" aria-hidden="true"></i> Location: {{ include.sport.location }}</li>

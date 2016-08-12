@@ -1,3 +1,3 @@
 # School Announcemnt System
 
-Version: 0.0.1
+Version: 1.0.0-alpha.1

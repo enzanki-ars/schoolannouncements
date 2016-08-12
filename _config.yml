@@ -1,6 +1,7 @@
 title: "School Announcements - DEMO"
 description: "Demo for School Announcements"
-repository: schoolannouncements/schoolannouncements.github.io
+repository: schoolnews/schoolnews.github.io
+timezone: America/New_York
 
 versions:
   bootstrap: 3.3.6
@@ -42,7 +43,6 @@ header:
           internal-link: views/admin-live.html 
     - text: Documentation
       internal-link: docs/index.html
-
   right-header:
     - text: Privacy
       internal-link: privacy.html
@@ -80,4 +80,5 @@ gems:
   - jekyll-feed
   - jekyll-redirect-from
   - jekyll-github-metadata
+  - jekyll-paginate
 

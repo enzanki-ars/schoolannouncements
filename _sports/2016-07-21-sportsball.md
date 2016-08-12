@@ -1,7 +1,7 @@
 ---
 name: Sportsball
 enabled: true
-time: 9:30am EST
+date: 2016-07-21 9:30am
 location: Online
 status: Completed
 description: >

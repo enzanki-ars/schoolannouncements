@@ -2,7 +2,7 @@
 name: School Announcements
 enabled: true
 meetingdates: Everyday
-nextdate: Tommorrow
+nextdate: 2016-07-21 1:00pm
 location: Online
 time: All day
 description: Help make this project better!

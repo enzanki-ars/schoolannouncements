@@ -2,10 +2,7 @@
 <section>
   <ul>
     {% if include.announcement.date %}
-      <li><i class="fa fa-calendar" aria-hidden="true"></i> Date: {{ include.announcement.date | date: "%A, %B %e, %Y" }}</li>
-    {% endif %}
-    {% if include.announcement.time %}
-      <li><i class="fa fa-clock-o" aria-hidden="true"></i> Time: {{ include.announcement.time | date: "%l:%M %Z" }}</li>
+      <li><i class="fa fa-calendar" aria-hidden="true"></i> Date: <time class="timeago" datetime="{{ include.announcement.date | date_to_xmlschema }}">{{ include.announcement.date | date: "%A, %B %e, %Y %l:%M%P %Z" }}</time></li>
     {% endif %}
     {% if include.announcement.location %}
       <li><i class="fa fa-map-marker" aria-hidden="true"></i> Location: {{ include.announcement.location }}</li>

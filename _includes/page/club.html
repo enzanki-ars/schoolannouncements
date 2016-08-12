@@ -4,10 +4,7 @@
     <li><i class="fa fa-calendar" aria-hidden="true"></i> Meeting Dates: {{ include.club.dates }}</li>
   {% endif %}
   {% if include.club.nextdate %}
-    <li><i class="fa fa-calendar" aria-hidden="true"></i> Next Date: {{ include.club.nextdate | date: "%A, %B %e, %Y" }}</li>
-  {% endif %}
-  {% if include.club.time %}
-    <li><i class="fa fa-clock-o" aria-hidden="true"></i> Time: {{ include.club.time | date: "%l:%M %Z" }}</li>
+    <li><i class="fa fa-calendar" aria-hidden="true"></i> Next Date: <time class="timeago" datetime="{{ include.club.nextdate | date_to_xmlschema }}">{{ include.club.nextdate | date: "%A, %B %e, %Y %l:%M%P %Z" }}</time></li>
   {% endif %}
   {% if include.club.location %}
     <li><i class="fa fa-map-marker" aria-hidden="true"></i> Location: {{ include.club.location }}</li>

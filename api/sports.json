@@ -1,4 +1,21 @@
 ---
 ---
 
-{{ site.sports | jsonify }}
+[
+{% for sport in site.sports %}
+  {
+    "url": "{{ sport.url }}",
+    "name": "{{ sport.name }}",
+    "draft": {{ sport.draft }},
+    "enabled": {{ sport.enabled }},
+    "date": "{{ sport.date }}",
+    "location": "{{ sport.location }}",
+    "status": "{{ sport.status }}",
+    "description": "{{ sport.description | markdownify }}",
+    "result": "{{ sport.result }}",
+    "score": {{ sport.score | jsonify }},
+    "content": "{{ sport.content | markdownify }}",
+    "excerpt": "{{ sport.excerpt | markdownify }}",
+  }
+{% endfor %}
+]

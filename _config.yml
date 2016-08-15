@@ -8,7 +8,7 @@ versions:
   font-awesome: 4.6.3
   jquery: 2.2.4
   modernizer: 2.8.3
-  autotrack: 1.0.0
+  autotrack: 1.0.1
   revealjs: 3.3.0
   timeago: 1.5.3
 

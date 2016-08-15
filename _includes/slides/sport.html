@@ -2,19 +2,19 @@
 <section>
   <ul>
     {% if include.sport.date %}
-      <li><i class="fa fa-calendar" aria-hidden="true"></i> Date: {{ include.sport.date | date: "%A, %B %e, %Y %l:%M%P %Z" }} (<time class="timeago" datetime="{{ include.sport.date | date_to_xmlschema }}">{{ include.sport.date | date: "%A, %B %e, %Y %l:%M%P %Z" }}</time>)</li>
+      <li><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> Date: {{ include.sport.date | date: "%A, %B %e, %Y %l:%M%P %Z" }} (<time class="timeago" datetime="{{ include.sport.date | date_to_xmlschema }}">{{ include.sport.date | date: "%A, %B %e, %Y %l:%M%P %Z" }}</time>)</li>
     {% endif %}
     {% if include.sport.location %}
-      <li><i class="fa fa-map-marker" aria-hidden="true"></i> Location: {{ include.sport.location }}</li>
+      <li><i class="fa fa-map-marker fa-fw" aria-hidden="true"></i> Location: {{ include.sport.location }}</li>
     {% endif %}
     {% if include.sport.tickets %}
-      <li><i class="fa fa-ticket" aria-hidden="true"></i> Tickets: {{ include.sport.tickets }}</li>
+      <li><i class="fa fa-ticket fa-fw" aria-hidden="true"></i> Tickets: {{ include.sport.tickets }}</li>
     {% endif %}
     {% if include.sport.status %}
-      <li><i class="fa fa-question-circle-o" aria-hidden="true"></i> Status: {{ include.sport.status }}</li>
+      <li><i class="fa fa-question-circle-o fa-fw" aria-hidden="true"></i> Status: {{ include.sport.status }}</li>
     {% endif %}
     {% if include.sport.result %}
-      <li><i class="fa fa-flag-checkered" aria-hidden="true"></i> Result: {{ include.sport.result }}</li>
+      <li><i class="fa fa-flag-checkered fa-fw" aria-hidden="true"></i> Result: {{ include.sport.result }}</li>
     {% endif %}
   </ul>
 </section>

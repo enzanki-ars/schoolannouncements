@@ -1,25 +1,25 @@
 <h3>{{ include.club.name }}</h3>
 <ul>
   {% if include.club.meetingdates %}
-    <li><i class="fa fa-calendar" aria-hidden="true"></i> Meeting Dates: {{ include.club.dates }}</li>
+    <li><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> Meeting Dates: {{ include.club.dates }}</li>
   {% endif %}
   {% if include.club.nextdate %}
-    <li><i class="fa fa-calendar" aria-hidden="true"></i> Next Date: {{ include.club.nextdate | date: "%A, %B %e, %Y %l:%M%P %Z" }} (<time class="timeago" datetime="{{ include.club.nextdate | date_to_xmlschema }}">{{ include.club.nextdate | date: "%A, %B %e, %Y %l:%M%P %Z" }}</time>)</li>
+    <li><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> Next Date: {{ include.club.nextdate | date: "%A, %B %e, %Y %l:%M%P %Z" }} (<time class="timeago" datetime="{{ include.club.nextdate | date_to_xmlschema }}">{{ include.club.nextdate | date: "%A, %B %e, %Y %l:%M%P %Z" }}</time>)</li>
   {% endif %}
   {% if include.club.location %}
-    <li><i class="fa fa-map-marker" aria-hidden="true"></i> Location: {{ include.club.location }}</li>
+    <li><i class="fa fa-map-marker fa-fw" aria-hidden="true"></i> Location: {{ include.club.location }}</li>
   {% endif %}
   {% if include.club.website %}
-    <li><i class="fa fa-map-marker" aria-hidden="true"></i> Website: <a href="{{ include.club.website }}">{{ include.club.website }}</a></li>
+    <li><i class="fa fa-globe fa-fw" aria-hidden="true"></i> Website: <a href="{{ include.club.website }}">{{ include.club.website }}</a></li>
   {% endif %}
   {% if include.club.twitter %}
-    <li><i class="fa fa-map-marker" aria-hidden="true"></i> Twitter: <a href="https://twitter.com/{{ include.club.twitter }}">@{{ include.club.twitter }}</a></li>
+    <li><i class="fa fa-twitter fa-fw" aria-hidden="true"></i> Twitter: <a href="https://twitter.com/{{ include.club.twitter }}">@{{ include.club.twitter }}</a></li>
   {% endif %}
   {% if include.club.facebook %}
-    <li><i class="fa fa-map-marker" aria-hidden="true"></i> Facebook: <a href="{{ include.club.facebook }}">{{ include.club.facebook }}</a></li>
+    <li><i class="fa fa-facebook fa-fw" aria-hidden="true"></i> Facebook: <a href="{{ include.club.facebook }}">{{ include.club.facebook }}</a></li>
   {% endif %}
   {% if include.club.remind %}
-    <li><i class="fa fa-map-marker" aria-hidden="true"></i> Remind: <a href="https://remind.com/join/{{ include.club.remind }}">@{{ include.club.remind }}</a></li>
+    <li><i class="fa fa-cloud fa-fw" aria-hidden="true"></i> Remind: <a href="https://remind.com/join/{{ include.club.remind }}">@{{ include.club.remind }}</a></li>
   {% endif %}
 </ul>
 {% if include.club.changes %}

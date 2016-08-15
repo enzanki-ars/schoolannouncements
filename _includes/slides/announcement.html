@@ -1,11 +1,11 @@
 <h2>{{include.announcement.title}}</h2>
 <section>
-  <ul>
+  <ul class="fa-ul">
     {% if include.announcement.date %}
-      <li><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> Date: {{ include.announcement.date | date: "%A, %B %e, %Y %l:%M%P %Z" }} (<time class="timeago" datetime="{{ include.announcement.date | date_to_xmlschema }}">{{ include.announcement.date | date: "%A, %B %e, %Y %l:%M%P %Z" }}</time>)</li>
+      <li><i class="fa-li fa fa-calendar fa-fw" aria-hidden="true"></i> Date: {{ include.announcement.date | date: "%A, %B %e, %Y %l:%M%P %Z" }} (<time class="timeago" datetime="{{ include.announcement.date | date_to_xmlschema }}">{{ include.announcement.date | date: "%A, %B %e, %Y %l:%M%P %Z" }}</time>)</li>
     {% endif %}
     {% if include.announcement.location %}
-      <li><i class="fa fa-map-marker fa-fw" aria-hidden="true"></i> Location: {{ include.announcement.location }}</li>
+      <li><i class="fa-li fa fa-map-marker fa-fw" aria-hidden="true"></i> Location: {{ include.announcement.location }}</li>
     {% endif %}
   </ul>
 </section>

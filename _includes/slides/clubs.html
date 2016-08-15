@@ -1,0 +1,7 @@
+{% for club in site.clubs %}
+  {% if club.enabled %}
+    <section>
+      {% include slides/club.html club=club %}
+    </section>
+  {% endif %}
+{% endfor %}

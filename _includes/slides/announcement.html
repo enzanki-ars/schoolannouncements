@@ -1,4 +1,9 @@
-<h2>{{include.announcement.title}}</h2>
+<h3>
+  {% if include.announcement.changes %}
+    <span class="label label-warning">Changed</span> - 
+  {% endif %}
+  {{ include.announcement.title}}
+</h3>
 <section>
   <ul class="fa-ul">
     {% if include.announcement.date %}
@@ -12,7 +17,7 @@
 {% if include.announcement.changes %}
   <section>
     <p>
-      Changes: {{ include.announcement.changes | markdownify | rstrip}}
+       <strong>Changes:</strong> {{ include.announcement.changes | markdownify | rstrip}}
     </p>
   </section>
 {% endif %}

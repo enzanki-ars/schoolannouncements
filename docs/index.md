@@ -4,6 +4,12 @@ layout: default
 
 # Documentation
 
+<div class="alert alert-info" role="alert">
+  <strong>Overwhelmed? </strong> Don't worry! Just click <a href="{{ site.github.issues_url }}">here</a>
+  and create a new issue documenting exactly what you would like included on the site. 
+  We can take care of the rest!
+</div>
+
 ## Usage/Editing
 
 Editing a site like this is a little different than most people would expect.
@@ -12,6 +18,9 @@ need to be changed, you simply have to look at the files in the `_data`
 directory. The rest of this page provides examples representing every possible 
 field that can be used in the file. In the examples below, many of these fields 
 are optional. If you do not require that field, just skip adding that line.
+
+Look at the existing files in [this project's repository code]({{ site.github.repository_url }}) 
+for some examples. 
 
 **Some important notes:** 
 
@@ -59,15 +68,20 @@ Shown in order of appearance in views.
 
 ```yml
 wordofthemonth: 
-pastwordofthemonthwinners:
-  - word: 
-    names: [...]
-
+  color:
+  word: 
+  description: 
+  winners: [...]
+  next: 
+  nextdescription: 
+  
 birthdays:
+  color: LightPink
   belated: [...]
   today: [...]
   weekend: [...]
-  holiday: [...]
+  breakname: ...
+  break: [...]
 ```
 
 ### _announcements/year-month-day-title.md

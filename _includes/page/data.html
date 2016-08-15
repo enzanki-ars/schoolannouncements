@@ -1,41 +1,67 @@
 {% if site.data.other.wordofthemonth %}
-  <h2>Word of the Month</h2>
+  <h3>Word of the Month: {{ site.data.other.wordofthemonth.word }}</h3>
   <p>
-    Word of the month: {{ site.data.other.wordofthemonth }}
+    {{ site.data.other.wordofthemonth.description }}
   </p>
+  {% if site.data.other.wordofthemonth.winners %}
+    <strong>Congratulations to: </strong>
+    <ul class="fa-ul">
+      {% for person in site.data.other.wordofthemonth.winners %}
+        <li><i class="fa-li fa fa-trophy fa-fw" aria-hidden="true"></i>{{ person }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  {% if site.data.other.wordofthemonth.next %}
+    <strong>Next Word of the Month: {{ site.data.other.wordofthemonth.next }}</strong>
+    <p>
+      {{ site.data.other.wordofthemonth.nextdescription }}
+    </p>
+  {% endif %}
 {% endif %}
 {% if site.data.other.birthdays %}
-  <h2>Birthdays</h2>
-  {% if site.data.other.birthdays.belated %}
-    <p>Happy Belated Birthday to: </p>
-    <ul class="fa-ul">
-      {% for person in site.data.other.birthdays.belated %}
-        <li><i class="fa-li fa fa-birthday-cake fa-fw" aria-hidden="true"></i>{{ person }}</li>
-      {% endfor %}
-    </ul>
-  {% endif %}
-  {% if site.data.other.birthdays.today %}
-    <p>Happy Birthday to: </p>
-    <ul class="fa-ul">
-      {% for person in site.data.other.birthdays.today %}
-        <li><i class="fa-li fa fa-birthday-cake fa-fw" aria-hidden="true"></i>{{ person }}</li>
-      {% endfor %}
-    </ul>
-  {% endif %}
-  {% if site.data.other.birthdays.weekend %}
-    <p>Happy Weekend Birthday to: </p>
-    <ul class="fa-ul">
-      {% for person in site.data.other.birthdays.weekend %}
-        <li><i class="fa-li fa fa-birthday-cake fa-fw" aria-hidden="true"></i>{{ person }}</li>
-      {% endfor %}
-    </ul>
-  {% endif %}
-  {% if site.data.other.birthdays.holiday %}
-    <p>Happy Holiday Birthday to: </p>
-    <ul class="fa-ul">
-      {% for person in site.data.other.birthdays.holiday %}
-        <li><i class="fa-li fa fa-birthday-cake fa-fw" aria-hidden="true"></i>{{ person }}</li>
-      {% endfor %}
-    </ul>
-  {% endif %}
+  <div class="container-fluid">
+    <div class="row">
+      <h2>Birthdays</h2>
+      {% if site.data.other.birthdays.belated %}
+        <div class="col-md-3">
+          <strong>Happy Belated Birthday to: </strong>
+          <ul class="fa-ul">
+            {% for person in site.data.other.birthdays.belated %}
+              <li><i class="fa-li fa fa-birthday-cake fa-fw" aria-hidden="true"></i>{{ person }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+      {% if site.data.other.birthdays.today %}
+        <div class="col-md-3">
+          <strong>Happy Birthday to: </strong>
+          <ul class="fa-ul">
+            {% for person in site.data.other.birthdays.today %}
+              <li><i class="fa-li fa fa-birthday-cake fa-fw" aria-hidden="true"></i>{{ person }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+      {% if site.data.other.birthdays.weekend %}
+        <div class="col-md-3">
+          <strong>Happy Weekend Birthday to: </strong>
+          <ul class="fa-ul">
+            {% for person in site.data.other.birthdays.weekend %}
+              <li><i class="fa-li fa fa-birthday-cake fa-fw" aria-hidden="true"></i>{{ person }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+      {% if site.data.other.birthdays.break %}
+        <div class="col-md-3">
+          <strong>Happy {{ site.data.other.birthdays.breakname }} Birthday to: </strong>
+          <ul class="fa-ul">
+            {% for person in site.data.other.birthdays.break %}
+              <li><i class="fa-li fa fa-birthday-cake fa-fw" aria-hidden="true"></i>{{ person }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+    </div>
+  </div>
 {% endif %}

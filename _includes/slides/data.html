@@ -1,13 +1,41 @@
 {% if site.data.other.wordofthemonth %}
-  <section data-autoslide="5000">
-    <h2>Word of the Month</h2>
-    <p>
-      Word of the month: {{ site.data.other.wordofthemonth }}
-    </p>
+  {% if site.data.other.wordofthemonth.color %}
+  <section data-background="{{ site.data.other.wordofthemonth.color }}">
+  {% else %}
+  <section>
+  {% endif %}
+    <section>
+      <h2>Word of the Month: {{ site.data.other.wordofthemonth.word }}</h2>
+      <p>
+        {{ site.data.other.wordofthemonth.description }}
+      </p>
+    </section>
+    {% if site.data.other.wordofthemonth.winners %}
+      <section>
+        <h3>Congratulations to: </h3>
+        <ul class="fa-ul">
+          {% for person in site.data.other.wordofthemonth.winners %}
+            <li><i class="fa-li fa fa-trophy fa-fw" aria-hidden="true"></i>{{ person }}</li>
+          {% endfor %}
+        </ul>
+      </section>
+    {% endif %}
+    {% if site.data.other.wordofthemonth.next %}
+      <section>
+        <h3>Next Word of the Month: {{ site.data.other.wordofthemonth.next }}</h3>
+        <p>
+          {{ site.data.other.wordofthemonth.nextdescription }}
+        </p>
+      </section>
+    {% endif %}
   </section>
 {% endif %}
 {% if site.data.other.birthdays %}
+  {% if site.data.other.birthdays.color %}
+  <section data-background="{{ site.data.other.birthdays.color }}">
+  {% else %}
   <section>
+  {% endif %}
     <h2>Birthdays</h2>
     {% if site.data.other.birthdays.belated %}
       <section>
@@ -39,15 +67,15 @@
         </ul>
       </section>
     {% endif %}
-    {% if site.data.other.birthdays.holiday %}
+    {% if site.data.other.birthdays.break %}
       <section>
-        <p>Happy Holiday Birthday to: </p>
+        <h3>Happy {{ site.data.other.birthdays.breakname }} Birthday to: </h3>
         <ul class="fa-ul">
-          {% for person in site.data.other.birthdays.holiday %}
+          {% for person in site.data.other.birthdays.break %}
             <li><i class="fa-li fa fa-birthday-cake fa-fw" aria-hidden="true"></i>{{ person }}</li>
           {% endfor %}
         </ul>
       </section>
-      {% endif %}
+    {% endif %}
   </section>
 {% endif %}

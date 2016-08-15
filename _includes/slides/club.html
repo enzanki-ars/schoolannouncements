@@ -1,4 +1,9 @@
-<h2>{{ include.club.name }}</h2>
+<h3>
+  {% if include.club.changes %}
+    <span class="label label-warning">Changed</span> - 
+  {% endif %}
+  {{ include.club.name }}
+</h3>
 <section>
   <ul class="fa-ul">
     {% if include.club.meetingdates %}
@@ -27,7 +32,7 @@
 {% if include.club.changes %}
   <section>
     <p>
-      Changes: {{ include.club.changes | markdownify | rstrip}}
+      <strong>Changes:</strong> {{ include.club.changes | markdownify | rstrip}}
     </p>
   </section>
 {% endif %}

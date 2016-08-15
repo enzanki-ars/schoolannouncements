@@ -1,4 +1,9 @@
-<h3>{{ include.club.name }}</h3>
+<h3>
+  {% if include.club.changes %}
+    <span class="label label-warning">Changed</span> - 
+  {% endif %}
+  {{ include.club.name }}
+</h3>
 <ul class="fa-ul">
   {% if include.club.meetingdates %}
     <li><i class="fa-li fa fa-calendar fa-fw" aria-hidden="true"></i> Meeting Dates: {{ include.club.dates }}</li>
@@ -23,9 +28,9 @@
   {% endif %}
 </ul>
 {% if include.club.changes %}
-  <p>
-    Changes: {{ include.club.changes | markdownify | rstrip}}
-  </p>
+  <div class="bg-warning">
+    <strong>Changes:</strong> {{ include.club.changes | markdownify | rstrip}}
+  </div>
 {% endif %}
 {% if include.club.description %}
   <p>

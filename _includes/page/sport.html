@@ -1,4 +1,9 @@
-<h3>{{ include.sport.name }}</h3>
+<h3>
+  {% if include.sport.changes %}
+    <span class="label label-warning">Changed</span> - 
+  {% endif %}
+  {{ include.sport.name }}
+</h3>
 <ul class="fa-ul">
   {% if include.sport.date %}
     <li><i class="fa-li fa fa-calendar fa-fw" aria-hidden="true"></i> Date: {{ include.sport.date | date: "%A, %B %e, %Y %l:%M%P %Z" }} (<time class="timeago" datetime="{{ include.sport.date | date_to_xmlschema }}">{{ include.sport.date | date: "%A, %B %e, %Y %l:%M%P %Z" }}</time>)</li>
@@ -17,9 +22,9 @@
   {% endif %}
 </ul>
 {% if include.sport.changes %}
-  <p>
-    Changes: {{ include.sport.changes | markdownify | rstrip}}
-  </p>
+  <div class="bg-warning">
+    <strong>Changes:</strong> {{ include.sport.changes | markdownify | rstrip}}
+  </div>
 {% endif %}
 {% if include.sport.description %}
   <p>

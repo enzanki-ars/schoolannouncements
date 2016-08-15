@@ -43,8 +43,13 @@ Example: `["Something", "Something Else", "Unknown something"]`
 Markdown includes features such as bold, italics, lists, and more. Feel free to 
 use any markdown you wish.
 
-* Date should be input in the form `YEAR-MONTH-DAY HOUR:MINUTESam/pm`. 
+* `date:` should be input in the form `YEAR-MONTH-DAY HOUR:MINUTESam/pm`. 
 Example: `2016-07-21 1:00pm` 
+
+* `color:` can be any color you wish to use for the background of the slide. 
+You can use any [named colors](https://en.wikipedia.org/wiki/Web_colors#X11_color_names),
+or you can use a [hex triplet](https://en.wikipedia.org/wiki/Web_colors#Hex_triplet).
+
 
 ## Data Files
 
@@ -77,6 +82,7 @@ shown on the slideshow.
 ---
 title: 
 enabled: 
+color: 
 date: 
 location: 
 changes: 
@@ -98,6 +104,7 @@ visible. By default, this time is 10 seconds.
 ---
 name: 
 enabled: 
+color: 
 date: 
 location: 
 tickets: 
@@ -120,6 +127,7 @@ tweet:
 ---
 name: 
 enabled:
+color:
 meetingdates: 
 nextdate: 
 location: 

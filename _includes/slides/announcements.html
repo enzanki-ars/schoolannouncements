@@ -1,6 +1,10 @@
 {% for announcement in site.announcements %}
   {% if announcement.enabled %}
+    {% if announcement.color %}
+    <section data-background="{{ announcement.color }}">
+    {% else %}
     <section>
+    {% endif %}
       {% include slides/announcement.html announcement=announcement %}
     </section>
   {% endif %}

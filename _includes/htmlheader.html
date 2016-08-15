@@ -73,8 +73,8 @@
         <script src="https://code.jquery.com/jquery-{{ site.versions.jquery }}.min.js"></script>
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/{{ site.versions.bootstrap }}/css/bootstrap.min.css" crossorigin="anonymous">
-        {% if site.theme %}
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/{{ site.versions.bootstrap }}/{{ site.theme }}/bootstrap.min.css" crossorigin="anonymous">    
+        {% if page.theme or site.theme %}
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/{{ site.versions.bootstrap }}/{{ page.theme | default: site.theme }}/bootstrap.min.css" crossorigin="anonymous">    
         {% endif %}
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/{{ site.versions.font-awesome }}/css/font-awesome.min.css" crossorigin="anonymous">
         <link rel="stylesheet" href="{{ site.github.url | replace_first:'http://','https://' }}/css/main.css">

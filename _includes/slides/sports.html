@@ -1,6 +1,10 @@
 {% for sport in site.sports %}
   {% if sport.enabled %}
+    {% if sport.color %}
+    <section data-background="{{ sport.color }}">
+    {% else %}
     <section>
+    {% endif %}
       {% include slides/sport.html sport=sport %}
     </section>
   {% endif %}

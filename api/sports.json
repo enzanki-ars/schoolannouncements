@@ -7,6 +7,7 @@
     "name": "{{ sport.name }}",
     "draft": {{ sport.draft }},
     "enabled": {{ sport.enabled | default: "true" }},
+    "color": "{{ sport.color }}",
     "date": "{{ sport.date }}",
     "location": "{{ sport.location }}",
     "tickets": "{{ sport.tickets }}",

@@ -1,6 +1,10 @@
 {% for club in site.clubs %}
   {% if club.enabled %}
+    {% if club.color %}
+    <section data-background="{{ club.color }}">
+    {% else %}
     <section>
+    {% endif %}
       {% include slides/club.html club=club %}
     </section>
   {% endif %}

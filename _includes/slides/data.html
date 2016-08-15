@@ -12,9 +12,9 @@
     {% if site.data.other.birthdays.belated %}
       <section>
         <h3>Happy Belated Birthday to: </h3>
-        <ul>
+        <ul class="fa-ul">
           {% for person in site.data.other.birthdays.belated %}
-            <li>{{ person }}</li>
+            <li><i class="fa-li fa fa-birthday-cake fa-fw" aria-hidden="true"></i>{{ person }}</li>
           {% endfor %}
         </ul>
       </section>
@@ -22,9 +22,9 @@
     {% if site.data.other.birthdays.today %}
       <section>
         <h3>Happy Birthday to: </h3>
-        <ul>
+        <ul class="fa-ul">
           {% for person in site.data.other.birthdays.today %}
-            <li>{{ person }}</li>
+            <li><i class="fa-li fa fa-birthday-cake fa-fw" aria-hidden="true"></i>{{ person }}</li>
           {% endfor %}
         </ul>
       </section>
@@ -32,9 +32,9 @@
     {% if site.data.other.birthdays.weekend %}
       <section>
         <h3>Happy Weekend Birthday to: </h3>
-        <ul>
+        <ul class="fa-ul">
           {% for person in site.data.other.birthdays.weekend %}
-            <li>{{ person }}</li>
+            <li><i class="fa-li fa fa-birthday-cake fa-fw" aria-hidden="true"></i>{{ person }}</li>
           {% endfor %}
         </ul>
       </section>
@@ -42,9 +42,9 @@
     {% if site.data.other.birthdays.holiday %}
       <section>
         <p>Happy Holiday Birthday to: </p>
-        <ul>
+        <ul class="fa-ul">
           {% for person in site.data.other.birthdays.holiday %}
-            <li>{{ person }}</li>
+            <li><i class="fa-li fa fa-birthday-cake fa-fw" aria-hidden="true"></i>{{ person }}</li>
           {% endfor %}
         </ul>
       </section>

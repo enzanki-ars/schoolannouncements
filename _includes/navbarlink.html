@@ -1,24 +1,6 @@
-{% if include.link.dropdown %}
-  <li class="dropdown">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ include.link.text }}<span class="caret"></span></a>
-    <ul class="dropdown-menu">
-      {% for dropdown in include.link.dropdown %}
-      <li>
-        {% if dropdown.internal-link %}
-          <a href="{{ site.github.url | replace_first:'http://','https://' }}/{{ dropdown.internal-link }}">{{ dropdown.text }}</a>
-        {% else %}
-          <a href="{{ dropdown.external-link }}">{{ dropdown.text }}</a>
-        {% endif %}
-      </li>
-      {% endfor %}
-    </ul>
-  </li>
+{% if include.link.internal-link %}
+  <a class="nav-item nav-link" href="{{ site.github.url | replace_first:'http://','https://' }}/{{ include.link.internal-link }}">{{ include.link.text }}</a>
 {% else %}
-  <li>
-    {% if include.link.internal-link %}
-      <a href="{{ site.github.url | replace_first:'http://','https://' }}/{{ include.link.internal-link }}">{{ include.link.text }}</a>
-    {% else %}
-      <a href="{{ include.link.external-link }}">{{ include.link.text }}</a>
-    {% endif %}
-  </li>
+  <a class="nav-item nav-link" href="{{ include.link.external-link }}">{{ include.link.text }}</a>
 {% endif %}
+

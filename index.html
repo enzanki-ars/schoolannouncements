@@ -3,18 +3,19 @@ layout: default
 ---
 
 <div class="jumbotron">
-  <h1>School Announcements</h1>
-  <p>
+  <h1 class="display-3">School Announcements</h1>
+  <p class="lead">
     Demo for school announcement management system.
   </p>
-  <p>
+  <hr class="m-y-2">
+  <p class="lead">
     <div class="btn-group">
       <button type="button" class="btn btn-primary dropdown-toggle btn-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         All Announcements <span class="caret"></span>
       </button>
       <ul class="dropdown-menu">
-        <li><a href="{{ site.github.url | replace_first:'http://','https://' }}/views/text/all.html">Text View</a></li>
-        <li><a href="{{ site.github.url | replace_first:'http://','https://' }}/views/slides/all.html">Slide View</a></li>
+        <li><a class="dropdown-item" href="{{ site.github.url | replace_first:'http://','https://' }}/views/text/all.html">Text View</a></li>
+        <li><a class="dropdown-item" href="{{ site.github.url | replace_first:'http://','https://' }}/views/slides/all.html">Slide View</a></li>
       </ul>
     </div>
     <div class="btn-group">
@@ -22,8 +23,8 @@ layout: default
         Announcements Only <span class="caret"></span>
       </button>
       <ul class="dropdown-menu">
-        <li><a href="{{ site.github.url | replace_first:'http://','https://' }}/views/text/announcements.html">Text View</a></li>
-        <li><a href="{{ site.github.url | replace_first:'http://','https://' }}/views/slides/announcements.html">Slide View</a></li>
+        <li><a class="dropdown-item" href="{{ site.github.url | replace_first:'http://','https://' }}/views/text/announcements.html">Text View</a></li>
+        <li><a class="dropdown-item" href="{{ site.github.url | replace_first:'http://','https://' }}/views/slides/announcements.html">Slide View</a></li>
       </ul>
     </div>
     <div class="btn-group">
@@ -31,8 +32,8 @@ layout: default
         Sports Only <span class="caret"></span>
       </button>
       <ul class="dropdown-menu">
-        <li><a href="{{ site.github.url | replace_first:'http://','https://' }}/views/text/sports.html">Text View</a></li>
-        <li><a href="{{ site.github.url | replace_first:'http://','https://' }}/views/slides/sports.html">Slide View</a></li>
+        <li><a class="dropdown-item" href="{{ site.github.url | replace_first:'http://','https://' }}/views/text/sports.html">Text View</a></li>
+        <li><a class="dropdown-item" href="{{ site.github.url | replace_first:'http://','https://' }}/views/slides/sports.html">Slide View</a></li>
       </ul>
     </div>
     <div class="btn-group">
@@ -40,8 +41,8 @@ layout: default
         Clubs Only <span class="caret"></span>
       </button>
       <ul class="dropdown-menu">
-        <li><a href="{{ site.github.url | replace_first:'http://','https://' }}/clubs.html">Text View</a></li>
-        <li><a href="{{ site.github.url | replace_first:'http://','https://' }}/views/slides/clubs.html">Slide View</a></li>
+        <li><a class="dropdown-item" href="{{ site.github.url | replace_first:'http://','https://' }}/clubs.html">Text View</a></li>
+        <li><a class="dropdown-item" href="{{ site.github.url | replace_first:'http://','https://' }}/views/slides/clubs.html">Slide View</a></li>
       </ul>
     </div>
   </p>

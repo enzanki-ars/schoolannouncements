@@ -1,0 +1,58 @@
+---
+layout: default
+title: Scoreboard
+---
+
+<div class="card-columns">
+  {% for sport in site.sports %}
+    {% if sport.enabled %}
+      {% if sport.status == "Completed" %}
+        <div class="card card-outline-info">
+      {% elsif sport.status == "In Progress" %}
+        <div class="card card-outline-success">
+      {% elsif sport.status == "Delayed" %}
+        <div class="card card-outline-warning">
+      {% elsif sport.status == "Canceled" %}
+        <div class="card card-outline-danger">
+      {% else %}
+        <div class="card card-outline-success">
+      {% endif %}
+        <div class="card-header">{{ sport.date | date: "%A, %B %e, %Y %l:%M%P %Z" }} (<time class="timeago" datetime="{{ sport.date | date_to_xmlschema }}">{{ sport.date | date: "%A, %B %e, %Y %l:%M%P %Z" }}</time>)</div>
+        <div class="card-block">
+          <h4 class="card-title">{{ sport.name }}</h4>
+          <ul class="fa-ul">
+            {% if sport.location %}
+              <li><i class="fa-li fa fa-map-marker fa-fw" aria-hidden="true"></i> Location: {{ sport.location }}</li>
+            {% endif %}
+            {% if sport.tickets %}
+              <li><i class="fa-li fa fa-ticket fa-fw" aria-hidden="true"></i> Status: {{ sport.tickets }}</li>
+            {% endif %}
+            {% if sport.status %}
+              <li><i class="fa-li fa fa-question-circle-o fa-fw" aria-hidden="true"></i> Status: {{ sport.status }}</li>
+            {% endif %}
+            {% if sport.result %}
+              <li><i class="fa-li fa fa-flag-checkered fa-fw" aria-hidden="true"></i> Result: {{ sport.result }}</li>
+            {% endif %}
+          </ul>
+          <p class="card-text">{{ sport.description }}</p>
+          <table class="table table-sm table-hover">
+            <tbody>
+              <tr>
+                <th>Team</th>
+                <th>Points</th>
+              </tr>
+            </tbody>
+            <tbody>
+              {% for team in sport.score %}
+                <tr>
+                  <td>{{ team.team }}</td>
+                  <td>{{ team.points }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>

@@ -6,7 +6,7 @@
 <tr>
 {% endif %}
   <th><a href="{{ include.sport.url }}">{{ include.sport.name }}</a></th>
-  <td>{{ include.sport.date | default: "" | date: "%A, %B %e, %Y" }}</td>
+  <td>{{ include.sport.date | date: "%A, %B %e, %Y %l:%M%P %Z" }} (<time class="timeago" datetime="{{ include.sport.date | date_to_xmlschema }}">{{ include.sport.date | date: "%A, %B %e, %Y %l:%M%P %Z" }}</time>)</td>
   <td>{{ include.sport.time | default: "" | date: "%l:%M %Z" }}</td>
   <td>{{ include.sport.location }}</td>
   <td>{{ include.sport.tickets }}</td>
@@ -15,7 +15,7 @@
   <td>{{ include.sport.changes | default: "" | markdownify | rstrip}}</td>
   <td>{{ include.sport.description | default: "" | markdownify | rstrip}}</td>
   <td>
-    <table class="table table-condensed table-hover">
+    <table class="table table-sm table-hover">
       <tbody>
         <tr>
           <th>Team</th>

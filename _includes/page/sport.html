@@ -1,6 +1,6 @@
 <h3>
   {% if include.sport.changes %}
-    <span class="label label-warning">Changed</span> - 
+    <span class="tag tag-warning">Changed</span> - 
   {% endif %}
   {{ include.sport.name }}
 </h3>
@@ -22,7 +22,7 @@
   {% endif %}
 </ul>
 {% if include.sport.changes %}
-  <div class="bg-warning">
+  <div class="alert alert-warning" role="alert">
     <strong>Changes:</strong> {{ include.sport.changes | markdownify | rstrip}}
   </div>
 {% endif %}
@@ -33,7 +33,7 @@
 {% endif %}
 {% if include.sport.score %}
   Score: 
-  <table class="table table-condensed table-hover">
+  <table class="table table-sm table-hover">
     <tbody>
       <tr>
         <th>Team</th>

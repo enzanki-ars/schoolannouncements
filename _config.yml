@@ -83,5 +83,4 @@ gems:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-redirect-from
-  - jekyll-github-metadata
   - jekyll-paginate

@@ -3,9 +3,6 @@ description: "Demo for School Announcements"
 repository: schoolnews/schoolnews.github.io
 timezone: America/New_York
 
-googleanalytics: UA-81210681-1
-rollbar: 9af0fe3376854d60a9280e95a374c60a
-
 exclude: [vendor]
 
 collections:

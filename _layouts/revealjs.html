@@ -8,7 +8,7 @@
     
     <script>
     var _rollbarConfig = {
-      accessToken: "{{ site.rollbar }}",
+      accessToken: "{{ site.data.debug.rollbar }}",
       captureUncaught: true,
       payload: {
         environment: "{{ jekyll.environment }}"

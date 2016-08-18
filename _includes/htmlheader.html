@@ -58,7 +58,7 @@
         
         <script>
         var _rollbarConfig = {
-            accessToken: "{{ site.rollbar }}",
+            accessToken: "{{ site.data.debug.rollbar }}",
             captureUncaught: true,
             payload: {
                 environment: "{{ jekyll.environment }}"
@@ -88,10 +88,10 @@
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/{{ site.data.versions.modernizer }}/modernizr.min.js"></script> -->
     </head>
     <body>
-        {% if site.googleanalytics %}
+        {% if site.data.debug.googleanalytics %}
         <script>
             window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-            ga('create', '{{ site.googleanalytics }}', {'siteSpeedSampleRate': 100});
+            ga('create', '{{ site.data.debug.googleanalytics }}', {'siteSpeedSampleRate': 100});
             ga('require', 'linkid');
             
             ga('require', 'cleanUrlTracker');

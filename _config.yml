@@ -4,9 +4,9 @@ repository: schoolnews/schoolnews.github.io
 timezone: America/New_York
 
 versions:
-  bootstrap: 3.3.6
+  bootstrap: 3.3.7
   font-awesome: 4.6.3
-  jquery: 2.2.4
+  jquery: 3.1.0
   modernizer: 2.8.3
   autotrack: 1.0.1
   revealjs: 3.3.0

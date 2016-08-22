@@ -4,6 +4,18 @@ layout: default
 
 # Documentation
 
+<div class="alert alert-warning" role="alert">
+  <strong>Warning! </strong> Before diving into a contribution, make sure you check this site's 
+  <a href="{{ site.github.issues_url }}">issues</a> and <a href="{{ site.github.repository_url }}/pulls">pull requests</a>
+  incase someone else already submitted a change.
+</div>
+
+[this project's repository code]({{ site.github.repository_url }}) 
+
+<div class="alert alert-warning" role="alert">
+  <strong>Warning! </strong> In the next couple of days, this will get easier! There will soon be a submition form where people can submit new items very quickly.  
+</div>
+
 <div class="alert alert-info" role="alert">
   <strong>Overwhelmed? </strong> Don't worry! Just click <a href="{{ site.github.issues_url }}">here</a>
   and create a new issue documenting exactly what you would like included on the site. 

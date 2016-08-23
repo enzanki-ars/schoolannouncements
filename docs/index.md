@@ -10,8 +10,6 @@ layout: default
   incase someone else already submitted a change.
 </div>
 
-[this project's repository code]({{ site.github.repository_url }}) 
-
 <div class="alert alert-warning" role="alert">
   <strong>Warning! </strong> In the next couple of days, this will get easier! There will soon be a submition form where people can submit new items very quickly.  
 </div>

@@ -1,0 +1,55 @@
+---
+layout: default
+---
+
+<h1>Submit</h1>
+
+<div class="alert alert-warning" role="alert">
+  <strong>Warning!</strong> Before diving into a contribution, make sure you
+  check this site's <a href="{{ site.github.issues_url }}">issues</a> and
+  <a href="{{ site.github.repository_url }}/pulls">pull requests</a>
+  incase someone else already submitted a change.
+</div>
+
+<div class="alert alert-danger" role="alert">
+  <strong>Warning!</strong> In the next couple of days, this feature will be
+  finished, but currently, it's just a demo.
+</div>
+
+<form class="form-horizontal">
+  <div class="form-group">
+    <label for="type">Type</label>
+    <select class="form-control" id="type">
+      <option>announcements</option>
+      <option>sports</option>
+      <option>clubs</option>
+    </select>
+    <p class="help-block">
+      Please select the type of submission you are making.
+    </p>
+  </div>
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" class="form-control" id="title" placeholder="post-title">
+    <p class="help-block">
+      The title should be in the form
+      <code>all-words-lowercase-separated-by-a-dash</code>.
+    </p>
+  </div>
+  <div class="form-group">
+    <label for="title">Date</label>
+    <!-- Hopefully, Firefox and others will fix their implementation of `datetime-local` so I can use it.-->
+    <input type="date" class="form-control" id="date">
+    <p class="help-block">
+      For Firefox/Internet Explorer users: The date should be in the form <code>YYYY-MM-DD</code>.
+    </p>
+  </div>
+  <div class="form-group">
+    <label for="title">Time</label>
+    <!-- Hopefully, Firefox and others will fix their implementation of `datetime-local` so I can use it.-->
+    <input type="time" class="form-control" id="time">
+    <p class="help-block">
+      For Firefox/Internet Explorer users: The time should be in the form <code>HH:MM am/pm</code>.
+    </p>
+  </div>
+</form>

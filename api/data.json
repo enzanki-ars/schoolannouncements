@@ -1,4 +1,4 @@
 ---
 ---
 
-{{ site.data.other | jsonify }}
+{{ site.data | jsonify }}

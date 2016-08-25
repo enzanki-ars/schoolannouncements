@@ -44,7 +44,19 @@ layout: default
   </div>
   <div class="panel-body">
     <div class="container-fluid">
-      <form class="form-horizontal">
+      <script type="text/javascript">
+        function submit() {
+
+          alert("This action has not been completed yet. Sorry.");
+
+          filename = "_announcements/";
+          content = "";
+          message = "---";
+          description = "Submitted via {{page.url}}";
+          url = "{{ site.github.repository_url }}/new/master?filename=" + filename + "&value=" + content + "&message=" + message + "&description=" + description;
+        }
+      </script>
+      <form action="javascript:submit();" class="form-horizontal" id="form">
         <div class="form-group">
           <label for="title"><span class="label label-danger">Required</span> Title</label>
           <input type="text" class="form-control" id="title" placeholder="post-title" required>
@@ -118,7 +130,7 @@ layout: default
           </p>
         </div>
         <div class="form-group">
-          <label for="title"><span class="label label-info">Optional</span> Piture</label>
+          <label for="title"><span class="label label-info">Optional</span> Picture</label>
           <input type="url" class="form-control" id="picture">
           <p class="help-block">
             Please only pase the link to the picture.
@@ -139,7 +151,7 @@ layout: default
             Please paste the entire twitter embed code.
           </p>
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
+        <input type="submit" class="btn btn-default" value="Submit">
       </form>
     </div>
   </div>

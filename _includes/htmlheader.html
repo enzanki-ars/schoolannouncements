@@ -55,10 +55,10 @@
         {% if page.next.url %}
             <link rel="next" href="{{ page.next.url | prepend: site.github.url | replace_first:'http://','https://' }}" />
         {% endif %}
-        
+
         <script>
         var _rollbarConfig = {
-            accessToken: "{{ site.rollbar }}",
+            accessToken: "{{ site.data.debug.rollbar }}",
             captureUncaught: true,
             payload: {
                 environment: "{{ jekyll.environment }}"
@@ -70,30 +70,30 @@
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
         <link rel="apple-touch-icon" href="{{ site.github.url | replace_first:'http://','https://' }}/icons/apple-touch-icon.png">
 
-        <script src="https://code.jquery.com/jquery-{{ site.versions.jquery }}.min.js"></script>
+        <script src="https://code.jquery.com/jquery-{{ site.data.versions.jquery }}.min.js"></script>
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/{{ site.versions.bootstrap }}/css/bootstrap.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/{{ site.data.versions.bootstrap }}/css/bootstrap.min.css" crossorigin="anonymous">
         {% if page.theme or site.theme %}
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/{{ site.versions.bootstrap }}/{{ page.theme | default: site.theme }}/bootstrap.min.css" crossorigin="anonymous">    
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/{{ site.data.versions.bootstrap }}/{{ page.theme | default: site.theme }}/bootstrap.min.css" crossorigin="anonymous">
         {% endif %}
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/{{ site.versions.font-awesome }}/css/font-awesome.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/{{ site.data.versions.font-awesome }}/css/font-awesome.min.css" crossorigin="anonymous">
         <link rel="stylesheet" href="{{ site.github.url | replace_first:'http://','https://' }}/css/main.css">
-        
+
         {% if page.live-reload %}
             <script async src="{{ site.github.url | replace_first:'http://','https://' }}/js/live.js"></script>
         {% endif %}
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/{{ site.versions.timeago }}/jquery.timeago.min.js"></script>
 
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/{{ site.versions.modernizer }}/modernizr.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/{{ site.data.versions.timeago }}/jquery.timeago.min.js"></script>
+
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/{{ site.data.versions.modernizer }}/modernizr.min.js"></script> -->
     </head>
     <body>
-        {% if site.googleanalytics %}
+        {% if site.data.debug.googleanalytics %}
         <script>
             window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-            ga('create', '{{ site.googleanalytics }}', {'siteSpeedSampleRate': 100});
+            ga('create', '{{ site.data.debug.googleanalytics }}', {'siteSpeedSampleRate': 100});
             ga('require', 'linkid');
-            
+
             ga('require', 'cleanUrlTracker');
             ga('require', 'eventTracker');
             ga('require', 'impressionTracker');
@@ -103,11 +103,11 @@
             ga('require', 'pageVisibilityTracker');
             ga('require', 'socialWidgetTracker');
             ga('require', 'urlChangeTracker');
-            
+
             ga('send', 'pageview');
         </script>
         <script async src="https://www.google-analytics.com/analytics.js"></script>
-        <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/{{ site.versions.autotrack }}/autotrack.js"></script>
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/{{ site.data.versions.autotrack }}/autotrack.js"></script>
         {% endif %}
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser.

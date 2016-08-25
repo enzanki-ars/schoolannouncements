@@ -12,7 +12,8 @@ layout: default
 </div>
 
 <div class="alert alert-warning" role="alert">
-  <strong>Warning!</strong> In the next couple of days, this will get easier! There will soon be a submition form where people can submit new items very quickly.  
+  <strong>Warning!</strong> In the next couple of days, this will get easier!
+  There will soon be a submission form where people can submit new items very quickly.  
 </div>
 
 <div class="alert alert-info" role="alert">
@@ -75,30 +76,32 @@ or you can use a [hex triplet](https://en.wikipedia.org/wiki/Web_colors#Hex_trip
 
 Shown in order of appearance in views.
 
-### _data/other.yml
+### _data/wordofthemonth.yml
 
 ```yml
-wordofthemonth:
-  color:
-  word:
-  description:
-  winners: [...]
-  next:
-  nextdescription:
+color:
+word:
+description:
+winners: [...]
+next:
+nextdescription:
+```
 
-birthdays:
-  color: LightPink
-  belated: [...]
-  today: [...]
-  weekend: [...]
-  breakname: ...
-  break: [...]
+### _data/birthdays.yml
+
+```yml
+color: LightPink
+belated: [...]
+today: [...]
+weekend: [...]
+breakname: ...
+break: [...]
 ```
 
 ### _announcements/year-month-day-title.md
 
-`slidetime:` is use to extend the default time that the description slide
-is visible. By default, this time is 10 seconds.
+`slidetime:` is used to extend the default time that the description slides
+are visible. By default, this time is 10 seconds.
 
 `description:` is visible in all views, while `extendeddescription:` will not
 shown on the slideshow.

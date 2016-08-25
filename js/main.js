@@ -1,5 +1,5 @@
 function loadSuccess() {
-  document.getElementById("blockedInfo").innerHTML = "<span class=\"tag tag-info\">" 
+  document.getElementById("blockedInfo").innerHTML = "<span class=\"tag tag-info\">"
 	+ "YouTube Access Check Succeeded.</span>";
   var image_x = document.getElementById('blockedImage');
   image_x.parentNode.removeChild(image_x);
@@ -16,8 +16,17 @@ function loadError() {
   ga('send', 'event', "YouTube Error", "YouTube Load Error");
 }
 $(window).on("load", function() {
-  jQuery("time.timeago").timeago();
-  jQuery.timeago.settings.allowFuture = true;
+  var elements = document.querySelectorAll('input,select,textarea');
+
+  for (var i = elements.length; i--;) {
+    elements[i].addEventListener('invalid', function () {
+      this.scrollIntoView(false);
+    });
+  }
+
+  $("time.timeago").timeago();
+  $.timeago.settings.allowFuture = true;
+  
   $('[data-toggle="tooltip"]').tooltip();
   $(".marquee").css("animation-duration", ($(window).width() + $(".marquee").width()) / 30 + "s")
 });

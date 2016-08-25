@@ -1,0 +1,36 @@
+left-header:
+  - text: Home
+    internal-link: index.html
+  - text: Posts
+    internal-link: posts.html
+  - text: Views
+    dropdown:
+      - text: All Announcements - Text View
+        internal-link: views/text/all.html
+      - text: All Announcements - Slide View
+        internal-link: views/slides/all.html
+      - text: Announcements Only - Text View
+        internal-link: views/text/announcements.html
+      - text: Announcements Only - Slide View
+        internal-link: views/slides/announcements.html
+      - text: Sports Only - Text View
+        internal-link: views/text/sports.html
+      - text: Sports Only - Slide View
+        internal-link: views/slides/sports.html
+      - text: Clubs Only - Text View
+        internal-link: clubs.html
+      - text: Clubs Only - Slide View
+        internal-link: views/slides/clubs.html
+      - text: List View
+        internal-link: views/admin.html
+      - text: List View - Live
+        internal-link: views/admin-live.html
+  - text: Documentation
+    internal-link: docs/index.html
+  - text: Submit
+    dropdown:
+      - text: Announcements
+        internal-link: submit/announcements.html
+right-header:
+  - text: Privacy
+    internal-link: privacy.html

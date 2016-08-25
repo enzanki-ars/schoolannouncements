@@ -55,7 +55,7 @@
         {% if page.next.url %}
             <link rel="next" href="{{ page.next.url | prepend: site.github.url | replace_first:'http://','https://' }}" />
         {% endif %}
-        
+
         <script>
         var _rollbarConfig = {
             accessToken: "{{ site.data.debug.rollbar }}",
@@ -78,7 +78,7 @@
         {% endif %}
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/{{ site.data.versions.font-awesome }}/css/font-awesome.min.css" crossorigin="anonymous">
         <link rel="stylesheet" href="{{ site.github.url | replace_first:'http://','https://' }}/css/main.css">
-        
+
         {% if page.live-reload %}
             <script async src="{{ site.github.url | replace_first:'http://','https://' }}/js/live.js"></script>
         {% endif %}
@@ -93,7 +93,7 @@
             window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
             ga('create', '{{ site.data.debug.googleanalytics }}', {'siteSpeedSampleRate': 100});
             ga('require', 'linkid');
-            
+
             ga('require', 'cleanUrlTracker');
             ga('require', 'eventTracker');
             ga('require', 'impressionTracker');
@@ -103,7 +103,7 @@
             ga('require', 'pageVisibilityTracker');
             ga('require', 'socialWidgetTracker');
             ga('require', 'urlChangeTracker');
-            
+
             ga('send', 'pageview');
         </script>
         <script async src="https://www.google-analytics.com/analytics.js"></script>

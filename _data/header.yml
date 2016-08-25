@@ -1,6 +1,11 @@
+
 - text: Posts
   internal-link: posts.html
 - text: Documentation
   internal-link: docs/index.html
 - text: Privacy
   internal-link: privacy.html
+- text: Submit
+  dropdown:
+   - text: Announcements
+      internal-link: submit/announcements.html

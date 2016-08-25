@@ -1,0 +1,158 @@
+---
+layout: default
+---
+
+<h1>Submit - Announcements</h1>
+
+<div class="alert alert-warning" role="alert">
+  <strong>Warning!</strong> Before diving into a contribution, make sure you
+  check this site's <a href="{{ site.github.issues_url }}">issues</a> and
+  <a href="{{ site.github.repository_url }}/pulls">pull requests</a>
+  incase someone else already submitted a change.
+</div>
+
+<div class="alert alert-danger" role="alert">
+  <strong>Warning!</strong> In the next couple of days, this feature will be
+  finished, but currently, it's just a demo.
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Notes</h3>
+  </div>
+  <div class="panel-body">
+
+    <ul>
+      <li>
+        The color can be any color you wish to use for the background of the slide.
+        You can use any <a href="https://en.wikipedia.org/wiki/Web_colors#X11_color_names">named colors</a>,
+        or you can use a <a href="https://en.wikipedia.org/wiki/Web_colors#Hex_triplet">hex triplet</a>.
+      </li>
+      <li>
+        All fields that show the <span class="label label-success">M</span> symbol accept
+        <a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/">markdown</a>.
+        Markdown includes features such as bold, italics, lists, and more. Feel free to
+        use any markdown you wish.
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Announcements - Submission Form</h3>
+  </div>
+  <div class="panel-body">
+    <div class="container-fluid">
+      <script type="text/javascript">
+        function submit() {
+
+          alert("This action has not been completed yet. Sorry.");
+
+          filename = "_announcements/";
+          content = "";
+          message = "---";
+          description = "Submitted via {{page.url}}";
+          url = "{{ site.github.repository_url }}/new/master?filename=" + filename + "&value=" + content + "&message=" + message + "&description=" + description;
+        }
+      </script>
+      <form action="javascript:submit();" class="form-horizontal" id="form">
+        <div class="form-group">
+          <label for="title"><span class="label label-danger">Required</span> Title</label>
+          <input type="text" class="form-control" id="title" placeholder="post-title" required>
+          <p class="help-block">
+            The title should be in the form
+            <code>all-words-lowercase-separated-by-a-dash</code>.
+          </p>
+        </div>
+        <div class="form-group">
+          <label for="title"><span class="label label-info">Optional</span> Color</label>
+          <input type="color" class="form-control" id="color">
+          <p class="help-block">
+            For Internet Explorer/iOS users: The color should be in the form
+            <code>#000000</code> or <a href="https://en.wikipedia.org/wiki/Web_colors#X11_color_names"><code>html named colors</code></a>.
+          </p>
+        </div>
+        <div class="form-group">
+          <label for="title"><span class="label label-danger">Required</span> Date</label>
+          <!-- Hopefully, Firefox and others will fix their implementation of `datetime-local` so I can use it...-->
+          <input type="date" class="form-control" id="date" placeholder="YYYY-MM-DD" required>
+          <p class="help-block">
+            For Firefox/Internet Explorer users: The date should be in the form <code>YYYY-MM-DD</code>.
+            <br>If not date is needed, please enter today's date.
+          </p>
+        </div>
+        <div class="form-group">
+          <label for="title"><span class="label label-info">Optional</span> Time</label>
+          <!-- Hopefully, Firefox and others will fix their implementation of `datetime-local` so I can use it...-->
+          <input type="time" class="form-control" id="time" placeholder="HH:MM am/pm">
+          <p class="help-block">
+            For Firefox/Internet Explorer users: The time should be in the form <code>HH:MM am/pm</code>.
+          </p>
+        </div>
+        <div class="form-group">
+          <label for="title"><span class="label label-info">Optional</span> Location</label>
+          <input type="text" class="form-control" id="location">
+        </div>
+        <div class="form-group">
+          <label for="title"><span class="label label-info">Optional</span> Changes <span class="label label-success">M</span></label>
+          <!-- Hopefully, Firefox and others will fix their implementation of `datetime-local` so I can use it...-->
+          <textarea class="form-control" id="changes"></textarea>
+          <p class="help-block">
+            List any changes from previous announcements, mainly used when it was announced elsewhere before import to this site.
+          </p>
+        </div>
+        <div class="form-group">
+          <label for="title"><span class="label label-info">Optional</span> Description <span class="label label-success">M</span></label>
+          <!-- Hopefully, Firefox and others will fix their implementation of `datetime-local` so I can use it...-->
+          <textarea class="form-control" id="description"></textarea>
+          <p class="help-block">
+            This will be visible in all views.
+          </p>
+        </div>
+        <div class="form-group">
+          <label for="title"><span class="label label-info">Optional</span> Extended Description <span class="label label-success">M</span></label>
+          <!-- Hopefully, Firefox and others will fix their implementation of `datetime-local` so I can use it...-->
+          <textarea class="form-control" id="extendeddescription"></textarea>
+          <p class="help-block">
+            This will only be visible in text only views, not slides.
+          </p>
+        </div>
+        <div class="form-group">
+          <label for="title"><span class="label label-info">Optional</span> Slide Time</label>
+          <div class="input-group">
+            <input type="number" class="form-control" id="slidetime" placeholder="10">
+            <span class="input-group-addon">Seconds</span>
+          </div>
+          <p class="help-block">
+            Slide time is used to extend the default time that the description slides
+            are visible. By default, this time is 10 seconds.
+          </p>
+        </div>
+        <div class="form-group">
+          <label for="title"><span class="label label-info">Optional</span> Picture</label>
+          <input type="url" class="form-control" id="picture">
+          <p class="help-block">
+            Please only pase the link to the picture.
+          </p>
+        </div>
+        <div class="form-group">
+          <label for="title"><span class="label label-info">Optional</span> Video</label>
+          <input type="url" class="form-control" id="video">
+          <p class="help-block">
+            Please only pase the link to the video's embed page.
+          </p>
+        </div>
+        <div class="form-group">
+          <label for="title"><span class="label label-info">Optional</span> Tweet</label>
+          <!-- Hopefully, Firefox and others will fix their implementation of `datetime-local` so I can use it...-->
+          <textarea class="form-control" id="tweet"></textarea>
+          <p class="help-block">
+            Please paste the entire twitter embed code.
+          </p>
+        </div>
+        <input type="submit" class="btn btn-default" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>

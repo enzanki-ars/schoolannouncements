@@ -16,9 +16,17 @@ function loadError() {
   ga('send', 'event', "YouTube Error", "YouTube Load Error");
 }
 $(window).on("load", function() {
-  jQuery("time.timeago").timeago();
-  jQuery.timeago.settings.allowFuture = true;
+  var elements = document.querySelectorAll('input,select,textarea');
+
+  for (var i = elements.length; i--;) {
+    elements[i].addEventListener('invalid', function () {
+      this.scrollIntoView(false);
+    });
+  }
+
+  $("time.timeago").timeago();
+  $.timeago.settings.allowFuture = true;
+  
   $('[data-toggle="tooltip"]').tooltip();
-  $('.dropdown-toggle').dropdown()
   $(".marquee").css("animation-duration", ($(window).width() + $(".marquee").width()) / 30 + "s")
 });

@@ -29,7 +29,7 @@ left-header:
     internal-link: docs/index.html
   - text: Submit
     dropdown:
-      - text: Announcements
+      - text: Announcement
         internal-link: submit/announcements.html
 right-header:
   - text: Privacy

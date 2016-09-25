@@ -46,6 +46,8 @@ function submit(type, values) {
       if (value == "date") {
         content += value + ": " + moment(document.getElementById("date").value)
           .format("YYYY-MM-DD hh:MM A") + "\n";
+      } else if (value == "score") {
+        content += export();
       } else {
         content += value + ": " + document.getElementById(value).value + "\n";
       }
@@ -85,7 +87,7 @@ function submit(type, values) {
   function export() {
     var $rows = $TABLE.find('tr:not(:hidden)');
     var headers = [];
-    var data = [];
+    var data = "score:\n";
 
     // Get the headers (add special header logic here)
     $($rows.shift()).find('th:not(:empty)').each(function () {
@@ -95,17 +97,18 @@ function submit(type, values) {
     // Turn all existing rows into a loopable array
     $rows.each(function () {
       var $td = $(this).find('td');
-      var h = {};
 
       // Use the headers from earlier to name our hash keys
       headers.forEach(function (header, i) {
-        h[header] = $td.eq(i).text();
+        if (header == "team") {
+          data += "  - team: " + $td.eq(i).text();;
+        } else if (header == "points") {
+          data += "    points: " + $td.eq(i).text();;
+        }
       });
-
-      data.push(h);
     });
 
     // Output the result
-    return JSON.stringify(data);
+    return data;
   });
 {% endif %}

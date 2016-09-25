@@ -35,37 +35,6 @@ $(window).on("load", function() {
   $(".marquee").css("animation-duration", ($(window).width() + $(".marquee").width()) / 30 + "s")
 });
 
-function submit(type, values) {
-  var filename = encodeURIComponent("_announcements/"
-    + moment(document.getElementById("date").value).format("YYYY-MM-DD")
-    + "-" + getSlug(document.getElementById("title").value) + ".md");
-
-  var content = "---\nenabled: true\n";
-  $.each(values, function( index, value ) {
-    if (document.getElementById(value).value) {
-      if (value == "date") {
-        content += value + ": " + moment(document.getElementById("date").value)
-          .format("YYYY-MM-DD hh:MM A") + "\n";
-      } else if (value == "score") {
-        content += export();
-      } else {
-        content += value + ": " + document.getElementById(value).value + "\n";
-      }
-    }
-  });
-  content += "---\n"
-
-  content = encodeURIComponent(content);
-
-  message = encodeURIComponent("[New Announcement] "
-    + moment(document.getElementById("date").value).format("YYYY-MM-DD")
-    + "-" + document.getElementById("title").value);
-  description = encodeURIComponent("Submitted via {{page.url}}");
-  window.location.href = "{{ site.github.repository_url }}/new/master?filename=" + filename
-    + "&value=" + content + "&message=" + message
-    + "&description=" + description;
-}
-
 {% if page.editabletable %}
   // Code below is modified from http://codepen.io/ashblue/pen/mCtuA/
 
@@ -112,3 +81,36 @@ function submit(type, values) {
     return data;
   });
 {% endif %}
+
+// End code modified from http://codepen.io/ashblue/pen/mCtuA/
+
+function submit(type, values) {
+  var filename = encodeURIComponent("_announcements/"
+    + moment(document.getElementById("date").value).format("YYYY-MM-DD")
+    + "-" + getSlug(document.getElementById("title").value) + ".md");
+
+  var content = "---\nenabled: true\n";
+  $.each(values, function( index, value ) {
+    if (document.getElementById(value).value) {
+      if (value == "date") {
+        content += value + ": " + moment(document.getElementById("date").value)
+          .format("YYYY-MM-DD hh:MM A") + "\n";
+      } else if (value == "score") {
+        content += export();
+      } else {
+        content += value + ": " + document.getElementById(value).value + "\n";
+      }
+    }
+  });
+  content += "---\n"
+
+  content = encodeURIComponent(content);
+
+  message = encodeURIComponent("[New Announcement] "
+    + moment(document.getElementById("date").value).format("YYYY-MM-DD")
+    + "-" + document.getElementById("title").value);
+  description = encodeURIComponent("Submitted via {{page.url}}");
+  window.location.href = "{{ site.github.repository_url }}/new/master?filename=" + filename
+    + "&value=" + content + "&message=" + message
+    + "&description=" + description;
+}

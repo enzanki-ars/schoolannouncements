@@ -118,23 +118,29 @@ editabletable: true
             Quick overview of the result.
           </p>
         </div>
-        <div id="table" class="table-editable">
-          <i class="table-add fa fa-plus" aria-hidden="true"></i>
-          <table class="table">
-            <tr>
-              <th>Team</th>
-              <th>Points</th>
-              <th></th>
-            </tr>
-            <!-- This is our clonable table line -->
-            <tr class="hide">
-              <td contenteditable="true">Untitled</td>
-              <td contenteditable="true">undefined</td>
-              <td>
-                <i class="table-remove fa fa-plus" aria-hidden="true"></i>
-              </td>
-            </tr>
-          </table>
+        <div class="form-group">
+          <label for="title"><span class="label label-info">Optional</span> Scores</label>
+          <div id="table" class="table-editable">
+            <i class="table-add fa fa-plus" aria-hidden="true"></i>
+            <table class="table">
+              <tr>
+                <th>Team</th>
+                <th>Points</th>
+                <th></th>
+              </tr>
+              <!-- This is our clonable table line -->
+              <tr class="hide">
+                <td contenteditable="true">Team</td>
+                <td contenteditable="true">Points</td>
+                <td>
+                  <i class="table-remove fa fa-plus" aria-hidden="true"></i>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <p class="help-block">
+            Add the scores to the game here!
+          </p>
         </div>
         <div class="form-group">
           <label for="title"><span class="label label-info">Optional</span> Awards <span class="label label-success">M</span></label>

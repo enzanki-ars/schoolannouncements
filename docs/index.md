@@ -103,19 +103,15 @@ break: [...]
 `slidetime:` is used to extend the default time that the description slides
 are visible. By default, this time is 10 seconds.
 
-`description:` is visible in all views, while `extendeddescription:` will not
-shown on the slideshow.
-
 ```md
 ---
-title:
 enabled:
+title:
 color:
 date:
 location:
 changes:
 description:
-extendeddescription:
 slidetime:
 picture:
 video:
@@ -130,21 +126,22 @@ visible. By default, this time is 10 seconds.
 
 ```md
 ---
-name:
 enabled:
+name:
 color:
 date:
 location:
 tickets:
 status:
 description:
-slidetime:
 changes:
+slidetime:
 result:
 score:
   - team:
     points:
 awards:
+video:
 tweet:
 ---
 ```
@@ -153,8 +150,8 @@ tweet:
 
 ```md
 ---
-name:
 enabled:
+name:
 color:
 meetingdates:
 nextdate:

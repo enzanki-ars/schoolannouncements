@@ -29,8 +29,15 @@ left-header:
     internal-link: docs/index.html
   - text: Submit
     dropdown:
+      - text: Easy
+        internal-link: submit/easy.html
       - text: Announcement
         internal-link: submit/announcements.html
+      - text: Club
+        internal-link: submit/clubs.html
+      - text: Sport
+        internal-link: submit/sports.html
+
 right-header:
   - text: Privacy
     internal-link: privacy.html

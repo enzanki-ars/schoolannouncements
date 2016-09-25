@@ -40,8 +40,8 @@ slugjs: true
   </div>
   <div class="panel-body">
     <div class="container-fluid">
-      <form action="javascript:submit('clubs', ['enabled', 'name', 'color',
-        'meetingdates', 'nextdate', 'location', 'changes', 'description',
+      <form action="javascript:submit('club', ['title', 'color',
+        'date', 'location', 'changes', 'description', 'slidetime',
         'website', 'twitter', 'facebook', 'remind']);" class="form-horizontal" id="form">
         <div class="form-group">
           <label for="title"><span class="label label-danger">Required</span> Title</label>
@@ -100,24 +100,31 @@ slugjs: true
           </p>
         </div>
         <div class="form-group">
-          <label for="title"><span class="label label-info">Optional</span> Picture</label>
-          <input type="url" class="form-control" id="picture">
+          <label for="title"><span class="label label-info">Optional</span> Website</label>
+          <input type="url" class="form-control" id="website">
           <p class="help-block">
-            Please only pase the link to the picture.
+            Link to the website for the club/event.
           </p>
         </div>
         <div class="form-group">
-          <label for="title"><span class="label label-info">Optional</span> Video</label>
-          <input type="url" class="form-control" id="video">
+          <label for="title"><span class="label label-info">Optional</span> Twitter</label>
+          <input type="url" class="form-control" id="twitter">
           <p class="help-block">
-            Please only pase the link to the video's embed page.
+            The link to the Twitter post/profile.
           </p>
         </div>
         <div class="form-group">
-          <label for="title"><span class="label label-info">Optional</span> Tweet</label>
-          <textarea class="form-control" id="tweet"></textarea>
+          <label for="title"><span class="label label-info">Optional</span> Facebook</label>
+          <input type="url" class="form-control" id="facebook"></textarea>
           <p class="help-block">
-            Please paste the entire twitter embed code.
+            The link to the Facebook post/profile.
+          </p>
+        </div>
+        <div class="form-group">
+          <label for="title"><span class="label label-info">Optional</span> Remind</label>
+          <input type="url" class="form-control" id="remind"></textarea>
+          <p class="help-block">
+            Please only include the Remind class code.
           </p>
         </div>
         <input type="submit" class="btn btn-default" value="Submit">

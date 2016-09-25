@@ -41,12 +41,12 @@ editabletable: true
   </div>
   <div class="panel-body">
     <div class="container-fluid">
-      <form action="javascript:submit('sports', ['enabled'', 'name', 'color',
-        'date', 'location', 'tickets', 'status', 'description', 'changes',
-        'slidetime', 'result', 'score', 'awards', 'video','tweet']);" class="form-horizontal" id="form">
+      <form action="javascript:submit('sport', ['title', 'color',
+        'date', 'location', 'tickets', 'status', 'changes', 'description',
+        'slidetime', 'result', 'score', 'awards', 'video', 'tweet']);" class="form-horizontal" id="form">
         <div class="form-group">
-          <label for="title"><span class="label label-danger">Required</span> Name</label>
-          <input type="text" class="form-control" id="name" required>
+          <label for="title"><span class="label label-danger">Required</span> Title</label>
+          <input type="text" class="form-control" id="title" required>
           <p class="help-block">
             Required: Displays on all pages.
           </p>
@@ -119,8 +119,8 @@ editabletable: true
           </p>
         </div>
         <div class="form-group">
-          <label for="title"><span class="label label-info">Optional</span> Scores</label>
-          <div id="table" class="table-editable">
+          <label for="title"><span class="label label-info">Optional</span> Score</label>
+          <div id="table" class="table-editable" id="score">
             <i class="table-add fa fa-plus" aria-hidden="true"></i>
             <table class="table">
               <tr>
@@ -133,7 +133,7 @@ editabletable: true
                 <td contenteditable="true">Team</td>
                 <td contenteditable="true">Points</td>
                 <td>
-                  <i class="table-remove fa fa-plus" aria-hidden="true"></i>
+                  <i class="table-remove fa fa-trash" aria-hidden="true"></i>
                 </td>
               </tr>
             </table>
@@ -144,9 +144,9 @@ editabletable: true
         </div>
         <div class="form-group">
           <label for="title"><span class="label label-info">Optional</span> Awards <span class="label label-success">M</span></label>
-          <textarea class="form-control" id="picture"></textarea>
+          <textarea class="form-control" id="awards"></textarea>
           <p class="help-block">
-            Please only paste the link to the picture.
+            List awards here if applicable.
           </p>
         </div>
         <div class="form-group">

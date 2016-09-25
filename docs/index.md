@@ -90,11 +90,11 @@ nextdescription:
 ### _data/birthdays.yml
 
 ```yml
-color: LightPink
+color:
 belated: [...]
 today: [...]
 weekend: [...]
-breakname: ...
+breakname:
 break: [...]
 ```
 
@@ -127,7 +127,7 @@ visible. By default, this time is 10 seconds.
 ```md
 ---
 enabled:
-name:
+title:
 color:
 date:
 location:
@@ -148,16 +148,21 @@ tweet:
 
 ### _clubs/clubname.md
 
+`slidetime:` is use to extend the default time that the description slide is
+visible. By default, this time is 10 seconds.
+
+`remind:` should only include the class code.
+
 ```md
 ---
 enabled:
 name:
 color:
-meetingdates:
-nextdate:
+date:
 location:
 changes:
 description:
+slidetime:
 website:
 twitter:
 facebook:

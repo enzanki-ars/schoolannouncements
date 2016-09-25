@@ -69,36 +69,40 @@ function dataexport() {
     // Use the headers from earlier to name our hash keys
     headers.forEach(function (header, i) {
       if (header == "team") {
-        data += "  - team: " + $td.eq(i).text();
+        data += "  - team: " + $td.eq(i).text() + "\n";
       } else if (header == "points") {
-        data += "    points: " + $td.eq(i).text();
+        data += "    points: " + $td.eq(i).text() + "\n";
       }
     });
   });
 
+  console.log(data);
+
   // Output the result
-  return data;
+  if (data=="score:\n") {
+    return "";
+  } else {
+    return data;
+  }
 };
 
 
 // End code modified from http://codepen.io/ashblue/pen/mCtuA/
 
 function submit(type, values) {
-  var filename = encodeURIComponent("_" + type + "/"
+  var filename = encodeURIComponent("_" + type + "s/"
     + moment(document.getElementById("date").value).format("YYYY-MM-DD")
     + "-" + getSlug(document.getElementById("title").value) + ".md");
 
   var content = "---\nenabled: true\n";
   $.each(values, function( index, value ) {
-    if (document.getElementById(value).value) {
-      if (value == "date") {
-        content += value + ": " + moment(document.getElementById("date").value)
-          .format("YYYY-MM-DD hh:MM A") + "\n";
-      } else if (value == "score") {
-        content += dataexport();
-      } else {
-        content += value + ": " + document.getElementById(value).value + "\n";
-      }
+    if (value == "date") {
+      content += value + ": " + moment(document.getElementById("date").value)
+        .format("YYYY-MM-DD hh:MM A") + "\n";
+    } else if (value == "score") {
+      content += dataexport();
+    } else if (document.getElementById(value).value) {
+      content += value + ": " + document.getElementById(value).value + "\n";
     }
   });
   content += "---\n"
@@ -108,7 +112,7 @@ function submit(type, values) {
   message = encodeURIComponent("[New " + type + "] "
     + moment(document.getElementById("date").value).format("YYYY-MM-DD")
     + "-" + document.getElementById("title").value);
-  description = encodeURIComponent("Submitted via {{page.url}}");
+  description = encodeURIComponent("Submitted via " + window.location.href);
   window.location.href = "{{ site.github.repository_url }}/new/master?filename=" + filename
     + "&value=" + content + "&message=" + message
     + "&description=" + description;

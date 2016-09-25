@@ -4,7 +4,7 @@
 [{% for sport in site.sports %}
   {
     "url": "{{ sport.url }}",
-    "name": "{{ sport.name }}",
+    "title": "{{ sport.title }}",
     "draft": {{ sport.draft }},
     "enabled": {{ sport.enabled | default: "true" }},
     "color": "{{ sport.color }}",

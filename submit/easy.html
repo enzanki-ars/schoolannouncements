@@ -1,0 +1,73 @@
+---
+layout: default
+---
+
+<h1>Submit - Announcements</h1>
+
+<div class="alert alert-warning" role="alert">
+  <strong>Warning!</strong> Before diving into a contribution, make sure you
+  check this site's <a href="{{ site.github.issues_url }}">issues</a> and
+  <a href="{{ site.github.repository_url }}/pulls">pull requests</a>
+  incase someone else already submitted a change.
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Notes</h3>
+  </div>
+  <div class="panel-body">
+
+    <ul>
+      <li>
+        All fields that show the <span class="label label-success">M</span> symbol accept
+        <a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/">markdown</a>.
+        Markdown includes features such as bold, italics, lists, and more. Feel free to
+        use any markdown you wish.
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Announcements - Submission Form</h3>
+  </div>
+  <div class="panel-body">
+    <div class="container-fluid">
+      <script type="text/javascript">
+        function easySubmit() {
+          window.location.href = "{{ site.github.issues_url }}/new?title="
+            + encodeURIComponent("[New "
+              + document.getElementById("type").value + "] "
+              + document.getElementById("title").value)
+            + "&body="
+              + encodeURIComponent(document.getElementById("description").value + "\n\nSubmitted via {{page.url}}");
+        }
+      </script>
+      <form action="javascript:easySubmit();" class="form-horizontal" id="form">
+
+        <div class="form-group">
+          <label for="title"><span class="label label-danger">Required</span> Type</label>
+          <select class="form-control" id="type">
+            <option>Announcement</option>
+            <option>Club</option>
+            <option>Sport Event</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="title"><span class="label label-danger">Required</span> Title</label>
+          <input type="text" class="form-control" id="title" placeholder="post-title" required>
+        </div>
+        <div class="form-group">
+          <label for="title"><span class="label label-danger">Required</span> Description <span class="label label-success">M</span></label>
+          <!-- Hopefully, Firefox and others will fix their implementation of `datetime-local` so I can use it...-->
+          <textarea class="form-control" id="description" required></textarea>
+          <p class="help-block">
+            Please provide as much information as possible.  The more you provide, the quicker it can be input on the website.
+          </p>
+        </div>
+        <input type="submit" class="btn btn-default" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>

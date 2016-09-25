@@ -84,6 +84,11 @@
         {% endif %}
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/{{ site.data.versions.timeago }}/jquery.timeago.min.js"></script>
+        {% if page.slugjs %}
+          <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/speakingurl/9.0.0/speakingurl.min.js"></script>
+        {% endif %}
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment-with-locales.min.js"></script>
 
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/{{ site.data.versions.modernizer }}/modernizr.min.js"></script> -->
     </head>

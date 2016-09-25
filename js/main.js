@@ -35,52 +35,51 @@ $(window).on("load", function() {
   $(".marquee").css("animation-duration", ($(window).width() + $(".marquee").width()) / 30 + "s")
 });
 
-{% if page.editabletable %}
-  // Code below is modified from http://codepen.io/ashblue/pen/mCtuA/
+// Code below is modified from http://codepen.io/ashblue/pen/mCtuA/
 
-  var $TABLE = $('#table');
+var $TABLE = $('#table');
 
-  $('.table-add').click(function () {
-    var $clone = $TABLE.find('tr.hide').clone(true).removeClass('hide table-line');
-    $TABLE.find('table').append($clone);
+$('.table-add').click(function () {
+  var $clone = $TABLE.find('tr.hide').clone(true).removeClass('hide table-line');
+  $TABLE.find('table').append($clone);
+});
+
+$('.table-remove').click(function () {
+  $(this).parents('tr').detach();
+});
+
+// A few jQuery helpers for exporting only
+jQuery.fn.pop = [].pop;
+jQuery.fn.shift = [].shift;
+
+function export() {
+  var $rows = $TABLE.find('tr:not(:hidden)');
+  var headers = [];
+  var data = "score:\n";
+
+  // Get the headers (add special header logic here)
+  $($rows.shift()).find('th:not(:empty)').each(function () {
+    headers.push($(this).text().toLowerCase());
   });
 
-  $('.table-remove').click(function () {
-    $(this).parents('tr').detach();
-  });
+  // Turn all existing rows into a loopable array
+  $rows.each(function () {
+    var $td = $(this).find('td');
 
-  // A few jQuery helpers for exporting only
-  jQuery.fn.pop = [].pop;
-  jQuery.fn.shift = [].shift;
-
-  function export() {
-    var $rows = $TABLE.find('tr:not(:hidden)');
-    var headers = [];
-    var data = "score:\n";
-
-    // Get the headers (add special header logic here)
-    $($rows.shift()).find('th:not(:empty)').each(function () {
-      headers.push($(this).text().toLowerCase());
+    // Use the headers from earlier to name our hash keys
+    headers.forEach(function (header, i) {
+      if (header == "team") {
+        data += "  - team: " + $td.eq(i).text();;
+      } else if (header == "points") {
+        data += "    points: " + $td.eq(i).text();;
+      }
     });
-
-    // Turn all existing rows into a loopable array
-    $rows.each(function () {
-      var $td = $(this).find('td');
-
-      // Use the headers from earlier to name our hash keys
-      headers.forEach(function (header, i) {
-        if (header == "team") {
-          data += "  - team: " + $td.eq(i).text();;
-        } else if (header == "points") {
-          data += "    points: " + $td.eq(i).text();;
-        }
-      });
-    });
-
-    // Output the result
-    return data;
   });
-{% endif %}
+
+  // Output the result
+  return data;
+});
+
 
 // End code modified from http://codepen.io/ashblue/pen/mCtuA/
 

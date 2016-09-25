@@ -22,7 +22,7 @@ $(window).on("load", function() {
   //Fix for header scroll http://stackoverflow.com/a/25887125/6820516
   var elements = document.querySelectorAll('input,select,textarea');
 
-  for (var i = elements.length; i >=0; i--;) {
+  for (var i = elements.length; i >=0; i--) {
       elements[i].addEventListener('invalid', function () {
           this.scrollIntoView(false);
       });
@@ -69,9 +69,9 @@ function dataexport() {
     // Use the headers from earlier to name our hash keys
     headers.forEach(function (header, i) {
       if (header == "team") {
-        data += "  - team: " + $td.eq(i).text();;
+        data += "  - team: " + $td.eq(i).text();
       } else if (header == "points") {
-        data += "    points: " + $td.eq(i).text();;
+        data += "    points: " + $td.eq(i).text();
       }
     });
   });

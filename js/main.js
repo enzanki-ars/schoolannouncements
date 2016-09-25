@@ -21,12 +21,10 @@ function loadError() {
 $(window).on("load", function() {
   //Fix for header scroll http://stackoverflow.com/a/25887125/6820516
   var elements = document.querySelectorAll('input,select,textarea');
+  var invalidListener = function(){ this.scrollIntoView(false); };
 
-  for (var i = elements.length; i >=0; i--) {
-      elements[i].addEventListener('invalid', function () {
-          this.scrollIntoView(false);
-      });
-  }
+  for(var i = elements.length; i--;)
+      elements[i].addEventListener('invalid', invalidListener);
 
   $("time.timeago").timeago();
   $.timeago.settings.allowFuture = true;

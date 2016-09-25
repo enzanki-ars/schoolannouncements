@@ -1,9 +1,10 @@
 ---
 layout: default
 slugjs: true
+editabletable: true
 ---
 
-<h1>Submit - Announcements</h1>
+<h1>Submit - Sports</h1>
 
 <div class="alert alert-warning" role="alert">
   <strong>Warning!</strong> Before diving into a contribution, make sure you
@@ -36,16 +37,16 @@ slugjs: true
 
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title">Announcements - Submission Form</h3>
+    <h3 class="panel-title">Sports - Submission Form</h3>
   </div>
   <div class="panel-body">
     <div class="container-fluid">
-      <form action="javascript:submit('announcements', ['title', 'color', 'date',
-        'location', 'changes', 'description', 'slidetime', 'picture', 'video',
-        'tweet']);" class="form-horizontal" id="form">
+      <form action="javascript:submit('sports', ['enabled'', 'name', 'color',
+        'date', 'location', 'tickets', 'status', 'description', 'changes',
+        'slidetime', 'result', 'score', 'awards', 'video','tweet']);" class="form-horizontal" id="form">
         <div class="form-group">
-          <label for="title"><span class="label label-danger">Required</span> Title</label>
-          <input type="text" class="form-control" id="title" required>
+          <label for="title"><span class="label label-danger">Required</span> Name</label>
+          <input type="text" class="form-control" id="name" required>
           <p class="help-block">
             Required: Displays on all pages.
           </p>
@@ -71,6 +72,17 @@ slugjs: true
         <div class="form-group">
           <label for="title"><span class="label label-info">Optional</span> Location</label>
           <input type="text" class="form-control" id="location">
+        </div>
+        <div class="form-group">
+          <label for="title"><span class="label label-info">Optional</span> Tickets</label>
+          <input type="text" class="form-control" id="tickets">
+        </div>
+        <div class="form-group">
+          <label for="title"><span class="label label-info">Optional</span> Status</label>
+          <input type="text" class="form-control" id="status">
+          <p class="help-block">
+            Show if the sporting event is in progress, delayed, completed, etc.
+          </p>
         </div>
         <div class="form-group">
           <label for="title"><span class="label label-info">Optional</span> Changes <span class="label label-success">M</span></label>
@@ -100,17 +112,42 @@ slugjs: true
           </p>
         </div>
         <div class="form-group">
-          <label for="title"><span class="label label-info">Optional</span> Picture</label>
-          <input type="url" class="form-control" id="picture">
+          <label for="title"><span class="label label-info">Optional</span> Result</label>
+          <input type="text" class="form-control" id="result">
           <p class="help-block">
-            Please only pase the link to the picture.
+            Quick overview of the result.
+          </p>
+        </div>
+        <div id="table" class="table-editable">
+          <i class="table-add fa fa-plus" aria-hidden="true"></i>
+          <table class="table">
+            <tr>
+              <th>Team</th>
+              <th>Points</th>
+              <th></th>
+            </tr>
+            <!-- This is our clonable table line -->
+            <tr class="hide">
+              <td contenteditable="true">Untitled</td>
+              <td contenteditable="true">undefined</td>
+              <td>
+                <i class="table-remove fa fa-plus" aria-hidden="true"></i>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="form-group">
+          <label for="title"><span class="label label-info">Optional</span> Awards <span class="label label-success">M</span></label>
+          <textarea class="form-control" id="picture"></textarea>
+          <p class="help-block">
+            Please only paste the link to the picture.
           </p>
         </div>
         <div class="form-group">
           <label for="title"><span class="label label-info">Optional</span> Video</label>
           <input type="url" class="form-control" id="video">
           <p class="help-block">
-            Please only pase the link to the video's embed page.
+            Please only paste the link to the video's embed page.
           </p>
         </div>
         <div class="form-group">

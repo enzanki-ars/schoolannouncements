@@ -22,7 +22,7 @@ $(window).on("load", function() {
   //Fix for header scroll http://stackoverflow.com/a/25887125/6820516
   var elements = document.querySelectorAll('input,select,textarea');
 
-  for (var i = elements.length; i--;) {
+  for (var i = elements.length; i >=0; i--;) {
       elements[i].addEventListener('invalid', function () {
           this.scrollIntoView(false);
       });
@@ -78,7 +78,7 @@ function dataexport() {
 
   // Output the result
   return data;
-});
+};
 
 
 // End code modified from http://codepen.io/ashblue/pen/mCtuA/

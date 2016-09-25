@@ -84,7 +84,7 @@ function dataexport() {
 // End code modified from http://codepen.io/ashblue/pen/mCtuA/
 
 function submit(type, values) {
-  var filename = encodeURIComponent("_announcements/"
+  var filename = encodeURIComponent("_" + type + "/"
     + moment(document.getElementById("date").value).format("YYYY-MM-DD")
     + "-" + getSlug(document.getElementById("title").value) + ".md");
 
@@ -105,7 +105,7 @@ function submit(type, values) {
 
   content = encodeURIComponent(content);
 
-  message = encodeURIComponent("[New Announcement] "
+  message = encodeURIComponent("[New " + type + "] "
     + moment(document.getElementById("date").value).format("YYYY-MM-DD")
     + "-" + document.getElementById("title").value);
   description = encodeURIComponent("Submitted via {{page.url}}");

@@ -52,7 +52,7 @@ $('.table-remove').click(function () {
 jQuery.fn.pop = [].pop;
 jQuery.fn.shift = [].shift;
 
-function export() {
+function dataexport() {
   var $rows = $TABLE.find('tr:not(:hidden)');
   var headers = [];
   var data = "score:\n";
@@ -95,7 +95,7 @@ function submit(type, values) {
         content += value + ": " + moment(document.getElementById("date").value)
           .format("YYYY-MM-DD hh:MM A") + "\n";
       } else if (value == "score") {
-        content += export();
+        content += dataexport();
       } else {
         content += value + ": " + document.getElementById(value).value + "\n";
       }

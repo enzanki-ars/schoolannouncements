@@ -1,6 +1,6 @@
 ---
-name: Sportsball
 enabled: true
+title: Sportsball
 color: Maroon
 date: 2016-07-21 9:30am
 location: Online

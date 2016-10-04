@@ -1,6 +1,6 @@
 ---
-name: School Announcements
 enabled: true
+name: School Announcements
 color: PapayaWhip
 meetingdates: Everyday
 nextdate: 2016-07-21 1:00pm

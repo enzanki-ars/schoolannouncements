@@ -7,7 +7,7 @@ slugjs: true
 
 <div class="alert alert-warning" role="alert">
   <strong>Warning!</strong> Before diving into a contribution, make sure you
-  check this site's <a href="{{ site.github.issues_url }}">issues</a> and
+  check this site's <a href="{{ site.github.issues_url }}">issues</a> an
   <a href="{{ site.github.repository_url }}/pulls">pull requests</a>
   incase someone else already submitted a change.
 </div>
@@ -36,13 +36,13 @@ slugjs: true
 
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title">Announcements - Submission Form</h3>
+    <h3 class="panel-title">Clubs - Submission Form</h3>
   </div>
   <div class="panel-body">
     <div class="container-fluid">
-      <form action="javascript:submit('announcement', ['title', 'color', 'date',
-        'location', 'changes', 'description', 'slidetime', 'picture', 'video',
-        'tweet']);" class="form-horizontal" id="form">
+      <form action="javascript:submit('club', ['title', 'color',
+        'date', 'location', 'changes', 'description', 'slidetime',
+        'website', 'twitter', 'facebook', 'remind']);" class="form-horizontal" id="form">
         <div class="form-group">
           <label for="title"><span class="label label-danger">Required</span> Title</label>
           <input type="text" class="form-control" id="title" required>
@@ -100,24 +100,31 @@ slugjs: true
           </p>
         </div>
         <div class="form-group">
-          <label for="title"><span class="label label-info">Optional</span> Picture</label>
-          <input type="url" class="form-control" id="picture">
+          <label for="title"><span class="label label-info">Optional</span> Website</label>
+          <input type="url" class="form-control" id="website">
           <p class="help-block">
-            Please only paste the link to the picture.
+            Link to the website for the club/event.
           </p>
         </div>
         <div class="form-group">
-          <label for="title"><span class="label label-info">Optional</span> Video</label>
-          <input type="url" class="form-control" id="video">
+          <label for="title"><span class="label label-info">Optional</span> Twitter</label>
+          <input type="url" class="form-control" id="twitter">
           <p class="help-block">
-            Please only paste the link to the video's embed page.
+            The link to the Twitter post/profile.
           </p>
         </div>
         <div class="form-group">
-          <label for="title"><span class="label label-info">Optional</span> Tweet</label>
-          <textarea class="form-control" id="tweet"></textarea>
+          <label for="title"><span class="label label-info">Optional</span> Facebook</label>
+          <input type="url" class="form-control" id="facebook"></textarea>
           <p class="help-block">
-            Please paste the entire twitter embed code.
+            The link to the Facebook post/profile.
+          </p>
+        </div>
+        <div class="form-group">
+          <label for="title"><span class="label label-info">Optional</span> Remind</label>
+          <input type="url" class="form-control" id="remind"></textarea>
+          <p class="help-block">
+            Please only include the Remind class code.
           </p>
         </div>
         <input type="submit" class="btn btn-default" value="Submit">

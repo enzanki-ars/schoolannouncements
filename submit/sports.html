@@ -1,9 +1,10 @@
 ---
 layout: default
 slugjs: true
+editabletable: true
 ---
 
-<h1>Submit - Announcements</h1>
+<h1>Submit - Sports</h1>
 
 <div class="alert alert-warning" role="alert">
   <strong>Warning!</strong> Before diving into a contribution, make sure you
@@ -36,13 +37,13 @@ slugjs: true
 
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title">Announcements - Submission Form</h3>
+    <h3 class="panel-title">Sports - Submission Form</h3>
   </div>
   <div class="panel-body">
     <div class="container-fluid">
-      <form action="javascript:submit('announcement', ['title', 'color', 'date',
-        'location', 'changes', 'description', 'slidetime', 'picture', 'video',
-        'tweet']);" class="form-horizontal" id="form">
+      <form action="javascript:submit('sport', ['title', 'color',
+        'date', 'location', 'tickets', 'status', 'changes', 'description',
+        'slidetime', 'result', 'score', 'awards', 'video', 'tweet']);" class="form-horizontal" id="form">
         <div class="form-group">
           <label for="title"><span class="label label-danger">Required</span> Title</label>
           <input type="text" class="form-control" id="title" required>
@@ -73,6 +74,17 @@ slugjs: true
           <input type="text" class="form-control" id="location">
         </div>
         <div class="form-group">
+          <label for="title"><span class="label label-info">Optional</span> Tickets</label>
+          <input type="text" class="form-control" id="tickets">
+        </div>
+        <div class="form-group">
+          <label for="title"><span class="label label-info">Optional</span> Status</label>
+          <input type="text" class="form-control" id="status">
+          <p class="help-block">
+            Show if the sporting event is in progress, delayed, completed, etc.
+          </p>
+        </div>
+        <div class="form-group">
           <label for="title"><span class="label label-info">Optional</span> Changes <span class="label label-success">M</span></label>
           <!-- Hopefully, Firefox and others will fix their implementation of `datetime-local` so I can use it...-->
           <textarea class="form-control" id="changes"></textarea>
@@ -100,10 +112,41 @@ slugjs: true
           </p>
         </div>
         <div class="form-group">
-          <label for="title"><span class="label label-info">Optional</span> Picture</label>
-          <input type="url" class="form-control" id="picture">
+          <label for="title"><span class="label label-info">Optional</span> Result</label>
+          <input type="text" class="form-control" id="result">
           <p class="help-block">
-            Please only paste the link to the picture.
+            Quick overview of the result.
+          </p>
+        </div>
+        <div class="form-group">
+          <label for="title"><span class="label label-info">Optional</span> Score</label>
+          <div id="table" class="table-editable" id="score">
+            <i class="table-add fa fa-plus" aria-hidden="true"></i>
+            <table class="table">
+              <tr>
+                <th>Team</th>
+                <th>Points</th>
+                <th></th>
+              </tr>
+              <!-- This is our clonable table line -->
+              <tr class="hide">
+                <td contenteditable="true">Team</td>
+                <td contenteditable="true">Points</td>
+                <td>
+                  <i class="table-remove fa fa-trash" aria-hidden="true"></i>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <p class="help-block">
+            Add the scores to the game here!
+          </p>
+        </div>
+        <div class="form-group">
+          <label for="title"><span class="label label-info">Optional</span> Awards <span class="label label-success">M</span></label>
+          <textarea class="form-control" id="awards"></textarea>
+          <p class="help-block">
+            List awards here if applicable.
           </p>
         </div>
         <div class="form-group">

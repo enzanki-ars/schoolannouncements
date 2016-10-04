@@ -90,11 +90,11 @@ nextdescription:
 ### _data/birthdays.yml
 
 ```yml
-color: LightPink
+color:
 belated: [...]
 today: [...]
 weekend: [...]
-breakname: ...
+breakname:
 break: [...]
 ```
 
@@ -103,19 +103,15 @@ break: [...]
 `slidetime:` is used to extend the default time that the description slides
 are visible. By default, this time is 10 seconds.
 
-`description:` is visible in all views, while `extendeddescription:` will not
-shown on the slideshow.
-
 ```md
 ---
-title:
 enabled:
+title:
 color:
 date:
 location:
 changes:
 description:
-extendeddescription:
 slidetime:
 picture:
 video:
@@ -130,37 +126,43 @@ visible. By default, this time is 10 seconds.
 
 ```md
 ---
-name:
 enabled:
+title:
 color:
 date:
 location:
 tickets:
 status:
 description:
-slidetime:
 changes:
+slidetime:
 result:
 score:
   - team:
     points:
 awards:
+video:
 tweet:
 ---
 ```
 
 ### _clubs/clubname.md
 
+`slidetime:` is use to extend the default time that the description slide is
+visible. By default, this time is 10 seconds.
+
+`remind:` should only include the class code.
+
 ```md
 ---
-name:
 enabled:
+name:
 color:
-meetingdates:
-nextdate:
+date:
 location:
 changes:
 description:
+slidetime:
 website:
 twitter:
 facebook:

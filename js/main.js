@@ -8,8 +8,7 @@ function loadSuccess() {
   image_x.parentNode.removeChild(image_x);
   ga("send", "event", "YouTube Success", "YouTube Load Success");
 }
-function loadError() {
-  var site = "YouTube";
+function loadError(site) {
   document.getElementById("blockedInfo").innerHTML = "<div class=\"alert alert-danger\" role=\"alert\">"
   + "<strong>" + site + " Blocked: </strong>You seem to be accessing this website from a location where "
   + site + " is blocked. As part of this website uses items from " + site + ", "

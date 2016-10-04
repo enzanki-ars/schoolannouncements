@@ -1,9 +1,5 @@
 body {
-<<<<<<< HEAD
   margin-top: 5rem;
-}
-=======
-	margin-top: 50px;
 }
 :target:before, .thumbnail:before {
 	content:"";
@@ -13,7 +9,6 @@ body {
 }
 
 // Scroll bar: http://stackoverflow.com/a/38118591/6820516
->>>>>>> master
 .marquee {
   width: 100%;
   margin: 0 auto;

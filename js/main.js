@@ -2,15 +2,9 @@
 ---
 
 function loadSuccess() {
-<<<<<<<
-  document.getElementById("blockedInfo").innerHTML = "<span class=\"tag tag-info\">" 
-	+ "YouTube Access Check Succeeded.</span>";
-  var image_x = document.getElementById('blockedImage');
-=======
   document.getElementById("blockedInfo").innerHTML = "<span class=\"tag tag-info\">"
   + "YouTube Access Check Succeeded.</span>";
   var image_x = document.getElementById("blockedImage");
->>>>>>>
   image_x.parentNode.removeChild(image_x);
   ga("send", "event", "YouTube Success", "YouTube Load Success");
 }

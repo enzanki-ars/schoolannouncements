@@ -29,6 +29,7 @@ $(window).on("load", function() {
   $.timeago.settings.allowFuture = true;
 
   $("[data-toggle=\"tooltip\"]").tooltip();
+  $('.dropdown-toggle').dropdown();
   $(".marquee").css("animation-duration", ($(window).width() + $(".marquee").width()) / 30 + "s")
 });
 

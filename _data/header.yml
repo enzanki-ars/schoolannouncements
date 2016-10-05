@@ -1,13 +1,5 @@
 - text: Posts
   internal-link: posts.html
-- text: Documentation
-  internal-link: docs/index.html
-- text: Privacy
-  internal-link: privacy.html
-- text: Submit
-  dropdown:
-   - text: Announcements
-      internal-link: submit/announcements.html
 - text: Views
   dropdown:
     - text: All Announcements - Text View
@@ -40,3 +32,7 @@
       internal-link: submit/clubs.html
     - text: Sport
       internal-link: submit/sports.html
+- text: Documentation
+  internal-link: docs/index.html
+- text: Privacy
+  internal-link: privacy.html

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Scoreboard
+live-reload: true
 ---
 
 <div class="card-columns">
@@ -17,7 +18,7 @@ title: Scoreboard
       {% else %}
         <div class="card card-outline-success">
       {% endif %}
-        <div class="card-header">{{ sport.date | date: "%A, %B %e, %Y %l:%M%P %Z" }} (<time class="timeago" datetime="{{ sport.date | date_to_xmlschema }}">{{ sport.date | date: "%A, %B %e, %Y %l:%M%P %Z" }}</time>)</div>
+        <div class="card-header">{{ sport.date | date: "%A, %B %e, %Y %l:%M%P" }} (<time class="timeago" datetime="{{ sport.date | date_to_xmlschema }}">{{ sport.date | date: "%A, %B %e, %Y %l:%M%P" }}</time>)</div>
         <div class="card-block">
           <h4 class="card-title">{{ sport.name }}</h4>
           <ul class="fa-ul">

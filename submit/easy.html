@@ -19,7 +19,7 @@ layout: default
 
     <ul>
       <li>
-        All fields that show the <span class="label label-success">M</span> symbol accept
+        All fields that show the <span class="tag tag-success">M</span> symbol accept
         <a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/">markdown</a>.
         Markdown includes features such as bold, italics, lists, and more. Feel free to
         use any markdown you wish.
@@ -47,7 +47,7 @@ layout: default
       <form action="javascript:easySubmit();" class="form-horizontal" id="form">
 
         <div class="form-group">
-          <label for="title"><span class="label label-danger">Required</span> Type</label>
+          <label for="title"><span class="tag tag-danger">Required</span> Type</label>
           <select class="form-control" id="type">
             <option>Announcement</option>
             <option>Club</option>
@@ -55,11 +55,11 @@ layout: default
           </select>
         </div>
         <div class="form-group">
-          <label for="title"><span class="label label-danger">Required</span> Title</label>
+          <label for="title"><span class="tag tag-danger">Required</span> Title</label>
           <input type="text" class="form-control" id="title" placeholder="post-title" required>
         </div>
         <div class="form-group">
-          <label for="title"><span class="label label-danger">Required</span> Description <span class="label label-success">M</span></label>
+          <label for="title"><span class="tag tag-danger">Required</span> Description <span class="tag tag-success">M</span></label>
           <!-- Hopefully, Firefox and others will fix their implementation of `datetime-local` so I can use it...-->
           <textarea class="form-control" id="description" required></textarea>
           <p class="help-block">

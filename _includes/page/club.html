@@ -5,11 +5,8 @@
   {{ include.club.name }}
 </h3>
 <ul class="fa-ul">
-  {% if include.club.meetingdates %}
-    <li><i class="fa-li fa fa-calendar fa-fw" aria-hidden="true"></i> Meeting Dates: {{ include.club.dates }}</li>
-  {% endif %}
-  {% if include.club.nextdate %}
-    <li><i class="fa-li fa fa-calendar fa-fw" aria-hidden="true"></i> Next Date: {{ include.club.nextdate | date: "%A, %B %e, %Y %l:%M%P %Z" }} (<time class="timeago" datetime="{{ include.club.nextdate | date_to_xmlschema }}">{{ include.club.nextdate | date: "%A, %B %e, %Y %l:%M%P %Z" }}</time>)</li>
+  {% if include.club.date %}
+    <li><i class="fa-li fa fa-calendar fa-fw" aria-hidden="true"></i> Next Date: {{ include.club.date | date: "%A, %B %e, %Y %l:%M%P %Z" }} (<time class="timeago" datetime="{{ include.club.date | date_to_xmlschema }}">{{ include.club.date | date: "%A, %B %e, %Y %l:%M%P %Z" }}</time>)</li>
   {% endif %}
   {% if include.club.location %}
     <li><i class="fa-li fa fa-map-marker fa-fw" aria-hidden="true"></i> Location: {{ include.club.location }}</li>
@@ -29,11 +26,11 @@
 </ul>
 {% if include.club.changes %}
   <div class="bg-warning">
-    <strong>Changes:</strong> {{ include.club.changes | markdownify | rstrip}}
+    <strong>Changes:</strong> {{ include.club.changes | markdownify | strip}}
   </div>
 {% endif %}
 {% if include.club.description %}
   <p>
-    {{ include.club.description | markdownify | rstrip}}
+    {{ include.club.description | markdownify | strip}}
   </p>
 {% endif %}

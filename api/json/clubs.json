@@ -1,0 +1,21 @@
+---
+---
+
+[{% for club in site.clubs %}
+  {
+    "url": "{{ club.url }}",
+    "name": "{{ club.name }}",
+    "draft": {{ club.draft }},
+    "enabled": {{ club.enabled }},
+    "color": "{{ club.color }}",
+    "meetingdates": "{{ club.meetingdates }}",
+    "nextdate": "{{ club.nextdate }}",
+    "location": "{{ club.location }}",
+    "changes": "{{ club.changes | strip }}",
+    "description": "{{ club.description | strip }}",
+    "website": "{{ club.website }}",
+    "twitter": "{{ club.twitter }}",
+    "facebook": "{{ club.facebook }}",
+    "remind": "{{ club.remind }}",
+  }{% if forloop.last != true %},{% endif %}
+{% endfor %}]

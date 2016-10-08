@@ -9,7 +9,7 @@
   <td>{{ include.announcement.date | default: "" | date: "%A, %B %e, %Y" }}</td>
   <td>{{ include.announcement.time | default: "" | date: "%l:%M %Z" }}</td>
   <td>{{ include.announcement.location }}</td>
-  <td>{{ include.announcement.changes | default: "" | markdownify | rstrip  }}</td>
+  <td>{{ include.announcement.changes | default: "" | markdownify | strip  }}</td>
   <td>
     {% if include.annoucement.picture %}
       <a href="{{ site.github.url | replace_first:'http://','https://' }}/img/announcement/{{ include.annoucement.picture }}">{{ site.github.url | replace_first:'http://','https://' }}/img/announcement/{{ include.annoucement.picture }}</a>
@@ -18,5 +18,5 @@
   <td>{{ include.announcement.picture-alt | default: "" }}</td>
   <td><a href="{{ include.announcement.video }}">{{ include.announcement.video }}</a></td>
   <td>{{ include.announcement.tweet }}</td>
-  <td>{{ include.announcement.description | default: "" | markdownify | rstrip }}</td>
+  <td>{{ include.announcement.description | default: "" | markdownify | strip }}</td>
 </tr>

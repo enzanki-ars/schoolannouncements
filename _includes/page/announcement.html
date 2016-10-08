@@ -14,7 +14,7 @@
 </ul>
 {% if include.announcement.changes %}
   <div class="bg-warning">
-    <strong>Changes:</strong> {{ include.announcement.changes | markdownify | rstrip}}
+    <strong>Changes:</strong> {{ include.announcement.changes | markdownify | strip}}
   </div>
 {% endif %}
 {% if include.announcement.picture %}
@@ -30,6 +30,6 @@
 {% endif %}
 {% if include.announcement.description %}
   <p class="bg-warning">
-    {{ include.announcement.description | markdownify | rstrip}}
+    {{ include.announcement.description | markdownify | strip}}
   </p>
 {% endif %}

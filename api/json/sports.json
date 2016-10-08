@@ -1,0 +1,24 @@
+---
+---
+
+[{% for sport in site.sports %}
+  {
+    "url": "{{ sport.url }}",
+    "title": "{{ sport.title }}",
+    "draft": {{ sport.draft }},
+    "enabled": {{ sport.enabled | default: "true" }},
+    "color": "{{ sport.color }}",
+    "date": "{{ sport.date }}",
+    "location": "{{ sport.location }}",
+    "tickets": "{{ sport.tickets }}",
+    "status": "{{ sport.status }}",
+    "changes": "{{ sport.changes | strip }}",
+    "description": "{{ sport.description | strip }}",
+    "result": "{{ sport.result }}",
+    "score": {{ sport.score | jsonify }},
+    "awards": "{{ sport.awards }}",
+    "tweet": "{{ sport.tweet }}",
+    "content": "{{ sport.content | strip }}",
+    "excerpt": "{{ sport.excerpt | strip }}",
+  }{% if forloop.last != true %},{% endif %}
+{% endfor %}]

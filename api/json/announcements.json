@@ -1,0 +1,21 @@
+---
+---
+
+[{% for announcement in site.announcements %}
+  {
+    "url": "{{ announcement.url }}",
+    "title": "{{ announcement.title }}",
+    "draft": {{ announcement.draft }},
+    "enabled": {{ announcement.enabled }},
+    "color": "{{ announcement.color }}",
+    "date": "{{ announcement.date }}",
+    "location": "{{ announcement.location }}",
+    "changes": "{{ announcement.changes | strip }}",
+    "description": "{{ announcement.description | strip }}",
+    "picture": "{{ announcement.picture }}",
+    "video": "{{ announcement.video }}",
+    "tweet": "{{ announcement.tweet }}",
+    "content": "{{ announcement.content | strip }}",
+    "excerpt": "{{ announcement.excerpt | strip }}",
+  }{% if forloop.last != true %},{% endif %}
+{% endfor %}]

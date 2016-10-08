@@ -1,0 +1,8 @@
+---
+---
+{% capture all %}
+{% include scroll/announcements.txt %}
+{% include scroll/clubs.txt %}
+{% include scroll/sports.txt %}
+{% include scroll/data.txt %}
+{% endcapture %}{{ all | strip_newlines }}

@@ -13,8 +13,8 @@
   {% endif %}
 </ul>
 {% if include.announcement.changes %}
-  <div class="alert alert-warning" role="alert">
-    <p><strong>Changes:</strong> {{ include.announcement.changes | markdownify | rstrip}}</p>
+  <div class="bg-warning">
+    <strong>Changes:</strong> {{ include.announcement.changes | markdownify | strip}}
   </div>
 {% endif %}
 {% if include.announcement.picture %}
@@ -29,7 +29,7 @@
   {{ include.announcement.tweet }}
 {% endif %}
 {% if include.announcement.description %}
-  <p>
-    {{ include.announcement.description | markdownify | rstrip}}
+  <p class="bg-warning">
+    {{ include.announcement.description | markdownify | strip}}
   </p>
 {% endif %}

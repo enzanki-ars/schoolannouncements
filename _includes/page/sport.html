@@ -22,13 +22,13 @@
   {% endif %}
 </ul>
 {% if include.sport.changes %}
-  <div class="alert alert-warning" role="alert">
-    <strong>Changes:</strong> {{ include.sport.changes | markdownify | rstrip}}
+  <div class="bg-warning">
+    <strong>Changes:</strong> {{ include.sport.changes | markdownify | strip}}
   </div>
 {% endif %}
 {% if include.sport.description %}
   <p>
-    {{ include.sport.description | markdownify | rstrip}}
+    {{ include.sport.description | markdownify | strip}}
   </p>
 {% endif %}
 {% if include.sport.score %}
@@ -52,7 +52,7 @@
 {% endif %}
 {% if include.sport.awards %}
   <p>
-    {{ include.sport.awards | markdownify | rstrip}}
+    {{ include.sport.awards | markdownify | strip}}
   </p>
 {% endif %}
 {% if include.sport.tweet %}

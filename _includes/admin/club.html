@@ -6,8 +6,7 @@
 <tr>
 {% endif %}
   <th><a href="{{ include.club.url }}">{{ include.club.name }}</a></th>
-  <td>{{ include.club.dates }}</td>
-  <td>{{ include.club.nextdate | default: "" | date: "%A, %B %e, %Y" }}</td>
+  <td>{{ include.club.date | default: "" | date: "%A, %B %e, %Y" }}</td>
   <td>{{ include.club.time | default: "" | date: "%l:%M %Z" }}</td>
   <td>{{ include.club.location }}</td>
   <td><a href="{{ include.club.website }}">{{ include.club.website }}</a></td>
@@ -26,6 +25,6 @@
       <a href="https://remind.com/join/{{ include.club.remind }}">@{{ include.club.remind }}</a>
     {% endif %}
   </td>
-  <td>{{ include.club.changes | default: "" | markdownify | rstrip}}</td>
-  <td>{{ include.club.description | default: "" | markdownify | rstrip}}</td>
+  <td>{{ include.club.changes | default: "" | markdownify | strip}}</td>
+  <td>{{ include.club.description | default: "" | markdownify | strip}}</td>
 </tr>

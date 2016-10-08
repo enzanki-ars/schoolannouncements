@@ -17,7 +17,7 @@
 {% if include.announcement.changes %}
   <section>
     <p>
-       <strong>Changes:</strong> {{ include.announcement.changes | markdownify | rstrip}}
+       <strong>Changes:</strong> {{ include.announcement.changes | markdownify | strip}}
     </p>
   </section>
 {% endif %}
@@ -39,7 +39,7 @@
 {% if include.announcement.description %}
   <section data-autoslide="{{ include.announcement.slidetime | defualt: 10000 }}">
     <p>
-      {{ include.announcement.description | markdownify | rstrip}}
+      {{ include.announcement.description | markdownify | strip}}
     </p>
   </section>
 {% endif %}

@@ -12,8 +12,8 @@
   <td>{{ include.sport.tickets }}</td>
   <td>{{ include.sport.status }}</td>
   <td>{{ include.sport.result }}</td>
-  <td>{{ include.sport.changes | default: "" | markdownify | rstrip}}</td>
-  <td>{{ include.sport.description | default: "" | markdownify | rstrip}}</td>
+  <td>{{ include.sport.changes | default: "" | markdownify | strip}}</td>
+  <td>{{ include.sport.description | default: "" | markdownify | strip}}</td>
   <td>
     <table class="table table-sm table-hover">
       <tbody>
@@ -32,6 +32,6 @@
       </tbody>
     </table>
   </td>
-  <td>{{ include.sport.awards | default: "" | markdownify | rstrip}}</td>
+  <td>{{ include.sport.awards | default: "" | markdownify | strip}}</td>
   <td>{{ include.sport.tweet }}</td>
 </tr>

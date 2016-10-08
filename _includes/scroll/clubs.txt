@@ -1,0 +1,9 @@
+{% capture output %}
+< Clubs > | - {% for club in site.clubs %}
+{% if club.enabled %}{{ club.name }} (Date: {{ club.date | date: "%A, %B %e, %Y %l:%M %p" }}
+{% if club.location %} - Location: {{ club.location }}{% endif %})
+{% if club.changes %} - Changes: {{ club.changes | strip | strip_newlines }}{% endif %}
+{% if club.description %} - Description: {{ club.description | strip | strip_newlines }}{% endif %}
+ - {% endif %}
+{% endfor %}
+| {% endcapture %}{{ output | strip_newlines }}

@@ -1,8 +1,8 @@
 <h3>
   {% if include.sport.changes %}
-    <span class="label label-warning">Changed</span> - 
+    <span class="label label-warning">Changed</span> -
   {% endif %}
-  {{ include.sport.name }}
+  {{ include.sport.title }}
 </h3>
 <ul class="fa-ul">
   {% if include.sport.date %}
@@ -32,7 +32,7 @@
   </p>
 {% endif %}
 {% if include.sport.score %}
-  Score: 
+  Score:
   <table class="table table-condensed table-hover">
     <tbody>
       <tr>

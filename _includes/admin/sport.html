@@ -5,7 +5,7 @@
 {% else %}
 <tr>
 {% endif %}
-  <th><a href="{{ include.sport.url }}">{{ include.sport.name }}</a></th>
+  <th><a href="{{ include.sport.url }}">{{ include.sport.title }}</a></th>
   <td>{{ include.sport.date | default: "" | date: "%A, %B %e, %Y" }}</td>
   <td>{{ include.sport.time | default: "" | date: "%l:%M %Z" }}</td>
   <td>{{ include.sport.location }}</td>

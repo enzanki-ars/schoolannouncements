@@ -1,6 +1,6 @@
-title: "School Announcements - DEMO"
-description: "Demo for School Announcements"
-repository: schoolnews/schoolnews.github.io
+title: "Your School's News - DEMO"
+description: "Demo for Your School's News"
+repository: yourschoolsnews/yourschoolsnews.github.io
 timezone: America/New_York
 
 exclude: [vendor]

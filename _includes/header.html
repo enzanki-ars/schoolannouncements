@@ -1,42 +1,30 @@
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      {% if site.github.owner_gravatar_url %}
-        <a class="navbar-brand" href="#">
-          <img alt="Brand" src="{{ site.github.owner_gravatar_url }}" style="width: 20px; height: 20px; border-radius: 2px;">
-        </a>
-      {% endif %}
-      {% if site.github.project_title %}
-        <a class="navbar-brand" href="{{ site.github.url | replace_first:'http://','https://' }}/index.html">{{ site.github.project_title }}</a>
-      {% else %}
-        <a class="navbar-brand" href="{{ site.github.url | replace_first:'http://','https://' }}/index.html">{{ site.title }}</a>
-      {% endif %}
-    </div>
-    
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        {% for link in site.data.header.left-header %}
-          {% include navbarlink.html link=link %}
-        {% endfor %}
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        {% for link in site.data.header.right-header %}
-          {% include navbarlink.html link=link %}
-        {% endfor %}
-      </ul>
-    </div>
-    <!-- /.navbar-collapse -->
+<nav class="navbar navbar-fixed-top navbar-light bg-faded">
+  <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2" aria-controls="exCollapsingNavbar2" aria-expanded="false" aria-tag="Toggle navigation">
+    &#9776;
+  </button>
+  <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
+    {% if site.github.owner_gravatar_url %}
+      <a class="navbar-brand" href="#">
+        <img alt="Brand" src="{{ site.github.owner_gravatar_url }}" style="width: 20px; height: 20px; border-radius: 2px;">
+      </a>
+    {% endif %}
+    {% if site.github.project_title %}
+      <a class="navbar-brand" href="{{ site.github.url | replace_first:'http://','https://' }}/index.html">{{ site.github.project_title }}</a>
+    {% else %}
+      <a class="navbar-brand" href="{{ site.github.url | replace_first:'http://','https://' }}/index.html">{{ site.title }}</a>
+    {% endif %}
+
+    <ul class="nav navbar-nav nav-inline">
+      <li class="nav-item">
+        <a class="nav-link active" href="{{ site.github.url | replace_first:'http://','https://' }}">Home</a>
+      </li>
+      {% for link in site.data.header %}
+        {% include navbarlink.html link=link %}
+      {% endfor %}
+    </ul>
   </div>
-  <!-- /.container-fluid -->
 </nav>
+
 <div class="container">
   {% if site.alert %}
     <div class="sitealerts">

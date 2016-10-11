@@ -1,6 +1,7 @@
-bootstrap: 3.3.7
+bootstrap: 4.0.0-alpha.4
 font-awesome: 4.6.3
 jquery: 3.1.1
+tether: 1.3.3
 modernizer: 2.8.3
 autotrack: 1.0.1
 revealjs: 3.3.0

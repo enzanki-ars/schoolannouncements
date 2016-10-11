@@ -1,5 +1,5 @@
 body {
-	margin-top: 50px;
+  margin-top: 5rem;
 }
 :target:before, .thumbnail:before {
 	content:"";
@@ -22,6 +22,10 @@ body {
   animation: marquee linear infinite;
   animation-delay: 5s;
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> master
 @keyframes marquee {
   0% {
     transform: translate(10%, 0);

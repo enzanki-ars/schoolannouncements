@@ -74,10 +74,10 @@
         <link rel="apple-touch-icon" href="{{ site.github.url | replace_first:'http://','https://' }}/icons/apple-touch-icon.png">
 
         <script src="https://code.jquery.com/jquery-{{ site.data.versions.jquery }}.min.js"></script>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/{{ site.data.versions.tether }}/js/tether.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/{{ site.data.versions.bootstrap }}/css/bootstrap.min.css" crossorigin="anonymous">
         {% if page.theme or site.theme %}
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/{{ site.data.versions.bootstrap }}/{{ page.theme | default: site.theme }}/bootstrap.min.css" crossorigin="anonymous">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/{{ site.data.versions.bootstrap }}/{{ page.theme | default: site.theme }}/bootstrap.min.css" crossorigin="anonymous">    
         {% endif %}
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/{{ site.data.versions.font-awesome }}/css/font-awesome.min.css" crossorigin="anonymous">
         <link rel="stylesheet" href="{{ site.github.url | replace_first:'http://','https://' }}/css/main.css">
@@ -85,7 +85,7 @@
         {% if page.live-reload %}
             <script async src="{{ site.github.url | replace_first:'http://','https://' }}/js/live.js"></script>
         {% endif %}
-
+        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/{{ site.data.versions.timeago }}/jquery.timeago.min.js"></script>
         {% if page.slugjs %}
           <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/speakingurl/9.0.0/speakingurl.min.js"></script>

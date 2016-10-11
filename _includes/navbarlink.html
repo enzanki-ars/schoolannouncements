@@ -1,24 +1,22 @@
 {% if include.link.dropdown %}
-  <li class="dropdown">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ include.link.text }}<span class="caret"></span></a>
-    <ul class="dropdown-menu">
-      {% for dropdown in include.link.dropdown %}
-      <li>
-        {% if dropdown.internal-link %}
-          <a href="{{ site.github.url | replace_first:'http://','https://' }}/{{ dropdown.internal-link }}">{{ dropdown.text }}</a>
-        {% else %}
-          <a href="{{ dropdown.external-link }}">{{ dropdown.text }}</a>
-        {% endif %}
-      </li>
-      {% endfor %}
-    </ul>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{ include.link.text }}</a>
+    <div class="dropdown-menu">
+    {% for link in include.link.dropdown %}
+      {% if link.internal-link %}
+        <a class="dropdown-item" href="{{ site.github.url | replace_first:'http://','https://' }}/{{ link.internal-link }}">{{ link.text }}</a>
+      {% else %}
+        <a class="dropdown-item" href="{{ link.external-link }}">{{ link.text }}</a>
+      {% endif %}
+    {% endfor %}
+    </div>
+  </li>
+{% elsif include.link.internal-link %}
+  <li class="nav-item">
+    <a class="nav-link" href="{{ site.github.url | replace_first:'http://','https://' }}/{{ include.link.internal-link }}">{{ include.link.text }}</a>
   </li>
 {% else %}
-  <li>
-    {% if include.link.internal-link %}
-      <a href="{{ site.github.url | replace_first:'http://','https://' }}/{{ include.link.internal-link }}">{{ include.link.text }}</a>
-    {% else %}
-      <a href="{{ include.link.external-link }}">{{ include.link.text }}</a>
-    {% endif %}
+  <li class="nav-item">
+    <a class="nav-link" href="{{ include.link.external-link }}">{{ include.link.text }}</a>
   </li>
 {% endif %}

@@ -38,3 +38,4 @@ gems:
   - jekyll-feed
   - jekyll-redirect-from
   - jekyll-paginate
+  - jekyll-github-metadata

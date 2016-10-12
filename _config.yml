@@ -3,6 +3,8 @@ description: "Demo for Your School's News"
 repository: yourschoolsnews/yourschoolsnews.github.io
 timezone: America/New_York
 
+encoding: utf-8
+
 exclude: [vendor]
 
 collections:
@@ -38,3 +40,4 @@ gems:
   - jekyll-feed
   - jekyll-redirect-from
   - jekyll-paginate
+  - jekyll-seo-tag

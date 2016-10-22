@@ -2,23 +2,28 @@
 # Full project: https://gitlab.com/pages/jekyll
 image: ruby:2.3
 
+cache:
+  paths:
+    - vendor/bundle
+
+before_script:
+  - gem install bundler
+  - bundle install --path vendor/bundle
+
 test:
   stage: test
   script:
-  - gem install bundler
-  - bundle install
   - bundle exec jekyll build -d test
   artifacts:
     paths:
     - test
+    expire_in: 1 week
   except:
   - master
 
 pages:
   stage: deploy
   script:
-  - gem install bundler
-  - bundle install
   - bundle exec jekyll build -d public
   artifacts:
     paths:

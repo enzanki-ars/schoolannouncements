@@ -1,7 +1,19 @@
 title: "Your School's Newspaper - DEMO"
 description: "Demo for Your School's Newspaper"
 repository: schpaper/schpaper.github.io
+
+author:
+  twitter: schpaper
+
+twitter:
+  username: schpaper
+
+social:
+  links:
+    - https://twitter.com/schpaper
+
 timezone: America/New_York
+encoding: utf-8
 
 exclude: [vendor]
 
@@ -38,3 +50,4 @@ gems:
   - jekyll-feed
   - jekyll-redirect-from
   - jekyll-paginate
+  - jekyll-seo-tag

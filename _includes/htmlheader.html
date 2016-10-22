@@ -12,49 +12,7 @@
 
         {% feed_meta %}
 
-        <meta name="twitter:card" content="summary">
-        <meta name="twitter:site" content="@enzanki_ars">
-        <meta name="twitter:creator" content="@enzanki_ars">
-        <meta name="author" content="Alex Shafer">
-
-        {% if page.title %}
-            <meta name="twitter:title" content="{{ page.title }}">
-            <title>{{ page.title }}</title>
-        {% elsif page.github.project_title %}
-            <meta name="twitter:title" content="{{ page.github.project_title }}">
-            <title>{{ page.github.project_title }}</title>
-        {% else %}
-            <meta name="twitter:title" content="{{ site.title }}">
-            <title>{{ site.title }}</title>
-        {% endif %}
-
-        {% if page.url %}
-            <meta name="twitter:url" content="{{ site.github.url | replace_first:'http://','https://' }}{{ page.url }}">
-        {% endif %}
-
-        {% if page.description %}
-            <meta name="twitter:description" content="{{ page.description }}">
-            <meta name="description" content="{{ page.description }}">
-        {% elsif page.github.project_tagline %}
-            <meta name="twitter:description" content="{{ page.github.project_tagline }}">
-            <meta name="description" content="{{ page.github.project_tagline }}">
-        {% else %}
-            <meta name="twitter:description" content="{{ site.description }}">
-            <meta name="description" content="{{ site.description }}">
-        {% endif %}
-
-        {% if page.image %}
-            <meta name="twitter:image" content="{{ site.github.url | replace_first:'http://','https://' }}/img/{{ page.image }}">
-        {% elsif site.github.owner_gravatar_url %}
-            <meta name="twitter:image" content="{{ site.github.owner_gravatar_url }}">
-        {% endif %}
-
-        {% if page.previous.url %}
-            <link rel="prev" href="{{ page.previous.url | prepend: site.github.url | replace_first:'http://','https://' }}" />
-        {% endif %}
-        {% if page.next.url %}
-            <link rel="next" href="{{ page.next.url | prepend: site.github.url | replace_first:'http://','https://' }}" />
-        {% endif %}
+        {% seo %}
 
         <script>
         var _rollbarConfig = {

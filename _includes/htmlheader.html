@@ -29,7 +29,7 @@
         </script>
 
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
-        <link rel="apple-touch-icon" href="{{ site.github.url | replace_first:'http://','https://' }}/icons/apple-touch-icon.png">
+        <link rel="apple-touch-icon" href="{{ site.url }}/icons/apple-touch-icon.png">
 
         <script src="https://code.jquery.com/jquery-{{ site.data.versions.jquery }}.min.js"></script>
 
@@ -38,10 +38,10 @@
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/{{ site.data.versions.bootstrap }}/{{ page.theme | default: site.theme }}/bootstrap.min.css" crossorigin="anonymous">
         {% endif %}
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/{{ site.data.versions.font-awesome }}/css/font-awesome.min.css" crossorigin="anonymous">
-        <link rel="stylesheet" href="{{ site.github.url | replace_first:'http://','https://' }}/css/main.css">
+        <link rel="stylesheet" href="{{ site.url }}/css/main.css">
 
         {% if page.live-reload %}
-            <script async src="{{ site.github.url | replace_first:'http://','https://' }}/js/live.js"></script>
+            <script async src="{{ site.url }}/js/live.js"></script>
         {% endif %}
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/{{ site.data.versions.timeago }}/jquery.timeago.min.js"></script>

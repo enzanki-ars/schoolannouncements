@@ -1,6 +1,9 @@
 title: "Your School's Newspaper - DEMO"
 description: "Demo for Your School's Newspaper"
-repository: schpaper/schpaper.github.io
+url: https://schpaper.gitlab.io/
+
+gitlab:
+  repository_url: https://gitlab.com/schpaper/schpaper.gitlab.io
 
 author:
   twitter: schpaper
@@ -51,3 +54,4 @@ gems:
   - jekyll-redirect-from
   - jekyll-paginate
   - jekyll-seo-tag
+  - jekyll-git_metadata

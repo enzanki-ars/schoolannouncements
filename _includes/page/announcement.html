@@ -18,7 +18,7 @@
   </div>
 {% endif %}
 {% if include.announcement.picture %}
-  <img src="{{ site.github.url | replace_first:'http://','https://' }}/img/announcement/{{ include.annoucement.picture }}" class="img-responsive" alt="{{ include.announcement.picture-alt }}">
+  <img src="{{ site.url }}/img/announcement/{{ include.annoucement.picture }}" class="img-responsive" alt="{{ include.announcement.picture-alt }}">
 {% endif %}
 {% if include.announcement.video %}
   <div class="embed-responsive embed-responsive-16by9">

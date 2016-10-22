@@ -3,17 +3,24 @@
   <strong>Licence</strong>
   <ul>
     <li>
-      Content for {{ site.github.project_title }} is licensed under a <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+      Content for {{ site.title }} is licensed under a <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
     </li>
     <li>
-      Code for {{ site.github.project_title }} is licenced under a <a href="http://www.gnu.org/licenses/agpl-3.0.en.html">GNU Affero General Public License v3</a>.
+      Code for {{ site.title }} is licenced under a <a href="http://www.gnu.org/licenses/agpl-3.0.en.html">GNU Affero General Public License v3</a>.
     </li>
   </ul>
   <p>
-    Code avalible at <a href="{{ site.github.repository_url }}">{{ site.github.repository_url }}</a>
+    Code avalible at <a href="{{ site.gitlab.repository_url }}">{{ site.gitlab.repository_url }}</a>
   </p>
   <p>
-    Page compiled at {{ site.time }} for commit <a data-toggle="tooltip" data-placement="auto" title="Environment: {{ jekyll.environment }}" href="{{ site.github.repository_url }}/commit/{{ site.github.build_revision }}">{{ site.github.build_revision }}</a>. 
+    Page compiled at {{ site.time }} for commit
+    <a data-toggle="tooltip" data-placement="auto" title="Environment: {{ jekyll.environment }}" href="{{ site.gitlab.repository_url }}/commit/{{ site.git.last_commit.long_sha }}">
+      {{ site.git.last_commit.long_sha }}
+    </a>
+    by
+    <a href="#" data-toggle="{{ site.git.last_commit.author_date | date: "%A, %B %e, %Y %l:%M%P %Z" }} (<time class="timeago" datetime="{{ site.git.last_commit.author_date | date: "%A, %B %e, %Y %l:%M%P %Z" }}">{{ site.git.last_commit.author_date | date: "%A, %B %e, %Y %l:%M%P %Z" }}</time>)" title="Some tooltip text!">
+      {{ site.git.last_commit.name }}
+    </a>.
   </p>
 </footer>
 

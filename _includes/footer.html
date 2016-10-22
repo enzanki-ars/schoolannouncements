@@ -13,14 +13,10 @@
     Code avalible at <a href="{{ site.gitlab.repository_url }}">{{ site.gitlab.repository_url }}</a>
   </p>
   <p>
-    Page compiled at {{ site.time }} for commit
+    Page compiled at {{ site.time }}. <!--for commit
     <a data-toggle="tooltip" data-placement="auto" title="Environment: {{ jekyll.environment }}" href="{{ site.gitlab.repository_url }}/commit/{{ site.git.last_commit.long_sha }}">
       {{ site.git.last_commit.long_sha }}
-    </a>
-    by
-    <a href="#" data-toggle="{{ site.git.last_commit.author_date | date: "%A, %B %e, %Y %l:%M%P %Z" }} (<time class="timeago" datetime="{{ site.git.last_commit.author_date | date: "%A, %B %e, %Y %l:%M%P %Z" }}">{{ site.git.last_commit.author_date | date: "%A, %B %e, %Y %l:%M%P %Z" }}</time>)" title="Some tooltip text!">
-      {{ site.git.last_commit.name }}
-    </a>.
+    </a>.-->
   </p>
 </footer>
 

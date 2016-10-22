@@ -3,6 +3,7 @@
 image: ruby:2.3
 
 cache:
+  key: "global"
   paths:
     - vendor/bundle
 

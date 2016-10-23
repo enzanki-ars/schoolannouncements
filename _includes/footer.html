@@ -13,7 +13,7 @@
     Code avalible at <a href="{{ site.gitlab.repository_url }}">{{ site.gitlab.repository_url }}</a>
   </p>
   <p>
-    Page compiled at {{ site.time }}. <!--for commit
+    Page compiled at {{ site.time | date: "%A, %B %e, %Y %l:%M%P %Z" }} (<time class="timeago" datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: "%A, %B %e, %Y %l:%M%P %Z" }}</time>). <!--for commit
     <a data-toggle="tooltip" data-placement="auto" title="Environment: {{ jekyll.environment }}" href="{{ site.gitlab.repository_url }}/commit/{{ site.git.last_commit.long_sha }}">
       {{ site.git.last_commit.long_sha }}
     </a>.-->

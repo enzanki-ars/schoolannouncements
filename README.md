@@ -4,6 +4,4 @@
 
 **Version: 1.0.0-alpha.4.1**
 
-*This project uses git-flow for development.*
-
 *Setup instructions coming soon.*

@@ -29,5 +29,6 @@ pages:
   artifacts:
     paths:
     - public
+  environment: gitlab-pages
   only:
   - master

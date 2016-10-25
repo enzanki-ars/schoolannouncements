@@ -6,8 +6,8 @@ layout: default
 
 <div class="alert alert-warning" role="alert">
   <strong>Warning!</strong> Before diving into a contribution, make sure you
-  check this site's <a href="{{ site.gitlab.repository_url }}/issues">issues</a> and
-  <a href="{{ site.gitlab.repository_url }}/pulls">pull requests</a>
+  check this site's <a href="{{ site.github.repository_url }}/issues">issues</a> and
+  <a href="{{ site.github.repository_url }}/pulls">pull requests</a>
   incase someone else already submitted a change.
 </div>
 
@@ -17,7 +17,7 @@ layout: default
 </div>
 
 <div class="alert alert-info" role="alert">
-  <strong>Overwhelmed?</strong> Don't worry! Just click <a href="{{ site.gitlab.repository_url }}/issues">here</a>
+  <strong>Overwhelmed?</strong> Don't worry! Just click <a href="{{ site.github.repository_url }}/issues">here</a>
   and create a new issue documenting exactly what you would like included on the site.
   We can take care of the rest!
 </div>
@@ -31,7 +31,7 @@ directory. The rest of this page provides examples representing every possible
 field that can be used in the file. In the examples below, many of these fields
 are optional. If you do not require that field, just skip adding that line.
 
-Look at the existing files in [this project's repository code]({{ site.gitlab.repository_url }})
+Look at the existing files in [this project's repository code]({{ site.github.repository_url }})
 for some examples.
 
 **Some important notes:**

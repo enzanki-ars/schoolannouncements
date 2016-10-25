@@ -5,7 +5,7 @@
       {% for dropdown in include.link.dropdown %}
       <li>
         {% if dropdown.internal-link %}
-          <a href="{{ site.url }}/{{ dropdown.internal-link }}">{{ dropdown.text }}</a>
+          <a href="{{ site.github.url }}/{{ dropdown.internal-link }}">{{ dropdown.text }}</a>
         {% else %}
           <a href="{{ dropdown.external-link }}">{{ dropdown.text }}</a>
         {% endif %}
@@ -16,7 +16,7 @@
 {% else %}
   <li>
     {% if include.link.internal-link %}
-      <a href="{{ site.url }}/{{ include.link.internal-link }}">{{ include.link.text }}</a>
+      <a href="{{ site.github.url }}/{{ include.link.internal-link }}">{{ include.link.text }}</a>
     {% else %}
       <a href="{{ include.link.external-link }}">{{ include.link.text }}</a>
     {% endif %}

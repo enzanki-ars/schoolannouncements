@@ -122,7 +122,7 @@ function submit(type, values) {
     + moment(document.getElementById("date").value).format("YYYY-MM-DD")
     + "-" + document.getElementById("title").value);
   description = encodeURIComponent("Submitted via " + window.location.href);
-  window.location.href = "{{ site.gitlab.repository_url }}/new/master?filename=" + filename
+  window.location.href = "{{ site.github.repository_url }}/new/master?filename=" + filename
     + "&value=" + content + "&message=" + message
     + "&description=" + description;
 }

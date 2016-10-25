@@ -12,7 +12,7 @@
   <td>{{ include.announcement.changes | default: "" | markdownify | strip  }}</td>
   <td>
     {% if include.annoucement.picture %}
-      <a href="{{ site.url }}/img/announcement/{{ include.annoucement.picture }}">{{ site.url }}/img/announcement/{{ include.annoucement.picture }}</a>
+      <a href="{{ site.github.url }}/img/announcement/{{ include.annoucement.picture }}">{{ site.github.url }}/img/announcement/{{ include.annoucement.picture }}</a>
     {% endif %}
   </td>
   <td>{{ include.announcement.picture-alt | default: "" }}</td>

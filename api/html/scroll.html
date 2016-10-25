@@ -74,7 +74,13 @@ scroll: ticker
   {% endif %}
 
   <div class="marquee">
-    <span>Lots of text, written in a long sentence to make it go off the screen. Well I hope it goes off the screen</span>
+    <span>
+      {% capture all %}
+      {% include scroll/announcements.txt %}
+      {% include scroll/clubs.txt %}
+      {% include scroll/sports.txt %}
+      {% include scroll/data.txt %}
+      {% endcapture %}{{ all | strip_newlines }}</span>
   </div>
 </body>
 </html>

@@ -67,13 +67,13 @@
   {% endif %}
 
   <div class="marquee" style="width: 100%; left: 0px; height: 10%; position: fixed; margin: 0 auto; white-space: nowrap; overflow: hidden;">
-    <span>
+    <p>
       {% capture all %}
-      {% include scroll/announcements.txt %}
-      {% include scroll/clubs.txt %}
-      {% include scroll/sports.txt %}
-      {% include scroll/data.txt %}
-      {% endcapture %}{{ all | strip_newlines }}</span>
+      {% include scroll/html/announcements.html %}
+      {% include scroll/html/clubs.html %}
+      {% include scroll/html/sports.html %}
+      {% include scroll/html/data.html %}
+      {% endcapture %}{{ all | strip_newlines }}</p>
   </div>
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/{{ site.data.versions.bootstrap }}/js/bootstrap.min.js" crossorigin="anonymous"></script>

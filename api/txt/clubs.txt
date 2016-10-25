@@ -1,4 +1,4 @@
 ---
 ---
 
-{% include scroll/clubs.txt %}
+{% include scroll/txt/clubs.txt %}

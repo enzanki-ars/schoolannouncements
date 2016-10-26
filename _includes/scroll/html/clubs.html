@@ -2,7 +2,7 @@
 <span class="tag tag-primary">Clubs</span> - {% for club in site.clubs %}
 {% if club.enabled %}
 {% if club.changes %}
-  <span class="tag tag-warning">Changed</span> 
+  <span class="tag tag-warning">Changed</span>
 {% endif %}
 {{ club.name }} (<i class="fa fa-calendar fa-fw" aria-hidden="true"></i>: {{ club.date | date: "%A, %B %e, %Y %l:%M %p" }}
 {% if club.location %} - <i class="fa fa-map-marker fa-fw" aria-hidden="true"></i>: {{ club.location }}{% endif %})

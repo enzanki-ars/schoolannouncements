@@ -2,7 +2,7 @@
 <span class="tag tag-primary">Sports</span> - {% for sport in site.sports %}
 {% if sport.enabled %}
 {% if sport.changes %}
-  <span class="tag tag-warning">Changed</span> 
+  <span class="tag tag-warning">Changed</span>
 {% endif %}
 {{ sport.title }}
 {% if sport.status %} - <i class="fa fa-question-circle-o fa-fw" aria-hidden="true"></i>: {{ sport.status }}{% endif %} (<i class="fa fa-calendar fa-fw" aria-hidden="true"></i>: {{ sport.date | date: "%A, %B %e, %Y %l:%M %p" }}

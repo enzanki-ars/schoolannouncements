@@ -2,7 +2,7 @@
 <span class="tag tag-primary">Announcements</span> - {% for announcement in site.announcements %}
 {% if announcement.enabled %}
 {% if announcement.changes %}
-  <span class="tag tag-warning">Changed</span> 
+  <span class="tag tag-warning">Changed</span>
 {% endif %}
 {{ announcement.title }} (<i class="fa fa-calendar fa-fw" aria-hidden="true"></i>: {{ announcement.date | date: "%A, %B %e, %Y %l:%M %p" }}
 {% if announcement.location %} - <i class="fa fa-map-marker fa-fw" aria-hidden="true"></i>: {{ announcement.location }}{% endif %})

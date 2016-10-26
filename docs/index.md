@@ -6,7 +6,7 @@ layout: default
 
 <div class="alert alert-warning" role="alert">
   <strong>Warning!</strong> Before diving into a contribution, make sure you
-  check this site's <a href="{{ site.github.issues_url }}">issues</a> and
+  check this site's <a href="{{ site.github.repository_url }}/issues">issues</a> and
   <a href="{{ site.github.repository_url }}/pulls">pull requests</a>
   incase someone else already submitted a change.
 </div>
@@ -17,7 +17,7 @@ layout: default
 </div>
 
 <div class="alert alert-info" role="alert">
-  <strong>Overwhelmed?</strong> Don't worry! Just click <a href="{{ site.github.issues_url }}">here</a>
+  <strong>Overwhelmed?</strong> Don't worry! Just click <a href="{{ site.github.repository_url }}/issues">here</a>
   and create a new issue documenting exactly what you would like included on the site.
   We can take care of the rest!
 </div>

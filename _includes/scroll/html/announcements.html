@@ -1,0 +1,13 @@
+{% capture output %}
+<span class="tag tag-primary">Announcements</span> - {% for announcement in site.announcements %}
+{% if announcement.enabled %}
+{% if announcement.changes %}
+  <span class="tag tag-warning">Changed</span> 
+{% endif %}
+{{ announcement.title }} (<i class="fa fa-calendar fa-fw" aria-hidden="true"></i>: {{ announcement.date | date: "%A, %B %e, %Y %l:%M %p" }}
+{% if announcement.location %} - <i class="fa fa-map-marker fa-fw" aria-hidden="true"></i>: {{ announcement.location }}{% endif %})
+{% if announcement.changes %} - Changes: {{ announcement.changes | strip | strip_newlines }}{% endif %}
+{% if announcement.description %} - Description: {{ announcement.description | strip | strip_newlines }}{% endif %}
+ - {% endif %}
+{% endfor %}
+{% endcapture %}{{ output | strip_newlines }}

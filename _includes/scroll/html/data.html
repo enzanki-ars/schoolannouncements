@@ -1,0 +1,14 @@
+{% capture output %}
+<span class="tag tag-primary">Other Data</span> - 
+{% if site.data.birthdays.belated %}<i class="fa fa-birthday-cake fa-fw" aria-hidden="true"></i> Happy belated birthday to: {% for name in site.data.birthdays.belated %}{{ name }}{% if forloop.last != true %}, {% endif %}{% endfor %} - {% endif %}
+{% if site.data.birthdays.today %}<i class="fa fa-birthday-cake fa-fw" aria-hidden="true"></i> Happy birthday to: {% for name in site.data.birthdays.today %}{{ name }}{% if forloop.last != true %}, {% endif %}{% endfor %} - {% endif %}
+{% if site.data.birthdays.weekend %}<i class="fa fa-birthday-cake fa-fw" aria-hidden="true"></i> Happy weekend birthday to: {% for name in site.data.birthdays.weekend %}{{ name }}{% if forloop.last != true %}, {% endif %}{% endfor %} - {% endif %}
+{% if site.data.birthdays.break %}<i class="fa fa-birthday-cake fa-fw" aria-hidden="true"></i> Happy {{ site.data.birthdays.breakname }} birthday to: {% for name in site.data.birthdays.break %}{{ name }}{% if forloop.last != true %}, {% endif %}{% endfor %} - {% endif %}
+{% if site.data.wordofthemonth.word %}Word of the month: {{ site.data.wordofthemonth.word }}
+{% if site.data.wordofthemonth.description %} - Description: {{ site.data.wordofthemonth.description }} - {% endif %}
+{% endif %}
+{% if site.data.wordofthemonth.winners %}<i class="fa fa-trophy fa-fw" aria-hidden="true"></i>Winners: {% for name in site.data.wordofthemonth.winners %}{{ name }}{% if forloop.last != true %}, {% endif %}{% endfor %} - {% endif %}
+{% if site.data.wordofthemonth.next %}Next word of the month: {{ site.data.wordofthemonth.next }}
+{% if site.data.wordofthemonth.nextdescription %} - Description: {{ site.data.wordofthemonth.nextdescription }}{% endif %}
+ - {% endif %}
+{% endcapture %}{{ output  | strip_newlines }}

@@ -1,0 +1,20 @@
+{% capture output %}
+<span class="tag tag-primary">Sports</span> - {% for sport in site.sports %}
+{% if sport.enabled %}
+{% if sport.changes %}
+  <span class="tag tag-warning">Changed</span> 
+{% endif %}
+{{ sport.title }}
+{% if sport.status %} - <i class="fa fa-question-circle-o fa-fw" aria-hidden="true"></i>: {{ sport.status }}{% endif %} (<i class="fa fa-calendar fa-fw" aria-hidden="true"></i>: {{ sport.date | date: "%A, %B %e, %Y %l:%M %p" }}
+{% if sport.location %} - <i class="fa fa-map-marker fa-fw" aria-hidden="true"></i>: {{ sport.location }}{% endif %})
+{% if sport.changes %} - Changes: {{ sport.changes | strip | strip_newlines }}{% endif %}
+ - Description: {{ sport.description | strip | strip_newlines }}
+{% if sport.score %} - Score:
+{% for score in sport.score %}
+ {{score.team}}={{score.points}}
+{% if forloop.last != true %}, {% endif %}
+{% endfor %}{% endif %}
+{% if sport.awards %} - Awards: {{ sport.awards | strip | strip_newlines }}{% endif %}
+ - {% endif %}
+{% endfor %}
+{% endcapture %}{{ output  | strip_newlines }}

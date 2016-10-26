@@ -9,14 +9,14 @@
       </a>
     {% endif %}
     {% if site.github.project_title %}
-      <a class="navbar-brand" href="{{ site.github.url | replace_first:'http://','https://' }}/index.html">{{ site.github.project_title }}</a>
+      <a class="navbar-brand" href="{{ site.github.url }}/index.html">{{ site.github.project_title }}</a>
     {% else %}
-      <a class="navbar-brand" href="{{ site.github.url | replace_first:'http://','https://' }}/index.html">{{ site.title }}</a>
+      <a class="navbar-brand" href="{{ site.github.url }}/index.html">{{ site.title }}</a>
     {% endif %}
 
     <ul class="nav navbar-nav nav-inline">
       <li class="nav-item">
-        <a class="nav-link active" href="{{ site.github.url | replace_first:'http://','https://' }}">Home</a>
+        <a class="nav-link active" href="{{ site.github.url }}">Home</a>
       </li>
       {% for link in site.data.header %}
         {% include navbarlink.html link=link %}

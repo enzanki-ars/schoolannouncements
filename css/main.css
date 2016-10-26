@@ -1,40 +1,32 @@
-body {
-  margin-top: 5rem;
-}
-:target:before, .thumbnail:before {
-	content:"";
-	display:block;
-	height:50px; /* fixed header height*/
-	margin:-50px 0 0; /* negative fixed header height */
-}
+// Code below is modified from http://stackoverflow.com/a/38118591/6820516
 
-// Scroll bar: http://stackoverflow.com/a/38118591/6820516
 .marquee {
   width: 100%;
+  left: 0px;
+  position: fixed;
   margin: 0 auto;
   white-space: nowrap;
   overflow: hidden;
 }
-.marquee span {
+.marquee p {
   display: inline-block;
   padding-left: 100%;
   text-indent: 0;
   animation: marquee linear infinite;
-  animation-delay: 5s;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> master
 @keyframes marquee {
   0% {
-    transform: translate(10%, 0);
+    transform: translate(0%, 0);
   }
   100% {
     transform: translate(-100%, 0);
   }
 }
 
+// End modified code.
+
+// Code below is modified from http://codepen.io/ashblue/pen/mCtuA/
 
 .table-editable {
   position: relative;
@@ -52,3 +44,5 @@ body {
   top: 8px;
   right: 0;
 }
+
+// End modified code.

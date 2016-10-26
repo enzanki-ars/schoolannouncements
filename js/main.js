@@ -8,6 +8,7 @@ function loadSuccess() {
   image_x.parentNode.removeChild(image_x);
   ga("send", "event", "YouTube Success", "YouTube Load Success");
 }
+
 function loadError(site) {
   document.getElementById("blockedInfo").innerHTML = "<div class=\"alert alert-danger\" role=\"alert\">"
   + "<strong>" + site + " Blocked: </strong>You seem to be accessing this website from a location where "
@@ -17,6 +18,21 @@ function loadError(site) {
   image_x.parentNode.removeChild(image_x);
   ga("send", "event", "YouTube Error", "YouTube Load Error");
 }
+
+// Code below is modified from http://stackoverflow.com/a/38118591/6820516
+
+function calcSpeed(speed) {
+// Time = Distance/Speed
+  var spanSelector = document.querySelectorAll('.marquee p'),i;
+  for (i = 0; i < spanSelector.length; i++) {
+    var spanLength = spanSelector[i].offsetWidth;
+    var timeTaken = spanLength / speed;
+    spanSelector[i].style.animationDuration = timeTaken + "s";
+  }
+}
+
+// End modified code.
+
 $(window).on("load", function() {
   //Fix for header scroll http://stackoverflow.com/a/25887125/6820516
   var elements = document.querySelectorAll('input,select,textarea');
@@ -29,8 +45,7 @@ $(window).on("load", function() {
   $.timeago.settings.allowFuture = true;
 
   $("[data-toggle=\"tooltip\"]").tooltip();
-  $('.dropdown-toggle').dropdown();
-  $(".marquee").css("animation-duration", ($(window).width() + $(".marquee").width()) / 30 + "s")
+  calcSpeed(75);
 });
 
 // Code below is modified from http://codepen.io/ashblue/pen/mCtuA/

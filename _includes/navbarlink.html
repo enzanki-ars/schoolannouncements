@@ -4,7 +4,7 @@
     <div class="dropdown-menu">
     {% for link in include.link.dropdown %}
       {% if link.internal-link %}
-        <a class="dropdown-item" href="{{ site.github.url | replace_first:'http://','https://' }}/{{ link.internal-link }}">{{ link.text }}</a>
+        <a class="dropdown-item" href="{{ site.github.url }}/{{ link.internal-link }}">{{ link.text }}</a>
       {% else %}
         <a class="dropdown-item" href="{{ link.external-link }}">{{ link.text }}</a>
       {% endif %}
@@ -13,7 +13,7 @@
   </li>
 {% elsif include.link.internal-link %}
   <li class="nav-item">
-    <a class="nav-link" href="{{ site.github.url | replace_first:'http://','https://' }}/{{ include.link.internal-link }}">{{ include.link.text }}</a>
+    <a class="nav-link" href="{{ site.github.url }}/{{ include.link.internal-link }}">{{ include.link.text }}</a>
   </li>
 {% else %}
   <li class="nav-item">

@@ -1,9 +1,12 @@
 {% capture output %}
 <span class="label label-primary">Sports</span> - {% for sport in site.sports %}
 {% if sport.enabled %}
+{% if sport.changes %}
+  <span class="label label-warning">Changed</span> 
+{% endif %}
 {{ sport.title }}
-{% if sport.status %} - Status: {{ sport.status }}{% endif %} (Date: {{ sport.date | date: "%A, %B %e, %Y %l:%M %p" }}
-{% if sport.location %} - Location: {{ sport.location }}{% endif %})
+{% if sport.status %} - <i class="fa fa-question-circle-o fa-fw" aria-hidden="true"></i>: {{ sport.status }}{% endif %} (<i class="fa fa-calendar fa-fw" aria-hidden="true"></i>: {{ sport.date | date: "%A, %B %e, %Y %l:%M %p" }}
+{% if sport.location %} - <i class="fa fa-map-marker fa-fw" aria-hidden="true"></i>: {{ sport.location }}{% endif %})
 {% if sport.changes %} - Changes: {{ sport.changes | strip | strip_newlines }}{% endif %}
  - Description: {{ sport.description | strip | strip_newlines }}
 {% if sport.score %} - Score:

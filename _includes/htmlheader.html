@@ -39,17 +39,19 @@
 
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment-with-locales.min.js"></script>
 
+        {% if !page.noheader %}
         <style>
           body {
-            margin-top: 50px;
+            margin-top: 55px;
           }
           :target:before, .thumbnail:before {
             content:"";
             display:block;
-            height:50px; /* fixed header height*/
-            margin:-50px 0 0; /* negative fixed header height */
+            height:55px; /* fixed header height*/
+            margin:-55px 0 0; /* negative fixed header height */
           }
         </style>
+        {% endif %}
 
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/{{ site.data.versions.modernizer }}/modernizr.min.js"></script> -->
     </head>

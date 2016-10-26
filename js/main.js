@@ -19,15 +19,19 @@ function loadError(site) {
   ga("send", "event", "YouTube Error", "YouTube Load Error");
 }
 
+// Code below is modified from http://stackoverflow.com/a/38118591/6820516
+
 function calcSpeed(speed) {
 // Time = Distance/Speed
-  var spanSelector = document.querySelectorAll('.marquee span'),i;
+  var spanSelector = document.querySelectorAll('.marquee p'),i;
   for (i = 0; i < spanSelector.length; i++) {
     var spanLength = spanSelector[i].offsetWidth;
     var timeTaken = spanLength / speed;
     spanSelector[i].style.animationDuration = timeTaken + "s";
   }
 }
+
+// End modified code.
 
 $(window).on("load", function() {
   //Fix for header scroll http://stackoverflow.com/a/25887125/6820516
@@ -41,7 +45,7 @@ $(window).on("load", function() {
   $.timeago.settings.allowFuture = true;
 
   $("[data-toggle=\"tooltip\"]").tooltip();
-  calcSpeed(100);
+  calcSpeed(75);
 });
 
 // Code below is modified from http://codepen.io/ashblue/pen/mCtuA/

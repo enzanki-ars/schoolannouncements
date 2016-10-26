@@ -1,15 +1,4 @@
-body {
-	margin-top: 50px;
-}
-:target:before, .thumbnail:before {
-	content:"";
-	display:block;
-	height:50px; /* fixed header height*/
-	margin:-50px 0 0; /* negative fixed header height */
-}
-
 // Code below is modified from http://stackoverflow.com/a/38118591/6820516
-/* Make it a marquee */
 
 .marquee {
   width: 100%;
@@ -26,7 +15,6 @@ body {
   text-indent: 0;
   animation: marquee linear infinite;
 }
-/* Make it move */
 
 @keyframes marquee {
   0% {
@@ -36,6 +24,8 @@ body {
     transform: translate(-100%, 0);
   }
 }
+
+// End modified code.
 
 // Code below is modified from http://codepen.io/ashblue/pen/mCtuA/
 
@@ -55,3 +45,5 @@ body {
   top: 8px;
   right: 0;
 }
+
+// End modified code.

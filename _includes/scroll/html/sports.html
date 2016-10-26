@@ -1,5 +1,5 @@
 {% capture output %}
-<span class="label label-primary">Sports</span>| - {% for sport in site.sports %}
+<span class="label label-primary">Sports</span> - {% for sport in site.sports %}
 {% if sport.enabled %}
 {{ sport.title }}
 {% if sport.status %} - Status: {{ sport.status }}{% endif %} (Date: {{ sport.date | date: "%A, %B %e, %Y %l:%M %p" }}

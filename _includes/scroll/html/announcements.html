@@ -1,0 +1,10 @@
+{% capture output %}
+<span class="label label-primary">Announcements</span> - {% for announcement in site.announcements %}
+{% if announcement.enabled %}
+{{ announcement.title }} (Date: {{ announcement.date | date: "%A, %B %e, %Y %l:%M %p" }}
+{% if announcement.location %} - Location: {{ announcement.location }}{% endif %})
+{% if announcement.changes %} - Changes: {{ announcement.changes | strip | strip_newlines }}{% endif %}
+{% if announcement.description %} - Description: {{ announcement.description | strip | strip_newlines }}{% endif %}
+ - {% endif %}
+{% endfor %}
+{% endcapture %}{{ output | strip_newlines }}

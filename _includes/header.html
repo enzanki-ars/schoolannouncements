@@ -13,10 +13,10 @@
           <img alt="Brand" src="{{ site.github.owner_gravatar_url }}" style="width: 20px; height: 20px; border-radius: 2px;">
         </a>
       {% endif %}
-      {% if site.github.project_title %}
-        <a class="navbar-brand" href="{{ site.github.url | replace_first:'http://','https://' }}/index.html">{{ site.github.project_title }}</a>
+      {% if site.title %}
+        <a class="navbar-brand" href="{{ site.github.url }}/index.html">{{ site.title }}</a>
       {% else %}
-        <a class="navbar-brand" href="{{ site.github.url | replace_first:'http://','https://' }}/index.html">{{ site.title }}</a>
+        <a class="navbar-brand" href="{{ site.github.url }}/index.html">{{ site.title }}</a>
       {% endif %}
     </div>
     

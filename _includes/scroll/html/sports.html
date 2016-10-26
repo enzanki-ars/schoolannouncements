@@ -1,0 +1,17 @@
+{% capture output %}
+<span class="label label-primary">Sports</span> - {% for sport in site.sports %}
+{% if sport.enabled %}
+{{ sport.title }}
+{% if sport.status %} - Status: {{ sport.status }}{% endif %} (Date: {{ sport.date | date: "%A, %B %e, %Y %l:%M %p" }}
+{% if sport.location %} - Location: {{ sport.location }}{% endif %})
+{% if sport.changes %} - Changes: {{ sport.changes | strip | strip_newlines }}{% endif %}
+ - Description: {{ sport.description | strip | strip_newlines }}
+{% if sport.score %} - Score:
+{% for score in sport.score %}
+ {{score.team}}={{score.points}}
+{% if forloop.last != true %}, {% endif %}
+{% endfor %}{% endif %}
+{% if sport.awards %} - Awards: {{ sport.awards | strip | strip_newlines }}{% endif %}
+ - {% endif %}
+{% endfor %}
+{% endcapture %}{{ output  | strip_newlines }}

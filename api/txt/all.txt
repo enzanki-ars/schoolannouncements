@@ -1,8 +1,8 @@
 ---
 ---
 {% capture all %}
-{% include scroll/announcements.txt %}
-{% include scroll/clubs.txt %}
-{% include scroll/sports.txt %}
-{% include scroll/data.txt %}
+{% include scroll/txt/announcements.txt %}
+{% include scroll/txt/clubs.txt %}
+{% include scroll/txt/sports.txt %}
+{% include scroll/txt/data.txt %}
 {% endcapture %}{{ all | strip_newlines }}

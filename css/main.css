@@ -3,7 +3,6 @@
 .marquee {
   width: 100%;
   left: 0px;
-  height: 10%;
   position: fixed;
   margin: 0 auto;
   white-space: nowrap;

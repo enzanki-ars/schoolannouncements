@@ -1,0 +1,14 @@
+---
+layout: htmlapi
+---
+
+<div class="marquee" style="width: 100%; left: 0px; position: fixed; margin: 0 auto; white-space: nowrap; overflow: hidden;">
+  <p>
+    {% capture all %}
+    {% include scroll/html/announcements.html %}
+    {% include scroll/html/clubs.html %}
+    {% include scroll/html/sports.html %}
+    {% include scroll/html/data.html %}
+    {% endcapture %}{{ all | strip_newlines }}
+  </p>
+</div>

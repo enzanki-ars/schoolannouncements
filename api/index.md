@@ -4,8 +4,8 @@ layout: default
 
 # API
 
-* html
-  * [Scroll Bar](html/scroll.html)
+* HTML Scroll Bar
+  * [All](html/scroll.html)
 * JSON
   * [Announcements](json/announcements.json)
   * [Clubs](json/clubs.json)

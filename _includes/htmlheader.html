@@ -9,23 +9,26 @@
 
         {% seo %}
 
-        <script src="{{ site.github.url }}/js/rollbar.js"></script>
+        <script src="{{ site.github.url | replace_first:'http://','https://' }}/js/rollbar.js"></script>
 
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
         <link rel="apple-touch-icon" href="{{ site.github.url }}/icons/apple-touch-icon.png">
 
         <script src="https://code.jquery.com/jquery-{{ site.data.versions.jquery }}.min.js"></script>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/{{ site.data.versions.tether }}/js/tether.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/{{ site.data.versions.bootstrap }}/css/bootstrap.min.css" crossorigin="anonymous">
         {% if page.theme or site.theme %}
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/{{ site.data.versions.bootstrap }}/{{ page.theme | default: site.theme }}/bootstrap.min.css" crossorigin="anonymous">
         {% endif %}
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/{{ site.data.versions.font-awesome }}/css/font-awesome.min.css" crossorigin="anonymous">
-        <link rel="stylesheet" href="{{ site.github.url }}/css/main.css">
+        <link rel="stylesheet" href="{{ site.github.url | replace_first:'http://','https://' }}/css/main.css">
 
         {% if page.live-reload %}
-            <script src="{{ site.github.url }}/js/live.js"></script>
+            <script src="{{ site.github.url | replace_first:'http://','https://' }}/js/live.js"></script>
         {% endif %}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/{{ site.data.versions.font-awesome }}/css/font-awesome.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ site.github.url | replace_first:'http://','https://' }}/css/main.css">
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/{{ site.data.versions.timeago }}/jquery.timeago.min.js"></script>
         {% if page.slugjs %}

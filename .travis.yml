@@ -1,12 +1,19 @@
 language: python
 python: 
   - "3.5"
-cache: bundler
+cache: 
+  - bundler
+  - pip
 
 before_script:
   - rvm install 2.3.3
+  - bundle install
+  - bundle exec jekyll build
+  - pip install coala-bears
+  - npm install -g alex write-good csslint bootlint eslint jshint remark-cli
 script:
-  - bash ./script/cibuild
+  - bundle exec jekyll build
+  - coala --ci
 
 deploy:
   provider: script

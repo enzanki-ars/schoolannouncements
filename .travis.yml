@@ -1,15 +1,24 @@
 language: ruby
-python: "3.5"
 cache: bundler
 rvm:
   - 2.3.0
+
+addons:
+  apt:
+    packages:
+      - python3
+      - python3-dev
+      - python3-pip
+
 script:
   - bash ./script/cibuild
+
 deploy:
   provider: script
   script: bash ./script/rollbar
   on:
     branch: master
+
 env:
   global:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true

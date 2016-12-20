@@ -1,14 +1,26 @@
-language: ruby
-cache: bundler
-rvm:
-  - 2.3.0
+language: python
+python: 
+  - "3.5"
+cache: 
+  - bundler
+  - pip
+
+before_script:
+  - rvm install 2.3.3
+  - bundle install
+  - bundle exec jekyll build
+  - pip install coala-bears --upgrade
+  - npm update -g alex write-good csslint bootlint eslint jshint remark-cli
 script:
-  - bash ./script/cibuild
+  - bundle exec jekyll build
+  - coala --ci
+
 deploy:
   provider: script
   script: bash ./script/rollbar
   on:
     branch: master
+
 env:
   global:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true

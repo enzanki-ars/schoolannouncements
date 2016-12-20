@@ -1,0 +1,39 @@
+ignore = (.git/**/*|.git/*)
+
+[Common]
+files = (**/*|*)
+bears = InvalidLinkBear,LineLengthBear,SpaceConsistencyBear
+follow_redirects = True
+use_spaces = True
+allow_trailing_whitespace = True
+
+[Text]
+files = (**/*.md|*.md)
+bears = AlexBear,ProseLintBear,SpellCheckBear,WriteGoodLintBear
+# WriteGood need to be configured https://github.com/coala/bear-docs/blob/master/docs/WriteGoodLintBear.rst
+
+[CSS]
+files = _site/**/*.css
+bears = CSSLintBear
+
+[HTML]
+files = _site/**/*.html
+bears = BootLintBear,HTMLLintBear
+
+[JSON]
+files = _site/**/*.json
+bears = JSONFormatBear
+
+[JS]
+files = _site/**/*.js
+bears = ESLintBear,JSHintBear
+
+[Markdown]
+files = (**/*.md|*.md)
+bears = MarkdownBear
+markdown_horizontal_rule = '-'
+
+[YAML]
+files = (**/*.yml|*.yml|**/*.md|*.md) # Attempt to check headers of Markdown files.
+bears = YAMLLintBear
+markdown_horizontal_rule = '-'

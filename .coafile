@@ -1,5 +1,6 @@
 # pip install requests 
 [Common]
+files = (**/*|*)
 bears = InvalidLinkBear,LineLengthBear,SpaceConsistencyBear
 follow_redirects = True
 use_spaces = True

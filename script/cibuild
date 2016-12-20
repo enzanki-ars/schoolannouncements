@@ -1,3 +1,8 @@
 #!/usr/bin/env bash
 
 bundle exec jekyll build
+
+pip3 install coala-bears
+npm install -g alex write-good csslint bootlint eslint jshint remark-cli
+
+coala-ci

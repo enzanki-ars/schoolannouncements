@@ -9,8 +9,8 @@ before_script:
   - rvm install 2.3.3
   - bundle install
   - bundle exec jekyll build
-  - pip install coala-bears
-  - npm install -g alex write-good csslint bootlint eslint jshint remark-cli
+  - pip install coala-bears --upgrade
+  - npm update -g alex write-good csslint bootlint eslint jshint remark-cli
 script:
   - bundle exec jekyll build
   - coala --ci

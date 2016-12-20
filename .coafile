@@ -5,6 +5,13 @@ follow_redirects = True
 use_spaces = True
 allow_trailing_whitespace = True
 
+# npm install alex write-good
+# pip install proselint scspell3k
+[Text]
+files = (**/*.md|*.md)
+bears = AlexBear,ProseLintBear,SpellCheckBear,WriteGoodLintBear
+# WriteGood need to be configured https://github.com/coala/bear-docs/blob/master/docs/WriteGoodLintBear.rst
+
 # npm install csslint
 [CSS]
 files = _site/**/*.css

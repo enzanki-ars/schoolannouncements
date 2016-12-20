@@ -2,7 +2,7 @@
 
 bundle exec jekyll build
 
-pip install coala-bears
+pip3 install coala-bears
 npm install -g alex write-good csslint bootlint eslint jshint remark-cli
 
 coala --ci
